@@ -22,7 +22,9 @@
     "src/i18n/en.ts",
     "src/i18n/ar.ts",
     "src/i18n/useTranslation.ts",
-    "src/components/ConfirmDialog.tsx"
+    "src/components/ConfirmDialog.tsx",
+    "index.html",
+    "src/components/Card.tsx"
   ],
   "done": [
     "Initialized the parent repository and shared submodule",
@@ -43,5 +45,5 @@
   "questions": [
     "Which admin bug should be fixed?"
   ],
-  "lastUpdate": "2026-08-25T15:42:58+00:00"
+  "lastUpdate": "2026-08-25T15:47:27+00:00"
 }
