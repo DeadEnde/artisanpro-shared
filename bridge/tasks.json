@@ -1,7 +1,7 @@
 {
   "version": 2,
   "coordinator": "lead-engineer",
-  "lastUpdate": "2026-08-25T19:30:27.481Z",
+  "lastUpdate": "2026-08-25T20:00:00Z",
   "tasks": [
     {
       "id": "shared-types-sync",
@@ -204,7 +204,7 @@
       "priority": "P2",
       "role": "client",
       "parentRepo": "Artissan-Pro-Client",
-      "status": "todo",
+      "status": "in_progress",
       "assignee": "client-agent",
       "claimedFiles": [
         "src/context/AppContext.tsx",
@@ -224,7 +224,10 @@
       "done": [
         "AppContext existe avec mock localStorage"
       ],
-      "inProgress": [],
+      "inProgress": [
+        "Audit current Client data flow",
+        "Implement safe Supabase-backed data adapter"
+      ],
       "blocked": [],
       "next": [
         "Créer SQL pour clients/projects/quotes",
@@ -234,7 +237,8 @@
       "dependencies": [
         "shared-types-sync",
         "security-center-sessions"
-      ]
+      ],
+      "claimedAt": "2026-08-25T20:00:00Z"
     },
     {
       "id": "edge-function-security-logs",
