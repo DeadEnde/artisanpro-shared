@@ -3,7 +3,7 @@
   "task": "Admin i18n cleanup and RTL audit",
   "role": "admin",
   "parentRepo": "Artissan-Pro-Admin",
-  "status": "in_progress",
+  "status": "done",
   "claimedFiles": [
     "bridge/state.json",
     "src/main.tsx",
@@ -33,18 +33,16 @@
     "Added a shared Admin TranslationProvider so locale and RTL updates propagate across panels",
     "Added localized fallback behavior and translation coverage for Admin workflows",
     "Completed localized filters, status badges, empty states, confirmation dialogs, validation, and operation feedback",
-    "Audited Admin controls and table layouts for translated aria labels and logical RTL flow"
+    "Audited Admin controls and table layouts for translated aria labels and logical RTL flow",
+    "Verified production build, diff cleanliness, localized fallback safety, and absence of non-decorative raw JSX text",
+    "Committed and pushed the Admin i18n and RTL audit implementation"
   ],
-  "inProgress": [
-    "Run final static audit and production build",
-    "Commit and push the Admin source changes"
-  ],
+  "inProgress": [],
   "blocked": [],
   "next": [
-    "Verify all three dictionaries contain the new keys",
-    "Run final build and diff checks",
-    "Commit and push Admin changes, then mark the task complete"
+    "Manually verify live Supabase data and confirmation flows in each locale",
+    "Keep future Admin UI additions inside the existing translation namespaces"
   ],
   "questions": [],
-  "lastUpdate": "2026-08-25T15:49:07+00:00"
+  "lastUpdate": "2026-08-25T15:49:39+00:00"
 }

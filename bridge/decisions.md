@@ -7,3 +7,5 @@
 
 - The Admin i18n audit keeps the existing Supabase auth/RPC flow and adds only localized presentation, validation, filters, and confirmation UI.
 - The shared locale provider is consumed by the Admin app; no Client repository files were edited.
+
+- The Admin i18n and RTL audit was completed in parent commit `acb8ec4`; all source changes remain Admin-scoped.
