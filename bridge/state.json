@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "task": "Investigate admin bug (details pending)",
+  "role": "admin",
+  "parentRepo": "Artissan-Pro-Admin",
+  "status": "blocked",
+  "claimedFiles": [
+    "bridge/state.json",
+    "bridge/decisions.md",
+    "bridge/questions.md",
+    "bridge/locks.json"
+  ],
+  "done": [
+    "Initialized the parent repository and shared submodule",
+    "Verified the admin app currently passes npm run build"
+  ],
+  "inProgress": [],
+  "blocked": [
+    "No concrete bug description was provided"
+  ],
+  "next": [
+    "Obtain the failing behavior or acceptance criteria",
+    "Claim the affected admin files before editing",
+    "Run the build and hand off with commits"
+  ],
+  "questions": [
+    "Which admin bug should be fixed?"
+  ],
+  "lastUpdate": "2026-08-25T14:30:39+00:00"
+}
