@@ -21,7 +21,8 @@
     "src/i18n/fr.ts",
     "src/i18n/en.ts",
     "src/i18n/ar.ts",
-    "src/i18n/useTranslation.ts"
+    "src/i18n/useTranslation.ts",
+    "src/components/ConfirmDialog.tsx"
   ],
   "done": [
     "Initialized the parent repository and shared submodule",
@@ -33,12 +34,12 @@
   ],
   "blocked": [],
   "next": [
-    "Add typed translation keys for labels, actions, statuses, validation, empty states, and accessibility",
-    "Refactor Admin components to consume localized labels and direction-aware layout",
+    "Refactor Users, Modules, Subscriptions, Security, and profile controls",
+    "Add reusable localized confirmation dialog and accessible filter controls",
     "Run build and verify no visible hardcoded strings remain"
   ],
   "questions": [
     "Which admin bug should be fixed?"
   ],
-  "lastUpdate": "2026-08-25T15:35:45+00:00"
+  "lastUpdate": "2026-08-25T15:39:15+00:00"
 }
