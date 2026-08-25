@@ -26,11 +26,13 @@
   ],
   "done": [
     "Initialized the parent repository and shared submodule",
-    "Verified the admin app currently passes npm run build"
+    "Verified the admin app currently passes npm run build",
+    "Added a shared Admin TranslationProvider so locale and RTL updates propagate across panels",
+    "Added localized fallback behavior and translation coverage for Admin workflows"
   ],
   "inProgress": [
-    "Audit visible strings and raw translation fallbacks in the Admin UI",
-    "Complete Modules, Subscriptions, and Security Center translations and RTL behavior"
+    "Finish component-level i18n, filters, confirmation dialogs, validation, and localized operation feedback",
+    "Complete logical RTL/CSS audit for tables, controls, and responsive layouts"
   ],
   "blocked": [],
   "next": [
@@ -41,5 +43,5 @@
   "questions": [
     "Which admin bug should be fixed?"
   ],
-  "lastUpdate": "2026-08-25T15:39:15+00:00"
+  "lastUpdate": "2026-08-25T15:42:58+00:00"
 }
