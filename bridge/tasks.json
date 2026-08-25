@@ -1,0 +1,308 @@
+{
+  "version": 2,
+  "coordinator": "lead-engineer",
+  "lastUpdate": "2026-08-25T19:30:27.481Z",
+  "tasks": [
+    {
+      "id": "shared-types-sync",
+      "title": "Shared Module Sync & Cleanup",
+      "priority": "P0",
+      "role": "shared",
+      "parentRepo": "artisanpro-shared",
+      "status": "done",
+      "assignee": "lead-engineer",
+      "claimedFiles": [
+        "types/index.ts",
+        "constants/index.ts",
+        "supabase/types.ts",
+        "utils/index.ts",
+        "index.ts"
+      ],
+      "description": "Nettoyer et synchroniser les types partagés pour matcher le vrai schema Supabase (profiles, modules, user_modules, module_entitlements, app_sessions, subscriptions, admin_activity_logs, security_logs). Ajouter les helpers manquants.",
+      "acceptanceCriteria": [
+        "types/index.ts matche 100% le schema de artisanpro-supabase-setup.sql + upgrades",
+        "supabase/types.ts contient Database.Tables pour toutes les tables + Functions",
+        "constants contient tous les MODULES et PLANS réels",
+        "utils a hasModuleAccess, formatCurrency avec MAD/EUR/USD, getDirection",
+        "npm run build passe dans shared (tsc check)"
+      ],
+      "done": [
+        "Audited real SQL schema (setup + security + session + module upgrades)",
+        "Updated supabase/types.ts with all tables: profiles, modules, app_sessions, user_modules, subscriptions, admin_activity_logs, security_logs + view module_entitlements",
+        "Updated supabase/types.ts Functions: is_admin, claim_single_session, is_session_active, heartbeat_session, end_own_session, admin_force_logout_session, admin_set_user_status, admin_set_module_access, admin_set_subscription_status, cleanup_security_logs",
+        "Synced constants: added USER_STATUS, USER_ROLE, MODULE_STATUS, SUBSCRIPTION_STATUS, PAYMENT_SOURCE, MODULE_SOURCE, ONLINE_THRESHOLD, HEARTBEAT_INTERVAL, RETENTION",
+        "Verified types/index.ts already matches real schema"
+      ],
+      "inProgress": [],
+      "blocked": [],
+      "next": [
+        "Release locks for next agents"
+      ]
+    },
+    {
+      "id": "i18n-complete-audit",
+      "title": "Full i18n Audit FR/EN/AR - Client + Admin",
+      "priority": "P0",
+      "role": "i18n",
+      "parentRepo": "Artissan-Pro-Client + Artissan-Pro-Admin",
+      "status": "in_progress",
+      "assignee": "i18n-agent",
+      "claimedFiles": [
+        "src/context/LanguageContext.tsx",
+        "src/i18n/*",
+        "artisanpro-admin/src/i18n/*",
+        "src/main.tsx (all visible strings)",
+        "artisanpro-admin/src/main.tsx (all visible strings)"
+      ],
+      "description": "Aucun texte visible sans clé i18n. FR/EN/AR complets, RTL avec logical CSS, fallback safe, Intl pour MAD/dates.",
+      "acceptanceCriteria": [
+        "grep pour texte hardcoded en JSX = 0 (hors décoratif)",
+        "Dictionnaires: common, nav, auth, dashboard, modules, subscriptions, security, forms, errors, pricing, profile, landing, seo, peinture, actions, empty, status",
+        "AR RTL vérifié: sidebar, tables, forms, modals, mobile nav avec margin-inline, padding-inline",
+        "formatCurrency et formatDate utilisent Intl avec locale",
+        "Build FR/EN/AR testé screen by screen + screenshots"
+      ],
+      "done": [
+        "Admin i18n audit initial fait (commit acb8ec4)"
+      ],
+      "inProgress": [],
+      "blocked": [],
+      "next": [
+        "Scanner Client src/main.tsx pour pricing, login, dashboard, projects, quotes, lead page"
+      ],
+      "dependencies": [
+        "shared-types-sync"
+      ],
+      "claimedAt": "2026-08-25T19:31:19.281172+00:00"
+    },
+    {
+      "id": "peinture-workspace-premium",
+      "title": "Premium Peinture Workspace - Finalisation",
+      "priority": "P1",
+      "role": "peinture",
+      "parentRepo": "Artissan-Pro-Client",
+      "status": "todo",
+      "assignee": "peinture-agent",
+      "claimedFiles": [
+        "src/features/peinture/*",
+        "src/context/AppContext.tsx",
+        "src/data/defaults.ts"
+      ],
+      "description": "Finaliser le workspace peinture premium: engine, validation, pricing strategy, package selector, quote preview, storage, exporters.",
+      "acceptanceCriteria": [
+        "PeintureWorkspace branché avec tous les sous-composants",
+        "Validation: price floor/ceiling, profit target, VAT/discount, room type, ceiling toggle, doors/trims, interior/exterior, wall condition",
+        "Saved calculations: save/open/rename/duplicate/delete/import JSON/export JSON/CSV",
+        "Quote: number editor, validity, payment terms, notes, terms, client/project metadata",
+        "Exports: PDF, XLSX, CSV, print HTML",
+        "Route wiring: remplace Calculator() dans Painting() avec entitlement gate conservé"
+      ],
+      "done": [
+        "Structure de base existe dans src/features/peinture/"
+      ],
+      "inProgress": [],
+      "blocked": [
+        "i18n keys pour paint.* manquants"
+      ],
+      "next": [
+        "Ajouter paint.* keys FR/EN/AR",
+        "Wire PricingStrategyPanel",
+        "Ajouter price validation"
+      ],
+      "dependencies": [
+        "i18n-complete-audit"
+      ]
+    },
+    {
+      "id": "admin-modules-subscriptions",
+      "title": "Admin Modules & Subscriptions - Real UI",
+      "priority": "P1",
+      "role": "admin",
+      "parentRepo": "Artissan-Pro-Admin",
+      "status": "todo",
+      "assignee": "admin-agent",
+      "claimedFiles": [
+        "src/components/ModulesPanel.tsx",
+        "src/components/SubscriptionsPanel.tsx",
+        "src/components/UserPicker.tsx",
+        "src/components/UserDetailDrawer.tsx",
+        "src/components/ModuleAccessPanel.tsx",
+        "src/components/SubscriptionPanel.tsx"
+      ],
+      "description": "Construire UI réelle pour grant/revoke/pause/resume modules, expiry editor, manual payment history, badges.",
+      "acceptanceCriteria": [
+        "User detail drawer avec module badges + subscription badges",
+        "Grant Peinture, Revoke Peinture via admin_set_module_access",
+        "Pause/Resume subscription via admin_set_subscription_status",
+        "Expiry editor pour module et subscription",
+        "Manual payment history UI avec amount, currency, plan_name",
+        "Status timeline: pending/active/paused/expired/revoked/cancelled",
+        "ConfirmDialog localisé + validation localisée"
+      ],
+      "done": [
+        "ModuleAccessPanel et SubscriptionPanel de base existent",
+        "RPC admin_set_module_access et admin_set_subscription_status existent"
+      ],
+      "inProgress": [],
+      "blocked": [],
+      "next": [
+        "Créer UserDetailDrawer",
+        "Ajouter expiry validation",
+        "Ajouter subscription amount input"
+      ],
+      "dependencies": [
+        "shared-types-sync",
+        "i18n-complete-audit"
+      ]
+    },
+    {
+      "id": "security-center-sessions",
+      "title": "Security Center & Session Tracking",
+      "priority": "P1",
+      "role": "security",
+      "parentRepo": "Artissan-Pro-Admin + Artissan-Pro-Client",
+      "status": "in_progress",
+      "assignee": "security-agent",
+      "claimedFiles": [
+        "src/lib/sessionPresence.ts",
+        "src/lib/moduleAccess.ts",
+        "src/components/SecurityPanel.tsx",
+        "src/components/SecurityCenter.tsx",
+        "artisanpro-admin/src/components/SecurityPanel.tsx"
+      ],
+      "description": "Wire client app à app_sessions: claim_single_session au login, heartbeat last_seen_at, invalidation old device, force logout admin. Security Center réel.",
+      "acceptanceCriteria": [
+        "Client: on login -> claim_single_session(device_name)",
+        "Client: heartbeat toutes les 60s update last_seen_at",
+        "Client: logout -> ended session",
+        "Client: new device -> ancienne session forced_logout",
+        "Admin: liste sessions actives, online/offline (2min window), last seen, duration, device/browser/OS, force logout button",
+        "Admin: Security Center tab avec filtres app/client/admin, event type",
+        "Empty/loading/error states localisés"
+      ],
+      "done": [
+        "Table app_sessions existe",
+        "claim_single_session function existe",
+        "is_session_active existe"
+      ],
+      "inProgress": [],
+      "blocked": [
+        "Edge function pour logging sécurisé manquante"
+      ],
+      "next": [
+        "Vérifier artisanpro-session-security-upgrade.sql a été run",
+        "Implémenter heartbeat dans AppContext"
+      ],
+      "dependencies": [
+        "shared-types-sync"
+      ],
+      "claimedAt": "2026-08-25T19:31:19.281190+00:00"
+    },
+    {
+      "id": "client-supabase-migration",
+      "title": "Client App Migration localStorage -> Supabase",
+      "priority": "P2",
+      "role": "client",
+      "parentRepo": "Artissan-Pro-Client",
+      "status": "todo",
+      "assignee": "client-agent",
+      "claimedFiles": [
+        "src/context/AppContext.tsx",
+        "src/data/defaults.ts",
+        "src/types.ts",
+        "src/lib/supabase.ts"
+      ],
+      "description": "Migrer clients, projects, quotes, paint calculations de localStorage vers Supabase avec RLS per-user.",
+      "acceptanceCriteria": [
+        "Tables clients, projects, quotes, paint_calculations créées avec RLS",
+        "Chaque client voit seulement ses données, admin voit tout",
+        "AppContext lit/écrit depuis Supabase au lieu de localStorage",
+        "Migration douce: si localStorage existe, proposer import",
+        "Entitlement status / expiry affiché dans module card + CTA upgrade/contact admin",
+        "Refresh entitlement après changement admin"
+      ],
+      "done": [
+        "AppContext existe avec mock localStorage"
+      ],
+      "inProgress": [],
+      "blocked": [],
+      "next": [
+        "Créer SQL pour clients/projects/quotes",
+        "Ajouter RLS policies",
+        "Refactor AppContext"
+      ],
+      "dependencies": [
+        "shared-types-sync",
+        "security-center-sessions"
+      ]
+    },
+    {
+      "id": "edge-function-security-logs",
+      "title": "Edge Function Security Logs + IP Hash + Retention",
+      "priority": "P2",
+      "role": "api",
+      "parentRepo": "Artissan-Pro-API / Supabase",
+      "status": "in_progress",
+      "assignee": "api-agent",
+      "claimedFiles": [
+        "supabase/functions/log-security-event/*",
+        "supabase/functions/cleanup-logs/*",
+        "artisanpro-security-logs.sql"
+      ],
+      "description": "Créer Edge Functions pour logging sécurisé côté serveur: hashed IP, pas de raw IP/password/token, retention 90 jours.",
+      "acceptanceCriteria": [
+        "Edge Function log-security-event: reçoit event, email, app, provider, device, browser, OS, hash IP côté serveur",
+        "Insertion dans security_logs avec RLS admin-only read",
+        "Edge Function cleanup-logs: cron supprime >90 jours",
+        "Client/Admin appellent Edge Function au lieu d'insert direct",
+        "Events: login_success, login_failed, access_denied, account_blocked, logout, forced_logout, session_started, session_expired",
+        "Jamais stocker raw IP, password, Google token, service_role dans browser"
+      ],
+      "done": [
+        "Table security_logs existe",
+        "Spec IP hash + 90j définie"
+      ],
+      "inProgress": [],
+      "blocked": [],
+      "next": [
+        "Créer supabase/functions/log-security-event/index.ts",
+        "Déployer",
+        "Brancher dans client/admin"
+      ],
+      "dependencies": [
+        "shared-types-sync"
+      ],
+      "claimedAt": "2026-08-25T19:31:19.281193+00:00"
+    },
+    {
+      "id": "manual-payments-stripe-prep",
+      "title": "Manual Payments Workflow + Stripe Prep",
+      "priority": "P3",
+      "role": "billing",
+      "parentRepo": "Artissan-Pro-Admin + Artissan-Pro-Client",
+      "status": "todo",
+      "assignee": "billing-agent",
+      "claimedFiles": [
+        "src/components/SubscriptionsPanel.tsx",
+        "src/components/PaymentHistory.tsx"
+      ],
+      "description": "Finaliser workflow paiement manuel avant Stripe. Historique, confirmation, expiry/renewal.",
+      "acceptanceCriteria": [
+        "UI historique paiements manuels avec amount, currency, date, plan",
+        "Confirmation workflow pour admin",
+        "Expiry / renewal automation basique",
+        "Préparer architecture webhook Stripe pour plus tard",
+        "Ne pas implémenter Stripe avant validation manuel flow"
+      ],
+      "done": [],
+      "inProgress": [],
+      "blocked": [
+        "admin-modules-subscriptions doit être fait"
+      ],
+      "next": [],
+      "dependencies": [
+        "admin-modules-subscriptions"
+      ]
+    }
+  ]
+}

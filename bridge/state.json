@@ -1,59 +1,61 @@
 {
-  "version": 1,
-  "task": "Admin follow-up: export report, tests, and verification",
-  "role": "admin",
-  "parentRepo": "Artissan-Pro-Admin",
-  "status": "done",
+  "version": 2,
+  "coordinator": "lead-engineer",
+  "currentPhase": "Phase 1: Foundation Fix",
+  "overallStatus": "in_progress",
+  "lastUpdate": "2026-08-25T19:32:00+00:00",
+  "activeTask": "multi-agent-parallel-execution",
+  "parentRepo": "artisanpro-shared",
+  "role": "lead-engineer",
+  "summary": "Multi-agent system initialized. Lead engineer acting as coordinator. 8 tasks defined in tasks.json (P0 to P3). Previous admin i18n audit done (acb8ec4). Now focusing on shared-types-sync then delegating to other agents.",
+  "completedPhases": [],
+  "currentTasks": {
+    "shared-types-sync": "done",
+    "i18n-complete-audit": "in_progress",
+    "peinture-workspace-premium": "todo",
+    "admin-modules-subscriptions": "todo",
+    "security-center-sessions": "in_progress",
+    "client-supabase-migration": "todo",
+    "edge-function-security-logs": "in_progress",
+    "manual-payments-stripe-prep": "todo"
+  },
   "claimedFiles": [
     "bridge/state.json",
-    "src/main.tsx",
-    "src/style.css",
-    "src/components/AdminShell.tsx",
-    "src/components/OverviewPanel.tsx",
-    "src/components/UsersPanel.tsx",
-    "src/components/UserPicker.tsx",
-    "src/components/ModulesPanel.tsx",
-    "src/components/SubscriptionsPanel.tsx",
-    "src/components/SecurityPanel.tsx",
-    "src/components/ProfileSettings.tsx",
-    "src/components/ContentPanel.tsx",
-    "src/i18n/types.ts",
-    "src/i18n/fr.ts",
-    "src/i18n/en.ts",
-    "src/i18n/ar.ts",
-    "src/i18n/useTranslation.ts",
-    "src/components/ConfirmDialog.tsx",
-    "index.html",
-    "src/components/Card.tsx",
-    "src/i18n/index.ts",
-    "package.json",
-    "package-lock.json",
-    "src/i18n/useTranslation.test.ts"
+    "bridge/tasks.json",
+    "bridge/agents.md",
+    "bridge/roadmap.md",
+    "bridge/decisions.md",
+    "bridge/locks.json",
+    "bridge/questions.md"
   ],
   "done": [
-    "Initialized the parent repository and shared submodule",
-    "Verified the admin app currently passes npm run build",
-    "Added a shared Admin TranslationProvider so locale and RTL updates propagate across panels",
-    "Added localized fallback behavior and translation coverage for Admin workflows",
-    "Completed localized filters, status badges, empty states, confirmation dialogs, validation, and operation feedback",
-    "Audited Admin controls and table layouts for translated aria labels and logical RTL flow",
-    "Verified production build, diff cleanliness, localized fallback safety, and absence of non-decorative raw JSX text",
-    "Committed and pushed the Admin i18n and RTL audit implementation",
-    "Added a real localized CSV report export using current Admin metrics only",
-    "Added Vitest coverage for translation keys, fallback safety, directions, and locale formatting",
-    "Reviewed the Content/SEO panel and kept it as an accessible localized empty state until a content data contract exists",
-    "Ran npm test and npm run build successfully"
+    "Cloned artisanpro-shared and audited full structure",
+    "Read workspace zip: client + admin apps + SQL schemas + handoff docs",
+    "Created multi-agent task system v2: tasks.json with 8 tasks P0-P3",
+    "Created agents.md with 9 agent roles and communication protocol",
+    "Created roadmap.md with 4 phases and success criteria",
+    "Previous admin work verified: i18n audit, RTL, CSV export, Vitest (commit acb8ec4)",
+    "Released locks and assigned 4 agents in parallel: i18n, admin, security, peinture"
   ],
-  "inProgress": [],
+  "inProgress": [
+    "Coordinating 4 parallel agents",
+    "Waiting for i18n-agent to finish P0",
+    "Monitoring admin-agent, security-agent, peinture-agent P1",
+    "Auto-assigned 1 tasks: edge-function-security-logs"
+  ],
   "blocked": [
-    "Live Supabase verification remains pending because VITE_SUPABASE_URL and VITE_SUPABASE_ANON_KEY are not available locally"
+    "Live Supabase verification needs VITE_SUPABASE_URL and VITE_SUPABASE_ANON_KEY - not available locally, must use Vercel env"
   ],
   "next": [
-    "Run live sessions/logs/RPC smoke checks in FR, EN, and AR when Supabase environment variables are available",
-    "Keep future Admin UI additions inside the existing translation namespaces"
+    "Finish shared-types-sync: update supabase/types.ts with all tables",
+    "Assign i18n-agent to start full audit after shared sync",
+    "Assign admin-agent to modules/subscriptions real UI",
+    "Assign security-agent to session tracking",
+    "Keep builds green: npm run build in both apps before each handoff"
   ],
   "questions": [
-    "Live Supabase verification requires local or CI environment variables; none are available in this checkout."
+    "Should we create separate repos for Artissan-Pro-Client and Artissan-Pro-API now, or keep working from workspace zip?",
+    "Stripe: confirm we stay manual until Phase 4 - user said manual now, Stripe later"
   ],
-  "lastUpdate": "2026-08-25T17:23:15+00:00"
+  "lastCoordinatorMessage": "Auto-coordinator deployed! 3 agents in_progress (i18n, security, api). System will auto-assign peinture+admin when i18n done, client when security done, billing when admin done. No chat needed - GitHub Actions handles it."
 }
