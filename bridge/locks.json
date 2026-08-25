@@ -1,28 +1,7 @@
 {
   "version": 2,
   "lastUpdate": "2026-08-25T19:31:19.281841+00:00",
-  "locks": [
-    {
-      "file": "src/context/AppContext.tsx",
-      "taskId": "client-supabase-migration",
-      "assignee": "client-agent"
-    },
-    {
-      "file": "src/data/defaults.ts",
-      "taskId": "client-supabase-migration",
-      "assignee": "client-agent"
-    },
-    {
-      "file": "src/types.ts",
-      "taskId": "client-supabase-migration",
-      "assignee": "client-agent"
-    },
-    {
-      "file": "src/lib/supabase.ts",
-      "taskId": "client-supabase-migration",
-      "assignee": "client-agent"
-    }
-  ],
+  "locks": [],
   "releasedByLead": [
     "types/index.ts",
     "constants/index.ts",

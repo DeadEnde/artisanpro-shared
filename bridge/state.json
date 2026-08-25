@@ -3,7 +3,7 @@
   "coordinator": "lead-engineer",
   "currentPhase": "Phase 1: Foundation Fix",
   "overallStatus": "in_progress",
-  "lastUpdate": "2026-08-25T20:00:00Z",
+  "lastUpdate": "2026-08-25T20:05:00Z",
   "activeTask": "multi-agent-parallel-execution",
   "parentRepo": "artisanpro-shared",
   "role": "client-agent",
@@ -19,12 +19,7 @@
     "edge-function-security-logs": "in_progress",
     "manual-payments-stripe-prep": "todo"
   },
-  "claimedFiles": [
-    "src/context/AppContext.tsx",
-    "src/data/defaults.ts",
-    "src/types.ts",
-    "src/lib/supabase.ts"
-  ],
+  "claimedFiles": [],
   "done": [
     "Cloned artisanpro-shared and audited full structure",
     "Read workspace zip: client + admin apps + SQL schemas + handoff docs",
@@ -34,19 +29,13 @@
     "Previous admin work verified: i18n audit, RTL, CSV export, Vitest (commit acb8ec4)",
     "Released locks and assigned 4 agents in parallel: i18n, admin, security, peinture"
   ],
-  "inProgress": [
-    "Audit current Client data flow",
-    "Implement safe Supabase-backed data adapter"
-  ],
+  "inProgress": [],
   "blocked": [
-    "Live Supabase verification needs VITE_SUPABASE_URL and VITE_SUPABASE_ANON_KEY - not available locally, must use Vercel env"
+    "Required clients/projects/quotes/paint_calculations tables and RLS migration are not available"
   ],
   "next": [
-    "Finish shared-types-sync: update supabase/types.ts with all tables",
-    "Assign i18n-agent to start full audit after shared sync",
-    "Assign admin-agent to modules/subscriptions real UI",
-    "Assign security-agent to session tracking",
-    "Keep builds green: npm run build in both apps before each handoff"
+    "Wait for SQL schema/RLS migration",
+    "Then implement Supabase adapter and soft localStorage import"
   ],
   "questions": [
     "Should we create separate repos for Artissan-Pro-Client and Artissan-Pro-API now, or keep working from workspace zip?",
@@ -58,5 +47,5 @@
     "name": "Abdeo ArtisanPro"
   },
   "task": "Client App Migration localStorage -> Supabase",
-  "status": "in_progress"
+  "status": "blocked"
 }

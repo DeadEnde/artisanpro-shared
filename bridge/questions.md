@@ -114,3 +114,5 @@ Ou tu as déjà SQL pour ça? Sinon je crée.
 **Status:** [open / resolved]
 **Resolution:** [si résolu]
 ```
+
+- 2026-08-25 client-agent: Client Supabase migration is blocked because the required `clients`, `projects`, `quotes`, and `paint_calculations` tables/RLS migrations are not present in the Client repo or shared contract. Please provide/merge the SQL schema before replacing the localStorage data adapter.

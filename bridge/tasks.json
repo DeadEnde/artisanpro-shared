@@ -1,7 +1,7 @@
 {
   "version": 2,
   "coordinator": "lead-engineer",
-  "lastUpdate": "2026-08-25T20:00:00Z",
+  "lastUpdate": "2026-08-25T20:05:00Z",
   "tasks": [
     {
       "id": "shared-types-sync",
@@ -204,7 +204,7 @@
       "priority": "P2",
       "role": "client",
       "parentRepo": "Artissan-Pro-Client",
-      "status": "in_progress",
+      "status": "blocked",
       "assignee": "client-agent",
       "claimedFiles": [
         "src/context/AppContext.tsx",
@@ -224,15 +224,13 @@
       "done": [
         "AppContext existe avec mock localStorage"
       ],
-      "inProgress": [
-        "Audit current Client data flow",
-        "Implement safe Supabase-backed data adapter"
+      "inProgress": [],
+      "blocked": [
+        "Required clients/projects/quotes/paint_calculations tables and RLS migration are not available"
       ],
-      "blocked": [],
       "next": [
-        "Créer SQL pour clients/projects/quotes",
-        "Ajouter RLS policies",
-        "Refactor AppContext"
+        "Wait for SQL schema/RLS migration",
+        "Then implement Supabase adapter and soft localStorage import"
       ],
       "dependencies": [
         "shared-types-sync",
