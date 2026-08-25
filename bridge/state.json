@@ -3,7 +3,7 @@
   "task": "Admin follow-up: export report, tests, and verification",
   "role": "admin",
   "parentRepo": "Artissan-Pro-Admin",
-  "status": "in_progress",
+  "status": "done",
   "claimedFiles": [
     "bridge/state.json",
     "src/main.tsx",
@@ -38,23 +38,22 @@
     "Completed localized filters, status badges, empty states, confirmation dialogs, validation, and operation feedback",
     "Audited Admin controls and table layouts for translated aria labels and logical RTL flow",
     "Verified production build, diff cleanliness, localized fallback safety, and absence of non-decorative raw JSX text",
-    "Committed and pushed the Admin i18n and RTL audit implementation"
+    "Committed and pushed the Admin i18n and RTL audit implementation",
+    "Added a real localized CSV report export using current Admin metrics only",
+    "Added Vitest coverage for translation keys, fallback safety, directions, and locale formatting",
+    "Reviewed the Content/SEO panel and kept it as an accessible localized empty state until a content data contract exists",
+    "Ran npm test and npm run build successfully"
   ],
-  "inProgress": [
-    "Implement a real localized report export without fake metrics",
-    "Add automated i18n and RTL utility tests",
-    "Review the existing localized Content/SEO empty state and document the live-data boundary"
-  ],
+  "inProgress": [],
   "blocked": [
-    "Live Supabase verification cannot run locally because VITE_SUPABASE_URL and VITE_SUPABASE_ANON_KEY are not available"
+    "Live Supabase verification remains pending because VITE_SUPABASE_URL and VITE_SUPABASE_ANON_KEY are not available locally"
   ],
   "next": [
-    "Implement and test the safe local milestones",
-    "Run a production build and static checks",
-    "Hand off the missing-env live verification requirement without exposing secrets"
+    "Run live sessions/logs/RPC smoke checks in FR, EN, and AR when Supabase environment variables are available",
+    "Keep future Admin UI additions inside the existing translation namespaces"
   ],
   "questions": [
     "Live Supabase verification requires local or CI environment variables; none are available in this checkout."
   ],
-  "lastUpdate": "2026-08-25T17:20:56+00:00"
+  "lastUpdate": "2026-08-25T17:23:15+00:00"
 }

@@ -9,3 +9,6 @@
 - The shared locale provider is consumed by the Admin app; no Client repository files were edited.
 
 - The Admin i18n and RTL audit was completed in parent commit `acb8ec4`; all source changes remain Admin-scoped.
+
+- The follow-up added a localized CSV report export and a Vitest test command without changing auth, Supabase contracts, or Client code.
+- Live Supabase verification is intentionally deferred until environment variables are available.
