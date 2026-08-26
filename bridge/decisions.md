@@ -93,3 +93,5 @@
 - [ ] Faut-il créer repos séparés Artissan-Pro-Client et Artissan-Pro-API maintenant ou continuer depuis workspace zip?
 - [ ] Structure finale dossiers admin après cleanup legacy components (AdminApp, Overview, Manage)?
 - [ ] SQL pour clients/projects/quotes - créer nouvelle migration ou étendre setup existant?
+
+- Admin task `admin-modules-subscriptions` completed in parent commit `5f9baba` at 2026-08-26T18:51:13+00:00; its locks were released after build/test verification.

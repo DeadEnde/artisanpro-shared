@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "lastUpdate": "2026-08-26T18:42:49.727862+00:00",
+  "lastUpdate": "2026-08-26T18:51:13+00:00",
   "locks": [
     {
       "agent": "i18n-agent",
@@ -34,19 +34,6 @@
       ],
       "since": "2026-08-25T19:31:19.281838+00:00",
       "taskId": "edge-function-security-logs"
-    },
-    {
-      "agent": "admin-agent",
-      "files": [
-        "src/components/ModulesPanel.tsx",
-        "src/components/SubscriptionsPanel.tsx",
-        "src/components/UserPicker.tsx",
-        "src/components/UserDetailDrawer.tsx",
-        "src/components/ModuleAccessPanel.tsx",
-        "src/components/SubscriptionPanel.tsx"
-      ],
-      "since": "2026-08-26T18:42:49.727846+00:00",
-      "taskId": "admin-modules-subscriptions"
     }
   ],
   "releasedByLead": [
@@ -57,7 +44,13 @@
   ],
   "availableForClaim": [
     "src/features/peinture/*",
-    "src/components/PaymentHistory.tsx"
+    "src/components/PaymentHistory.tsx",
+    "src/components/ModulesPanel.tsx",
+    "src/components/SubscriptionsPanel.tsx",
+    "src/components/UserPicker.tsx",
+    "src/components/UserDetailDrawer.tsx",
+    "src/components/ModuleAccessPanel.tsx",
+    "src/components/SubscriptionPanel.tsx"
   ],
   "rules": "No overlapping file scopes. Check tasks.json deps before assigning. Human override allowed for admin task (no overlap). Continuous runner checks every 60s.",
   "releasedByClientAgent": [
@@ -65,5 +58,13 @@
     "src/data/defaults.ts",
     "src/types.ts",
     "src/lib/supabase.ts"
+  ],
+  "releasedByAdminAgent": [
+    "src/components/ModulesPanel.tsx",
+    "src/components/SubscriptionsPanel.tsx",
+    "src/components/UserPicker.tsx",
+    "src/components/UserDetailDrawer.tsx",
+    "src/components/ModuleAccessPanel.tsx",
+    "src/components/SubscriptionPanel.tsx"
   ]
 }

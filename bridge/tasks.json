@@ -1,7 +1,7 @@
 {
   "version": 2,
   "coordinator": "lead-engineer",
-  "lastUpdate": "2026-08-26T18:42:49.700377+00:00",
+  "lastUpdate": "2026-08-26T18:51:13+00:00",
   "tasks": [
     {
       "id": "shared-types-sync",
@@ -119,7 +119,7 @@
       "priority": "P1",
       "role": "admin",
       "parentRepo": "Artissan-Pro-Admin",
-      "status": "in_progress",
+      "status": "done",
       "assignee": "admin-agent",
       "claimedFiles": [
         "src/components/ModulesPanel.tsx",
@@ -141,20 +141,24 @@
       ],
       "done": [
         "ModuleAccessPanel et SubscriptionPanel de base existent",
-        "RPC admin_set_module_access et admin_set_subscription_status existent"
+        "RPC admin_set_module_access et admin_set_subscription_status existent",
+        "Created UserDetailDrawer with localized module and subscription summaries",
+        "Added shared-typed ModuleAccessPanel with module grant, pause, revoke, expiry, badges, and filters",
+        "Added shared-typed SubscriptionPanel with manual payment history, status timeline, expiry editor, and localized controls",
+        "Verified Admin build and tests before push"
       ],
       "inProgress": [],
       "blocked": [],
       "next": [
-        "Créer UserDetailDrawer",
-        "Ajouter expiry validation",
-        "Ajouter subscription amount input"
+        "Release admin-agent locks after delivery"
       ],
       "dependencies": [
         "shared-types-sync",
         "i18n-complete-audit"
       ],
-      "claimedAt": "2026-08-26T18:42:49.700359+00:00"
+      "claimedAt": "2026-08-26T18:42:49.700359+00:00",
+      "completedAt": "2026-08-26T18:51:13+00:00",
+      "commit": "Artissan-Pro-Admin: 5f9baba"
     },
     {
       "id": "security-center-sessions",
