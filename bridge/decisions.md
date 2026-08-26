@@ -95,3 +95,5 @@
 - [ ] SQL pour clients/projects/quotes - créer nouvelle migration ou étendre setup existant?
 
 - Admin task `admin-modules-subscriptions` completed in parent commit `5f9baba` at 2026-08-26T18:51:13+00:00; its locks were released after build/test verification.
+
+- Admin overview task completed in parent commit `a5f037d` at 2026-08-26T19:57:35+00:00; real Supabase-backed overview reads were added and the security-agent `SecurityPanel.tsx` lock was respected.

@@ -3,11 +3,11 @@
   "coordinator": "lead-engineer",
   "currentPhase": "Phase 1: Foundation Fix",
   "overallStatus": "in_progress",
-  "lastUpdate": "2026-08-26T19:52:42.606639+00:00",
+  "lastUpdate": "2026-08-26T19:57:35+00:00",
   "activeTask": "multi-agent-parallel-execution",
   "parentRepo": "artisanpro-shared",
   "role": "client-agent",
-  "summary": "Admin and client dispatched with new tasks to differentiate: client-agent -> peinture-workspace-premium IN_PROGRESS (peinture files), admin-agent -> admin-overview-enhancements IN_PROGRESS (overview files). No file overlap, safe parallel. 3 DONE, 5 IN_PROGRESS, 1 TODO. Runners active.",
+  "summary": "Admin overview enhancements DONE (parent commit a5f037d); real subscriptions, revenue, activity, quotes, and security counts wired. SecurityPanel lock respected.",
   "completedPhases": [],
   "currentTasks": {
     "shared-types-sync": "done",
@@ -18,7 +18,7 @@
     "client-supabase-migration": "done",
     "edge-function-security-logs": "in_progress",
     "manual-payments-stripe-prep": "in_progress",
-    "admin-overview-enhancements": "in_progress"
+    "admin-overview-enhancements": "done"
   },
   "claimedFiles": [],
   "done": [
@@ -30,7 +30,9 @@
     "Previous admin work verified: i18n audit, RTL, CSV export, Vitest (commit acb8ec4)",
     "Released locks and assigned 4 agents in parallel: i18n, admin, security, peinture",
     "Admin modules/subscriptions task completed: drawer, typed access controls, expiry editors, manual payment history, status timeline, and localized confirmations",
-    "Admin commit 5f9baba passed npm run build and npm run test"
+    "Admin commit 5f9baba passed npm run build and npm run test",
+    "Admin overview enhancement completed: real revenue chart, activity feed, quote count, and Security banner counts",
+    "Admin commit a5f037d passed npm run build and npm run test"
   ],
   "inProgress": [
     "Auto-assigned 1 tasks: manual-payments-stripe-prep"
@@ -71,11 +73,13 @@
   "nextTask": {
     "id": "admin-overview-enhancements",
     "title": "Admin Overview Real Data",
-    "status": "in_progress",
+    "status": "done",
     "assignee": "admin-agent",
     "role": "admin",
     "priority": "P1",
-    "reason": "New task for admin-agent to keep admin busy, no file overlap"
+    "reason": "New task for admin-agent to keep admin busy, no file overlap",
+    "completedAt": "2026-08-26T19:57:35+00:00",
+    "commit": "a5f037d"
   },
   "queue": {
     "prev": "admin DONE, client DONE",
@@ -97,6 +101,16 @@
       "currTask": null,
       "nextTask": null,
       "note": "No remaining client task in tasks.json - waiting for coordinator assignment"
+    },
+    "admin-agent": {
+      "prevTask": {
+        "id": "admin-overview-enhancements",
+        "status": "done",
+        "completedAt": "2026-08-26T19:57:35+00:00"
+      },
+      "currTask": null,
+      "nextTask": null,
+      "note": "No remaining admin task in tasks.json - waiting for coordinator assignment"
     }
   }
 }
