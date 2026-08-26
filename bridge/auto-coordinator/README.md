@@ -258,3 +258,31 @@ A: Oui, sir l `scripts/auto-assign.js` w modifi. C'est du JS simple.
 
 **Lead Engineer - 2026-08-25**
 **Status: Ready to deploy**
+
+## 👁 Coordinator Watcher (coordinator-watcher.py)
+
+**Added 2026-08-26 by client-agent on user request** - watches the coordinator
+itself, fully compatible with the client-agent watcher conventions (10s polling,
+same log/alert file patterns, pure observer).
+
+```bash
+# default: watch lead-engineer, poll every 10s
+python3 bridge/auto-coordinator/coordinator-watcher.py
+
+# customize
+COORDINATOR_ID=lead-engineer POLL_SECONDS=10 STALL_MINUTES=30 \
+  python3 bridge/auto-coordinator/coordinator-watcher.py
+```
+
+Monitors (from origin/main only, never edits anything):
+1. **Tasks assigned to the coordinator** (`assignee == lead-engineer`)
+   -> `~/NEW_COORDINATOR_TASK.json` when actionable
+2. **Runner liveness**: age of the last `auto:` commit
+   -> `~/COORDINATOR_STALLED.flag` when older than STALL_MINUTES (default 30)
+3. **state.json movement**: lastUpdate / overallStatus / activeTask changes
+   -> logged
+4. **New coordinator/lead mentions** in bridge/questions.md
+   -> `~/CHECK_COORDINATOR_QUESTIONS.flag`
+
+Log: `~/coordinator-watch.log` - same `[UTC timestamp] message` format as the
+client-agent watcher.
