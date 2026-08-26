@@ -1,7 +1,7 @@
 {
   "version": 2,
   "coordinator": "lead-engineer",
-  "lastUpdate": "2026-08-26T20:01:44.776260+00:00",
+  "lastUpdate": "2026-08-26T20:35:00+00:00",
   "tasks": [
     {
       "id": "shared-types-sync",
@@ -98,16 +98,26 @@
         "Route wiring: remplace Calculator() dans Painting() avec entitlement gate conservé"
       ],
       "done": [
-        "Structure de base existe dans src/features/peinture/"
+        "Structure de base existe dans src/features/peinture/",
+        "client-agent: types étendus (roomType, ceiling, doorsTrims, interiorExterior, wallCondition, PricingStrategy floor/ceiling/profitTarget) + normalisation legacy",
+        "client-agent: engine premium (facteurs pièce/état murs/intérieur-extérieur, portes 2m² + fenêtres 1,5m², paintArea détaillée) + validatePaint (errors/warnings i18n)",
+        "client-agent: i18n.ts feature-local FR/EN/AR (~60 clés) avec usePaintT() qui défère au t() central - lock LanguageContext respecté, clés prêtes pour absorption i18n-agent",
+        "client-agent: CostBreakdownForm groupé avec tous les nouveaux champs + PricingStrategyPanel (validation live)",
+        "client-agent: LibraryPanel - save/open/rename/duplicate/delete/import JSON/export JSON",
+        "client-agent: storage.ts dual-mode localStorage <-> Supabase paint_calculations (RLS per-user, payload complet dans metadata)",
+        "client-agent: exporters CSV/JSON/Excel(SpreadsheetML)/PDF(généré à la main, vérifié pdftotext)/print CSS",
+        "client-agent: QuotePreview avec paymentTerms/notes/terms + locale + RTL; éditeur métadonnées devis (numéro/validité/conditions/client/projet)",
+        "client-agent: npm run build PASS + 35/35 tests runtime Node (engine/validation/normalisation/PDF/XLSX/CSV)",
+        "client-agent: poussé sur DeadEnde/Artissan-Pro @ 3d90582"
       ],
       "inProgress": [],
       "blocked": [
-        "i18n keys pour paint.* manquants"
+        "Route wiring dans src/main.tsx bloqué par le lock i18n-agent (Q14): remplacer <Calculator/> par <PeintureWorkspace/> dans Painting()"
       ],
       "next": [
-        "Ajouter paint.* keys FR/EN/AR",
-        "Wire PricingStrategyPanel",
-        "Ajouter price validation"
+        "Q14: décision sur le wiring main.tsx (release du lock i18n OU override humain OU wiring par i18n-agent)",
+        "Absorption des clés paint.* locales dans LanguageContext par i18n-agent",
+        "PDF arabe complet nécessite police embarquée (follow-up)"
       ],
       "dependencies": [
         "i18n-complete-audit"
