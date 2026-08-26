@@ -183,6 +183,148 @@ export interface Database {
         };
         Update: Partial<Database['public']['Tables']['security_logs']['Insert']>;
       };
+
+      clients: {
+        Row: {
+          id: string;
+          user_id: string;
+          name: string;
+          phone: string | null;
+          city: string | null;
+          email: string | null;
+          address: string | null;
+          notes: string | null;
+          created_at: string;
+          updated_at: string;
+        };
+        Insert: {
+          id?: string;
+          user_id: string;
+          name: string;
+          phone?: string | null;
+          city?: string | null;
+          email?: string | null;
+          address?: string | null;
+          notes?: string | null;
+          created_at?: string;
+          updated_at?: string;
+        };
+        Update: Partial<Database['public']['Tables']['clients']['Insert']>;
+      };
+      projects: {
+        Row: {
+          id: string;
+          user_id: string;
+          client_id: string | null;
+          name: string;
+          module: string;
+          status: string;
+          city: string | null;
+          address: string | null;
+          notes: string | null;
+          created_at: string;
+          updated_at: string;
+        };
+        Insert: {
+          id?: string;
+          user_id: string;
+          client_id?: string | null;
+          name: string;
+          module?: string;
+          status?: string;
+          city?: string | null;
+          address?: string | null;
+          notes?: string | null;
+          created_at?: string;
+          updated_at?: string;
+        };
+        Update: Partial<Database['public']['Tables']['projects']['Insert']>;
+      };
+      quotes: {
+        Row: {
+          id: string;
+          user_id: string;
+          project_id: string | null;
+          client_id: string | null;
+          number: string;
+          title: string;
+          area: number | null;
+          liters: number | null;
+          total: number | null;
+          status: string;
+          validity_date: string | null;
+          payment_terms: string | null;
+          notes: string | null;
+          terms: string | null;
+          metadata: Record<string, unknown>;
+          created_at: string;
+          updated_at: string;
+        };
+        Insert: {
+          id?: string;
+          user_id: string;
+          project_id?: string | null;
+          client_id?: string | null;
+          number: string;
+          title?: string;
+          area?: number | null;
+          liters?: number | null;
+          total?: number | null;
+          status?: string;
+          validity_date?: string | null;
+          payment_terms?: string | null;
+          notes?: string | null;
+          terms?: string | null;
+          metadata?: Record<string, unknown>;
+          created_at?: string;
+          updated_at?: string;
+        };
+        Update: Partial<Database['public']['Tables']['quotes']['Insert']>;
+      };
+      paint_calculations: {
+        Row: {
+          id: string;
+          user_id: string;
+          name: string;
+          area: number;
+          coats: number;
+          yield_rate: number;
+          waste_percent: number;
+          paint_price: number;
+          liters: number | null;
+          total: number | null;
+          room_type: string | null;
+          ceiling: boolean | null;
+          doors_trims: boolean | null;
+          interior_exterior: string | null;
+          wall_condition: string | null;
+          metadata: Record<string, unknown>;
+          created_at: string;
+          updated_at: string;
+        };
+        Insert: {
+          id?: string;
+          user_id: string;
+          name?: string;
+          area: number;
+          coats?: number;
+          yield_rate?: number;
+          waste_percent?: number;
+          paint_price?: number;
+          liters?: number | null;
+          total?: number | null;
+          room_type?: string | null;
+          ceiling?: boolean | null;
+          doors_trims?: boolean | null;
+          interior_exterior?: string | null;
+          wall_condition?: string | null;
+          metadata?: Record<string, unknown>;
+          created_at?: string;
+          updated_at?: string;
+        };
+        Update: Partial<Database['public']['Tables']['paint_calculations']['Insert']>;
+      };
+
     };
     Views: {
       module_entitlements: {
