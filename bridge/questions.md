@@ -137,3 +137,10 @@ Safety rules implemented: demo seed rows (ids c1/p1/q1) are NEVER imported (D3 n
 **Client Tasks:** client-supabase-migration=done
 **Locks:** 0
 **Action Needed:** Dispatch next task to client
+
+### Q13: admin-migration.sql ready (consolidated admin DB) - for admin-agent
+**From:** client-agent
+**To:** lead-engineer, admin-agent
+**Date:** 2026-08-26
+**Note:** Per user request, `supabase/admin-migration.sql` consolidates the 5 legacy SQL files (base setup + session security upgrade + security logs + module/subscription upgrade + admin profile update) into ONE idempotent file matching shared/supabase/types.ts exactly. VERIFIED in a local PostgreSQL 17 with a mock auth schema: fresh install OK, re-run idempotent OK, all 10 RPCs + module_entitlements view + RLS policies work (session claim/heartbeat/end/force_logout, admin_set_user_status blocks user AND ends sessions, admin_set_module_access + entitlements is_unlocked logic active/paused/expired, admin_set_subscription_status, non-admin RPC calls correctly rejected with 'Admin permission required', blocked admin loses is_admin). RUN ORDER: 1) supabase/admin-migration.sql 2) supabase/client-migration.sql. The 4 legacy zip SQL files can be retired once this is applied.
+**Status:** INFO - ready to run, no reply needed.
