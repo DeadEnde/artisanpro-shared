@@ -98,6 +98,36 @@ PORT=3000 WEBHOOK_SECRET=ton_secret GITHUB_TOKEN=ghp_... REPO_PATH=/path/to/repo
 
 ---
 
+### Option 3: Agent-specific Watchers
+
+The coordinator assigns tasks; each agent can run a read-only watcher that polls
+`origin/main` and creates a local alert only for its own assignment.
+
+```bash
+# Direct checkout of artisanpro-shared
+python3 bridge/auto-coordinator/client-watcher.py
+python3 bridge/auto-coordinator/admin-watcher.py
+
+# Or use one generic watcher for any role
+AGENT_ID=client-agent python3 bridge/auto-coordinator/agent-watcher.py
+```
+
+The watcher checks every 60 seconds by default and writes:
+
+- client: `~/NEW_CLIENT_TASK.json`, `~/CHECK_QUESTIONS.flag`
+- admin: `~/NEW_ADMIN_TASK.json`, `~/CHECK_QUESTIONS_ADMIN.flag`
+- all roles: `~/<agent>-watch.log`
+
+Use `--once` for a safe smoke test. Set `SHARED_REPO`, `POLL_SECONDS`,
+`WATCH_LOG`, `WATCH_ALERT`, and `WATCH_QFLAG` to override paths. Git credentials
+must come from SSH, a credential helper, `GITHUB_TOKEN`, or `GH_TOKEN`; no token
+is stored in the watcher source.
+
+The watcher never edits application files or bridge coordination data. It only
+reads the remote bridge, records a heartbeat, and creates/clears local alerts.
+
+---
+
 ## 📜 Script Principal: `scripts/auto-assign.js`
 
 **Logique:**
