@@ -1,7 +1,7 @@
 {
   "version": 2,
   "coordinator": "lead-engineer",
-  "lastUpdate": "2026-08-26T20:00:57.087667+00:00",
+  "lastUpdate": "2026-08-26T20:01:44.776260+00:00",
   "tasks": [
     {
       "id": "shared-types-sync",
@@ -168,7 +168,7 @@
       "priority": "P1",
       "role": "security",
       "parentRepo": "Artissan-Pro-Admin + Artissan-Pro-Client",
-      "status": "in_progress",
+      "status": "blocked",
       "assignee": "security-agent",
       "claimedFiles": [
         "src/lib/sessionPresence.ts",
@@ -194,7 +194,7 @@
       ],
       "inProgress": [],
       "blocked": [
-        "Edge function pour logging sécurisé manquante"
+        "Stuck 24.5h no push, handoff to admin-agent via admin-security-center"
       ],
       "next": [
         "Vérifier artisanpro-session-security-upgrade.sql a été run",
@@ -203,7 +203,8 @@
       "dependencies": [
         "shared-types-sync"
       ],
-      "claimedAt": "2026-08-25T19:31:19.281190+00:00"
+      "claimedAt": "2026-08-25T19:31:19.281190+00:00",
+      "notes": "Security-agent stuck, work handed off to admin-agent who now has admin-security-center with same files + sessionPresence"
     },
     {
       "id": "client-supabase-migration",

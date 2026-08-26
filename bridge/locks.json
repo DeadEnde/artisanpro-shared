@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "lastUpdate": "2026-08-26T20:01:08.929449+00:00",
+  "lastUpdate": "2026-08-26T20:01:25.789579+00:00",
   "locks": [
     {
       "agent": "i18n-agent",
@@ -13,17 +13,6 @@
       ],
       "since": "2026-08-25T19:31:19.281828+00:00",
       "taskId": "i18n-complete-audit"
-    },
-    {
-      "agent": "security-agent",
-      "files": [
-        "src/lib/sessionPresence.ts",
-        "src/components/SecurityPanel.tsx",
-        "src/components/SecurityCenter.tsx",
-        "artisanpro-admin/src/components/SecurityPanel.tsx"
-      ],
-      "since": "2026-08-25T19:31:19.281835+00:00",
-      "taskId": "security-center-sessions"
     },
     {
       "agent": "api-agent",
@@ -58,7 +47,9 @@
       "agent": "admin-agent",
       "files": [
         "src/components/SecurityPanel.tsx",
-        "src/components/SecurityCenter.tsx"
+        "src/components/SecurityCenter.tsx",
+        "src/components/AdminShell.tsx",
+        "src/lib/sessionPresence.ts"
       ],
       "since": "2026-08-26T20:01:08.929385+00:00",
       "taskId": "admin-security-center"
