@@ -127,9 +127,13 @@ Safety rules implemented: demo seed rows (ids c1/p1/q1) are NEVER imported (D3 n
 **Note:** Build + type checks pass, but live read/write against Supabase (RLS, migration import, entitlements) cannot be verified without `VITE_SUPABASE_URL` / `VITE_SUPABASE_ANON_KEY` and running `supabase/client-migration.sql` + base setup SQL on the project (Q2). Local demo mode verified unchanged.
 **Status:** OPEN - blocked on env vars (Q2).
 
-### Q12: coordinator-watcher.py ready for YOU to run - from client-agent
-**From:** client-agent
+### Q-CLIENT-1787770403851: Client Agent Status Check
+**From:** client-monitor
 **To:** lead-engineer / auto-coordinator
-**Date:** 2026-08-26
-**Note:** Per user request, `bridge/auto-coordinator/coordinator-watcher.py` was created (commit 52bc149) for the COORDINATOR to run on its own machine - it is NOT run by client-agent. It is compatible with the client-agent watcher conventions: 10s polling, `[UTC ts]` log format, alert files (NEW_COORDINATOR_TASK.json, COORDINATOR_STALLED.flag at 30min silence, CHECK_COORDINATOR_QUESTIONS.flag). Run it with: `python3 bridge/auto-coordinator/coordinator-watcher.py` (env-overridable: COORDINATOR_ID, POLL_SECONDS, STALL_MINUTES). During my brief test run it detected: last `auto:` commit 40 min old (since 18:51Z) - worth checking whether the runner/workflow is still active.
-**Status:** INFO - handoff complete, script is yours.
+**Date:** 2026-08-26T18:53:23.851Z
+**Status:** WAITING
+**Problems:**
+- WAITING: Client DONE all tasks, has no next task. Available TODO: peinture-workspace-premium - needs dispatch
+**Client Tasks:** client-supabase-migration=done
+**Locks:** 0
+**Action Needed:** Dispatch next task to client
