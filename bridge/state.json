@@ -1,19 +1,19 @@
 {
-  "version": 3,
+  "version": 4,
   "coordinator": "lead-engineer",
   "currentPhase": "Phase 1: Foundation Fix",
   "overallStatus": "in_progress",
-  "lastUpdate": "2026-08-26T19:05:00+00:00",
+  "lastUpdate": "2026-08-26T18:43:28.276872+00:00",
   "activeTask": "multi-agent-parallel-execution",
   "parentRepo": "artisanpro-shared",
   "role": "client-agent",
-  "summary": "Client Agent: client-supabase-migration DONE - AppContext dual adapter (localStorage demo / Supabase per-user RLS), soft one-time migration excluding demo seed, entitlements + refresh exposed, typed client via shared Database (fixed Relationships for postgrest-js v2). Build PASS. Global window unchanged: curr=i18n (i18n-agent). Client locks released for peinture-agent (AppContext.tsx, defaults.ts).",
+  "summary": "Admin agent dispatched: admin-modules-subscriptions now IN_PROGRESS (human override, no overlap with i18n). Client DONE. Queue: 2 done, 4 in_progress, 2 todo. Runner active.",
   "completedPhases": [],
   "currentTasks": {
     "shared-types-sync": "done",
     "i18n-complete-audit": "in_progress",
     "peinture-workspace-premium": "todo",
-    "admin-modules-subscriptions": "todo",
+    "admin-modules-subscriptions": "in_progress",
     "security-center-sessions": "in_progress",
     "client-supabase-migration": "done",
     "edge-function-security-logs": "in_progress",
@@ -46,12 +46,12 @@
   "task": "Client App Migration localStorage -> Supabase",
   "status": "done",
   "prevTask": {
-    "id": "shared-types-sync",
-    "title": "Shared Module Sync & Cleanup",
+    "id": "client-supabase-migration",
+    "title": "Client App Migration",
     "status": "done",
-    "assignee": "lead-engineer",
-    "completedAt": "2026-08-25T19:30:00+00:00",
-    "role": "shared"
+    "assignee": "client-agent",
+    "completedAt": "2026-08-26T18:43:28.276884+00:00",
+    "role": "client"
   },
   "currTask": {
     "id": "i18n-complete-audit",
@@ -59,41 +59,26 @@
     "status": "in_progress",
     "assignee": "i18n-agent",
     "role": "i18n",
-    "priority": "P0",
-    "claimedFiles": [
-      "src/context/LanguageContext.tsx",
-      "src/i18n/*",
-      "artisanpro-admin/src/i18n/*",
-      "src/main.tsx",
-      "artisanpro-admin/src/main.tsx"
-    ],
-    "startedAt": "2026-08-25T19:31:19+00:00",
-    "unblocks": [
-      "peinture-workspace-premium",
-      "admin-modules-subscriptions"
-    ]
+    "priority": "P0"
   },
   "nextTask": {
     "id": "admin-modules-subscriptions",
     "title": "Admin Modules & Subscriptions",
-    "status": "waiting_dependency",
+    "status": "in_progress",
     "assignee": "admin-agent",
     "role": "admin",
     "priority": "P1",
-    "waitingFor": [
-      "i18n-complete-audit"
-    ],
-    "reason": "Human override safe, no file overlap, needs i18n keys"
+    "reason": "Human override per user request - no file overlap, dispatched now"
   },
   "queue": {
-    "prev": "shared-types-sync",
-    "curr": "i18n-complete-audit",
-    "next": "admin-modules-subscriptions waiting i18n -> then peinture, security, api, client(blocked), billing",
+    "prev": "client-supabase-migration DONE",
+    "curr": "i18n IN_PROGRESS P0 + security P1 + api P2 + admin P1 (human override)",
+    "next": "peinture waiting i18n, billing waiting admin",
     "totalTasks": 8,
-    "done": 1,
-    "inProgress": 3,
-    "todo": 3,
-    "blocked": 1
+    "done": 2,
+    "inProgress": 4,
+    "todo": 2,
+    "blocked": 0
   },
   "agentWindows": {
     "client-agent": {
