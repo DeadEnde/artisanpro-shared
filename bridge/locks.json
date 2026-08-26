@@ -59,8 +59,7 @@
       "files": [
         "src/components/OverviewPanel.tsx",
         "src/components/Card.tsx",
-        "src/components/AdminShell.tsx",
-        "src/components/SecurityPanel.tsx"
+        "src/components/AdminShell.tsx"
       ],
       "since": "2026-08-26T19:51:48.176079+00:00",
       "taskId": "admin-overview-enhancements"

@@ -1,23 +1,24 @@
 {
-  "version": 5,
+  "version": 6,
   "coordinator": "lead-engineer",
   "currentPhase": "Phase 1: Foundation Fix",
   "overallStatus": "in_progress",
-  "lastUpdate": "2026-08-26T18:54:55.575841+00:00",
+  "lastUpdate": "2026-08-26T19:52:42.606639+00:00",
   "activeTask": "multi-agent-parallel-execution",
   "parentRepo": "artisanpro-shared",
   "role": "client-agent",
-  "summary": "Admin DONE, Client DONE, Billing IN_PROGRESS (auto-unblocked). Dual monitor active: admin+client separate tracking. Runner 24/7 + dual monitor both checking every 60s recursively. i18n bottleneck P0 blocks peinture.",
+  "summary": "Admin and client dispatched with new tasks to differentiate: client-agent -> peinture-workspace-premium IN_PROGRESS (peinture files), admin-agent -> admin-overview-enhancements IN_PROGRESS (overview files). No file overlap, safe parallel. 3 DONE, 5 IN_PROGRESS, 1 TODO. Runners active.",
   "completedPhases": [],
   "currentTasks": {
     "shared-types-sync": "done",
     "i18n-complete-audit": "in_progress",
-    "peinture-workspace-premium": "todo",
+    "peinture-workspace-premium": "in_progress",
     "admin-modules-subscriptions": "done",
     "security-center-sessions": "in_progress",
     "client-supabase-migration": "done",
     "edge-function-security-logs": "in_progress",
-    "manual-payments-stripe-prep": "in_progress"
+    "manual-payments-stripe-prep": "in_progress",
+    "admin-overview-enhancements": "in_progress"
   },
   "claimedFiles": [],
   "done": [
@@ -59,32 +60,30 @@
     "role": "admin"
   },
   "currTask": {
-    "id": "i18n-complete-audit",
-    "title": "Full i18n Audit",
+    "id": "peinture-workspace-premium",
+    "title": "Premium Peinture Workspace",
     "status": "in_progress",
-    "assignee": "i18n-agent",
-    "role": "i18n",
-    "priority": "P0",
-    "unblocks": [
-      "peinture-workspace-premium"
-    ]
+    "assignee": "client-agent",
+    "role": "peinture",
+    "priority": "P1",
+    "reason": "Dispatched to client-agent per user request - admin and client waiting for new tasks, now differentiated"
   },
   "nextTask": {
-    "id": "manual-payments-stripe-prep",
-    "title": "Manual Payments + Stripe Prep",
+    "id": "admin-overview-enhancements",
+    "title": "Admin Overview Real Data",
     "status": "in_progress",
-    "assignee": "billing-agent",
-    "role": "billing",
-    "priority": "P3",
-    "reason": "Auto-unblocked after admin DONE"
+    "assignee": "admin-agent",
+    "role": "admin",
+    "priority": "P1",
+    "reason": "New task for admin-agent to keep admin busy, no file overlap"
   },
   "queue": {
     "prev": "admin DONE, client DONE",
-    "curr": "i18n P0 + security P1 + api P2 + billing P3 IN_PROGRESS",
-    "next": "peinture TODO waiting i18n",
-    "total": 8,
+    "curr": "i18n P0 + security P1 + api P2 + billing P3 + peinture P1 (client) + overview P1 (admin) IN_PROGRESS",
+    "next": "No more TODO, only i18n bottleneck blocks peinture fully",
+    "total": 9,
     "done": 3,
-    "inProgress": 4,
+    "inProgress": 5,
     "todo": 1,
     "blocked": 0
   },
