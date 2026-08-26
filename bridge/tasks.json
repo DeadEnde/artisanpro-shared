@@ -1,7 +1,7 @@
 {
   "version": 2,
   "coordinator": "lead-engineer",
-  "lastUpdate": "2026-08-25T20:05:00Z",
+  "lastUpdate": "2026-08-26T18:29:28.958909+00:00",
   "tasks": [
     {
       "id": "shared-types-sync",
@@ -204,7 +204,7 @@
       "priority": "P2",
       "role": "client",
       "parentRepo": "Artissan-Pro-Client",
-      "status": "blocked",
+      "status": "todo",
       "assignee": "client-agent",
       "claimedFiles": [
         "src/context/AppContext.tsx",
@@ -222,15 +222,17 @@
         "Refresh entitlement après changement admin"
       ],
       "done": [
-        "AppContext existe avec mock localStorage"
+        "AppContext existe avec mock localStorage",
+        "SQL migration created: supabase/client-migration.sql with clients, projects, quotes, paint_calculations + RLS",
+        "supabase/types.ts updated with 4 new tables"
       ],
       "inProgress": [],
-      "blocked": [
-        "Required clients/projects/quotes/paint_calculations tables and RLS migration are not available"
-      ],
+      "blocked": [],
       "next": [
-        "Wait for SQL schema/RLS migration",
-        "Then implement Supabase adapter and soft localStorage import"
+        "Créer SQL done - supabase/client-migration.sql created",
+        "Mettre à jour supabase/types.ts avec 4 nouvelles tables",
+        "Créer parent repos Artissan-Pro-Client et Artissan-Pro-Admin depuis zip pour débloquer i18n",
+        "Refactor AppContext to Supabase"
       ],
       "dependencies": [
         "shared-types-sync",
