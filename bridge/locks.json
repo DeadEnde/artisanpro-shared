@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "lastUpdate": "2026-08-26T18:51:13+00:00",
+  "lastUpdate": "2026-08-26T18:51:34.345Z",
   "locks": [
     {
       "agent": "i18n-agent",
@@ -34,6 +34,15 @@
       ],
       "since": "2026-08-25T19:31:19.281838+00:00",
       "taskId": "edge-function-security-logs"
+    },
+    {
+      "agent": "billing-agent",
+      "files": [
+        "src/components/SubscriptionsPanel.tsx",
+        "src/components/PaymentHistory.tsx"
+      ],
+      "since": "2026-08-26T18:51:34.344Z",
+      "taskId": "manual-payments-stripe-prep"
     }
   ],
   "releasedByLead": [
