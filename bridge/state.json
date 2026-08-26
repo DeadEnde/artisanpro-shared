@@ -1,13 +1,13 @@
 {
-  "version": 4,
+  "version": 5,
   "coordinator": "lead-engineer",
   "currentPhase": "Phase 1: Foundation Fix",
   "overallStatus": "in_progress",
-  "lastUpdate": "2026-08-26T18:51:34.345Z",
+  "lastUpdate": "2026-08-26T18:54:55.575841+00:00",
   "activeTask": "multi-agent-parallel-execution",
   "parentRepo": "artisanpro-shared",
   "role": "client-agent",
-  "summary": "Admin task admin-modules-subscriptions DONE (commit 5f9baba); lock released. Global currTask remains i18n-complete-audit for i18n-agent.",
+  "summary": "Admin DONE, Client DONE, Billing IN_PROGRESS (auto-unblocked). Dual monitor active: admin+client separate tracking. Runner 24/7 + dual monitor both checking every 60s recursively. i18n bottleneck P0 blocks peinture.",
   "completedPhases": [],
   "currentTasks": {
     "shared-types-sync": "done",
@@ -51,40 +51,41 @@
   "task": "Client App Migration localStorage -> Supabase",
   "status": "done",
   "prevTask": {
-    "id": "client-supabase-migration",
-    "title": "Client App Migration",
-    "status": "done",
-    "assignee": "client-agent",
-    "completedAt": "2026-08-26T18:43:28.276884+00:00",
-    "role": "client"
-  },
-  "currTask": {
-    "id": "i18n-complete-audit",
-    "title": "Full i18n Audit FR/EN/AR",
-    "status": "in_progress",
-    "assignee": "i18n-agent",
-    "role": "i18n",
-    "priority": "P0"
-  },
-  "nextTask": {
     "id": "admin-modules-subscriptions",
     "title": "Admin Modules & Subscriptions",
     "status": "done",
     "assignee": "admin-agent",
-    "role": "admin",
-    "priority": "P1",
-    "reason": "Human override per user request - no file overlap, dispatched now",
     "completedAt": "2026-08-26T18:51:13+00:00",
-    "commit": "5f9baba"
+    "role": "admin"
+  },
+  "currTask": {
+    "id": "i18n-complete-audit",
+    "title": "Full i18n Audit",
+    "status": "in_progress",
+    "assignee": "i18n-agent",
+    "role": "i18n",
+    "priority": "P0",
+    "unblocks": [
+      "peinture-workspace-premium"
+    ]
+  },
+  "nextTask": {
+    "id": "manual-payments-stripe-prep",
+    "title": "Manual Payments + Stripe Prep",
+    "status": "in_progress",
+    "assignee": "billing-agent",
+    "role": "billing",
+    "priority": "P3",
+    "reason": "Auto-unblocked after admin DONE"
   },
   "queue": {
-    "prev": "client-supabase-migration DONE",
-    "curr": "i18n IN_PROGRESS P0 + security P1 + api P2 + admin P1 (human override)",
-    "next": "peinture waiting i18n, billing waiting admin",
-    "totalTasks": 8,
-    "done": 2,
+    "prev": "admin DONE, client DONE",
+    "curr": "i18n P0 + security P1 + api P2 + billing P3 IN_PROGRESS",
+    "next": "peinture TODO waiting i18n",
+    "total": 8,
+    "done": 3,
     "inProgress": 4,
-    "todo": 2,
+    "todo": 1,
     "blocked": 0
   },
   "agentWindows": {
