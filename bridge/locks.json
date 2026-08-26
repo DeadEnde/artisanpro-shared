@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "lastUpdate": "2026-08-26T19:51:48.176088+00:00",
+  "lastUpdate": "2026-08-26T19:57:53+00:00",
   "locks": [
     {
       "agent": "i18n-agent",
@@ -53,16 +53,6 @@
       ],
       "since": "2026-08-26T19:51:48.176070+00:00",
       "taskId": "peinture-workspace-premium"
-    },
-    {
-      "agent": "admin-agent",
-      "files": [
-        "src/components/OverviewPanel.tsx",
-        "src/components/Card.tsx",
-        "src/components/AdminShell.tsx"
-      ],
-      "since": "2026-08-26T19:51:48.176079+00:00",
-      "taskId": "admin-overview-enhancements"
     }
   ],
   "releasedByLead": [
@@ -78,7 +68,10 @@
     "src/components/UserPicker.tsx",
     "src/components/UserDetailDrawer.tsx",
     "src/components/ModuleAccessPanel.tsx",
-    "src/components/SubscriptionPanel.tsx"
+    "src/components/SubscriptionPanel.tsx",
+    "src/components/OverviewPanel.tsx",
+    "src/components/Card.tsx",
+    "src/components/AdminShell.tsx"
   ],
   "rules": "No overlapping file scopes. Check tasks.json deps before assigning. Human override allowed for admin task (no overlap). Continuous runner checks every 60s.",
   "releasedByClientAgent": [
@@ -93,6 +86,9 @@
     "src/components/UserPicker.tsx",
     "src/components/UserDetailDrawer.tsx",
     "src/components/ModuleAccessPanel.tsx",
-    "src/components/SubscriptionPanel.tsx"
+    "src/components/SubscriptionPanel.tsx",
+    "src/components/OverviewPanel.tsx",
+    "src/components/Card.tsx",
+    "src/components/AdminShell.tsx"
   ]
 }
