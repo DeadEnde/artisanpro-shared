@@ -1,7 +1,7 @@
 {
   "version": 2,
   "coordinator": "lead-engineer",
-  "lastUpdate": "2026-08-26T18:51:34.344Z",
+  "lastUpdate": "2026-08-26T19:51:33.367706+00:00",
   "tasks": [
     {
       "id": "shared-types-sync",
@@ -81,8 +81,8 @@
       "priority": "P1",
       "role": "peinture",
       "parentRepo": "Artissan-Pro-Client",
-      "status": "todo",
-      "assignee": "peinture-agent",
+      "status": "in_progress",
+      "assignee": "client-agent",
       "claimedFiles": [
         "src/features/peinture/*",
         "src/context/AppContext.tsx",
@@ -111,7 +111,9 @@
       ],
       "dependencies": [
         "i18n-complete-audit"
-      ]
+      ],
+      "claimedAt": "2026-08-26T19:51:33.367686+00:00",
+      "notes": "Human override: Admin and client waiting for new tasks. Peinture assigned to client-agent to keep client busy. No file overlap. i18n keys TODO will be added as placeholders."
     },
     {
       "id": "admin-modules-subscriptions",
@@ -317,6 +319,44 @@
         "admin-modules-subscriptions"
       ],
       "claimedAt": "2026-08-26T18:51:34.344Z"
+    },
+    {
+      "id": "admin-overview-enhancements",
+      "title": "Admin Overview - Real Revenue + Activity",
+      "priority": "P1",
+      "role": "admin",
+      "parentRepo": "Artissan-Pro-Admin",
+      "status": "in_progress",
+      "assignee": "admin-agent",
+      "claimedFiles": [
+        "src/components/OverviewPanel.tsx",
+        "src/components/Card.tsx",
+        "src/components/AdminShell.tsx",
+        "src/components/SecurityPanel.tsx"
+      ],
+      "description": "Enhance Overview with real data: revenue chart from subscriptions, activity from admin_activity_logs, Security Center real counts. No fake KPIs.",
+      "acceptanceCriteria": [
+        "Revenue chart real data (0 if none)",
+        "Activity uses admin_activity_logs",
+        "Security banner real counts",
+        "Overview cards real",
+        "Localized empty states",
+        "Build passes"
+      ],
+      "done": [],
+      "inProgress": [
+        "Starting overview enhancements"
+      ],
+      "blocked": [],
+      "next": [
+        "Wire revenue chart",
+        "Wire activity",
+        "Update Security banner"
+      ],
+      "dependencies": [
+        "shared-types-sync"
+      ],
+      "claimedAt": "2026-08-26T19:51:33.367700+00:00"
     }
   ]
 }
