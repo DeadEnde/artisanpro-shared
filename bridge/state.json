@@ -3,11 +3,11 @@
   "coordinator": "lead-engineer",
   "currentPhase": "Phase 1: Foundation Fix",
   "overallStatus": "in_progress",
-  "lastUpdate": "2026-08-26T20:35:00+00:00",
+  "lastUpdate": "2026-08-26T20:11:39+00:00",
   "activeTask": "multi-agent-parallel-execution",
   "parentRepo": "artisanpro-shared",
   "role": "client-agent",
-  "summary": "Client Agent: peinture-workspace-premium ~95% DONE (engine+validation+strategy+library+dual storage+exports PDF/XLSX/CSV/print+i18n FR/EN/AR fallback, build PASS, 35/35 tests) - only route wiring in main.tsx pending (i18n-agent lock, Q14). Pushed Artissan-Pro@3d90582.",
+  "summary": "Admin Security Center task DONE (parent commit 11b3573); real sessions, online/offline, duration, force logout, and app/event filters delivered.",
   "completedPhases": [],
   "currentTasks": {
     "shared-types-sync": "done",
@@ -19,7 +19,7 @@
     "edge-function-security-logs": "in_progress",
     "manual-payments-stripe-prep": "in_progress",
     "admin-overview-enhancements": "done",
-    "admin-security-center": "in_progress",
+    "admin-security-center": "done",
     "client-projects-quotes-ui": "in_progress"
   },
   "claimedFiles": [],
@@ -34,17 +34,17 @@
     "Admin modules/subscriptions task completed: drawer, typed access controls, expiry editors, manual payment history, status timeline, and localized confirmations",
     "Admin commit 5f9baba passed npm run build and npm run test",
     "Admin overview enhancement completed: real revenue chart, activity feed, quote count, and Security banner counts",
-    "Admin commit a5f037d passed npm run build and npm run test"
+    "Admin commit a5f037d passed npm run build and npm run test",
+    "Admin Security Center task completed: real sessions/logs UI, online/offline window, duration, filters, and localized force logout",
+    "Admin commit 11b3573 passed npm run build and npm run test"
   ],
   "inProgress": [
     "Auto-assigned 1 tasks: manual-payments-stripe-prep"
   ],
-  "blocked": [
-    "Route wiring src/main.tsx locked by i18n-agent (Q14)"
-  ],
+  "blocked": [],
   "next": [
-    "Q14 decision on main.tsx wiring",
-    "then mark peinture-workspace-premium done"
+    "Await next admin-agent assignment after coordinator refresh",
+    "Keep shared contracts synchronized before future Admin work"
   ],
   "questions": [
     "Should we create separate repos for Artissan-Pro-Client and Artissan-Pro-API now, or keep working from workspace zip?",
@@ -76,10 +76,12 @@
   "nextTask": {
     "id": "admin-security-center",
     "title": "Admin Security Center",
-    "status": "in_progress",
+    "status": "done",
     "assignee": "admin-agent",
     "role": "admin",
-    "priority": "P1"
+    "priority": "P1",
+    "completedAt": "2026-08-26T20:11:39+00:00",
+    "commit": "11b3573"
   },
   "queue": {
     "prev": "admin-overview DONE",
@@ -106,9 +108,9 @@
     },
     "admin-agent": {
       "prevTask": {
-        "id": "admin-overview-enhancements",
+        "id": "admin-security-center",
         "status": "done",
-        "completedAt": "2026-08-26T19:57:35+00:00"
+        "completedAt": "2026-08-26T20:11:39+00:00"
       },
       "currTask": null,
       "nextTask": null,

@@ -1,7 +1,7 @@
 {
   "version": 2,
   "coordinator": "lead-engineer",
-  "lastUpdate": "2026-08-26T20:35:00+00:00",
+  "lastUpdate": "2026-08-26T20:11:39+00:00",
   "tasks": [
     {
       "id": "shared-types-sync",
@@ -378,7 +378,7 @@
       "priority": "P1",
       "role": "admin",
       "parentRepo": "Artissan-Pro-Admin",
-      "status": "in_progress",
+      "status": "done",
       "assignee": "admin-agent",
       "claimedFiles": [
         "src/components/SecurityPanel.tsx",
@@ -395,20 +395,23 @@
         "Empty/loading/error localized",
         "Build passes"
       ],
-      "done": [],
-      "inProgress": [
-        "Starting Security Center real UI"
+      "done": [
+        "Loaded real app_sessions rows with user, device, browser, OS, last-seen, and duration details",
+        "Added localized online/offline status using the two-minute activity window",
+        "Added localized app and event filters for security logs",
+        "Kept localized force-logout confirmation and admin_force_logout_session RPC flow",
+        "Added SecurityCenter compatibility entry point without touching Client code",
+        "Verified Admin build and tests before push"
       ],
+      "inProgress": [],
       "blocked": [],
-      "next": [
-        "Wire sessions list",
-        "Add force logout",
-        "Add filters"
-      ],
+      "next": [],
       "dependencies": [
         "shared-types-sync"
       ],
-      "claimedAt": "2026-08-26T20:00:57.087642+00:00"
+      "claimedAt": "2026-08-26T20:00:57.087642+00:00",
+      "completedAt": "2026-08-26T20:11:39+00:00",
+      "commit": "Artissan-Pro-Admin: 11b3573"
     },
     {
       "id": "client-projects-quotes-ui",

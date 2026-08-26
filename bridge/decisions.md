@@ -97,3 +97,5 @@
 - Admin task `admin-modules-subscriptions` completed in parent commit `5f9baba` at 2026-08-26T18:51:13+00:00; its locks were released after build/test verification.
 
 - Admin overview task completed in parent commit `a5f037d` at 2026-08-26T19:57:35+00:00; real Supabase-backed overview reads were added and the security-agent `SecurityPanel.tsx` lock was respected.
+
+- Admin Security Center completed in parent commit `11b3573` at 2026-08-26T20:11:39+00:00; sessions/logs UI is delivered and all admin locks were released.

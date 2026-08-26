@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "lastUpdate": "2026-08-26T20:01:25.789579+00:00",
+  "lastUpdate": "2026-08-26T20:11:39+00:00",
   "locks": [
     {
       "agent": "i18n-agent",
@@ -44,17 +44,6 @@
       "taskId": "peinture-workspace-premium"
     },
     {
-      "agent": "admin-agent",
-      "files": [
-        "src/components/SecurityPanel.tsx",
-        "src/components/SecurityCenter.tsx",
-        "src/components/AdminShell.tsx",
-        "src/lib/sessionPresence.ts"
-      ],
-      "since": "2026-08-26T20:01:08.929385+00:00",
-      "taskId": "admin-security-center"
-    },
-    {
       "agent": "client-agent",
       "files": [
         "src/features/projects/ProjectsPanel.tsx",
@@ -80,7 +69,10 @@
     "src/components/SubscriptionPanel.tsx",
     "src/components/OverviewPanel.tsx",
     "src/components/Card.tsx",
-    "src/components/AdminShell.tsx"
+    "src/components/AdminShell.tsx",
+    "src/components/SecurityPanel.tsx",
+    "src/components/SecurityCenter.tsx",
+    "src/lib/sessionPresence.ts"
   ],
   "rules": "No overlapping file scopes. Check tasks.json deps before assigning. Human override allowed for admin task (no overlap). Continuous runner checks every 60s.",
   "releasedByClientAgent": [
@@ -98,6 +90,9 @@
     "src/components/SubscriptionPanel.tsx",
     "src/components/OverviewPanel.tsx",
     "src/components/Card.tsx",
-    "src/components/AdminShell.tsx"
+    "src/components/AdminShell.tsx",
+    "src/components/SecurityPanel.tsx",
+    "src/components/SecurityCenter.tsx",
+    "src/lib/sessionPresence.ts"
   ]
 }
