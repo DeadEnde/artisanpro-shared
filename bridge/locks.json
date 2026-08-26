@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "lastUpdate": "2026-08-26T19:57:53+00:00",
+  "lastUpdate": "2026-08-26T20:01:08.929449+00:00",
   "locks": [
     {
       "agent": "i18n-agent",
@@ -53,6 +53,24 @@
       ],
       "since": "2026-08-26T19:51:48.176070+00:00",
       "taskId": "peinture-workspace-premium"
+    },
+    {
+      "agent": "admin-agent",
+      "files": [
+        "src/components/SecurityPanel.tsx",
+        "src/components/SecurityCenter.tsx"
+      ],
+      "since": "2026-08-26T20:01:08.929385+00:00",
+      "taskId": "admin-security-center"
+    },
+    {
+      "agent": "client-agent",
+      "files": [
+        "src/features/projects/ProjectsPanel.tsx",
+        "src/features/quotes/QuotesPanel.tsx"
+      ],
+      "since": "2026-08-26T20:01:08.929398+00:00",
+      "taskId": "client-projects-quotes-ui"
     }
   ],
   "releasedByLead": [

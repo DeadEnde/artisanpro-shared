@@ -1,7 +1,7 @@
 {
   "version": 2,
   "coordinator": "lead-engineer",
-  "lastUpdate": "2026-08-26T19:57:53+00:00",
+  "lastUpdate": "2026-08-26T20:00:57.087667+00:00",
   "tasks": [
     {
       "id": "shared-types-sync",
@@ -360,6 +360,82 @@
       "claimedAt": "2026-08-26T19:51:33.367700+00:00",
       "completedAt": "2026-08-26T19:57:53+00:00",
       "commit": "Artissan-Pro-Admin: a5f037d"
+    },
+    {
+      "id": "admin-security-center",
+      "title": "Admin Security Center - Real Sessions + Logs UI",
+      "priority": "P1",
+      "role": "admin",
+      "parentRepo": "Artissan-Pro-Admin",
+      "status": "in_progress",
+      "assignee": "admin-agent",
+      "claimedFiles": [
+        "src/components/SecurityPanel.tsx",
+        "src/components/SecurityCenter.tsx",
+        "src/components/AdminShell.tsx"
+      ],
+      "description": "Build real Security Center: active sessions list, online/offline 2min window, last seen, duration, device/browser/OS, force logout button, filters app/client/admin, event type, empty/loading/error localized.",
+      "acceptanceCriteria": [
+        "Active sessions list real from app_sessions",
+        "Online/offline 2min window",
+        "Last seen, duration, device/browser/OS",
+        "Force logout button via admin_force_logout_session",
+        "Filters app/client/admin, event type",
+        "Empty/loading/error localized",
+        "Build passes"
+      ],
+      "done": [],
+      "inProgress": [
+        "Starting Security Center real UI"
+      ],
+      "blocked": [],
+      "next": [
+        "Wire sessions list",
+        "Add force logout",
+        "Add filters"
+      ],
+      "dependencies": [
+        "shared-types-sync"
+      ],
+      "claimedAt": "2026-08-26T20:00:57.087642+00:00"
+    },
+    {
+      "id": "client-projects-quotes-ui",
+      "title": "Client Projects & Quotes UI with Supabase",
+      "priority": "P2",
+      "role": "client",
+      "parentRepo": "Artissan-Pro-Client",
+      "status": "in_progress",
+      "assignee": "client-agent",
+      "claimedFiles": [
+        "src/features/projects/ProjectsPanel.tsx",
+        "src/features/quotes/QuotesPanel.tsx",
+        "src/context/AppContext.tsx"
+      ],
+      "description": "Build Projects and Quotes UI using Supabase tables clients/projects/quotes: list, create, edit, delete, with RLS per-user, entitlement check, upgrade CTA.",
+      "acceptanceCriteria": [
+        "Projects list from Supabase with RLS",
+        "Quotes list from Supabase",
+        "Create/edit/delete with validation",
+        "Entitlement check + upgrade CTA",
+        "Refresh after admin changes",
+        "Build passes"
+      ],
+      "done": [],
+      "inProgress": [
+        "Starting projects & quotes UI"
+      ],
+      "blocked": [],
+      "next": [
+        "Create ProjectsPanel",
+        "Create QuotesPanel",
+        "Wire Supabase"
+      ],
+      "dependencies": [
+        "shared-types-sync",
+        "client-supabase-migration"
+      ],
+      "claimedAt": "2026-08-26T20:00:57.087658+00:00"
     }
   ]
 }
