@@ -1,26 +1,65 @@
 {
   "version": 2,
-  "lastUpdate": "2026-08-25T19:31:19.281841+00:00",
-  "locks": [],
+  "lastUpdate": "2026-08-26T18:20:00+00:00",
+  "locks": [
+    {
+      "agent": "i18n-agent",
+      "files": [
+        "src/context/LanguageContext.tsx",
+        "src/i18n/*",
+        "artisanpro-admin/src/i18n/*",
+        "src/main.tsx",
+        "artisanpro-admin/src/main.tsx"
+      ],
+      "since": "2026-08-25T19:31:19.281828+00:00",
+      "taskId": "i18n-complete-audit"
+    },
+    {
+      "agent": "security-agent",
+      "files": [
+        "src/lib/sessionPresence.ts",
+        "src/components/SecurityPanel.tsx",
+        "src/components/SecurityCenter.tsx",
+        "artisanpro-admin/src/components/SecurityPanel.tsx"
+      ],
+      "since": "2026-08-25T19:31:19.281835+00:00",
+      "taskId": "security-center-sessions"
+    },
+    {
+      "agent": "api-agent",
+      "files": [
+        "supabase/functions/log-security-event/*",
+        "supabase/functions/cleanup-logs/*",
+        "artisanpro-security-logs.sql"
+      ],
+      "since": "2026-08-25T19:31:19.281838+00:00",
+      "taskId": "edge-function-security-logs"
+    },
+    {
+      "agent": "client-agent",
+      "files": [
+        "src/context/AppContext.tsx",
+        "src/data/defaults.ts",
+        "src/types.ts",
+        "src/lib/supabase.ts"
+      ],
+      "since": "2026-08-25T20:00:00+00:00",
+      "taskId": "client-supabase-migration"
+    }
+  ],
   "releasedByLead": [
     "types/index.ts",
     "constants/index.ts",
     "supabase/types.ts",
-    "utils/index.ts",
-    "bridge/state.json",
-    "bridge/tasks.json",
-    "bridge/agents.md",
-    "bridge/roadmap.md",
-    "bridge/decisions.md",
-    "bridge/questions.md"
+    "utils/index.ts"
   ],
   "availableForClaim": [
-    "src/context/AppContext.tsx",
-    "src/data/defaults.ts",
-    "src/types.ts",
-    "src/lib/supabase.ts",
-    "supabase/functions/*",
+    "src/features/peinture/*",
+    "src/components/ModulesPanel.tsx",
+    "src/components/SubscriptionsPanel.tsx",
+    "src/components/UserPicker.tsx",
+    "src/components/UserDetailDrawer.tsx",
     "src/components/PaymentHistory.tsx"
   ],
-  "rules": "Un agent ne peut pas modifier un fichier locké par un autre sans passer par questions.md. Lead engineer peut override en cas d'urgence mais doit documenter dans decisions.md. Locks actuels: i18n, admin, security, peinture peuvent travailler en parallèle car files différents."
+  "rules": "No overlapping file scopes. Check tasks.json deps before assigning. Human override allowed for admin task (no overlap). Continuous runner checks every 60s."
 }
