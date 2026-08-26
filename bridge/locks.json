@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "lastUpdate": "2026-08-26T18:20:00+00:00",
+  "lastUpdate": "2026-08-26T19:05:00+00:00",
   "locks": [
     {
       "agent": "i18n-agent",
@@ -34,17 +34,6 @@
       ],
       "since": "2026-08-25T19:31:19.281838+00:00",
       "taskId": "edge-function-security-logs"
-    },
-    {
-      "agent": "client-agent",
-      "files": [
-        "src/context/AppContext.tsx",
-        "src/data/defaults.ts",
-        "src/types.ts",
-        "src/lib/supabase.ts"
-      ],
-      "since": "2026-08-25T20:00:00+00:00",
-      "taskId": "client-supabase-migration"
     }
   ],
   "releasedByLead": [
@@ -61,5 +50,11 @@
     "src/components/UserDetailDrawer.tsx",
     "src/components/PaymentHistory.tsx"
   ],
-  "rules": "No overlapping file scopes. Check tasks.json deps before assigning. Human override allowed for admin task (no overlap). Continuous runner checks every 60s."
+  "rules": "No overlapping file scopes. Check tasks.json deps before assigning. Human override allowed for admin task (no overlap). Continuous runner checks every 60s.",
+  "releasedByClientAgent": [
+    "src/context/AppContext.tsx",
+    "src/data/defaults.ts",
+    "src/types.ts",
+    "src/lib/supabase.ts"
+  ]
 }

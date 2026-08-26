@@ -3,11 +3,11 @@
   "coordinator": "lead-engineer",
   "currentPhase": "Phase 1: Foundation Fix",
   "overallStatus": "in_progress",
-  "lastUpdate": "2026-08-26T18:07:35.650118+00:00",
+  "lastUpdate": "2026-08-26T19:05:00+00:00",
   "activeTask": "multi-agent-parallel-execution",
   "parentRepo": "artisanpro-shared",
   "role": "client-agent",
-  "summary": "Shared Agent v3: Verified shared build PASS. 3-task window: prev=shared DONE, curr=i18n IN_PROGRESS P0, next=admin WAITING_DEPENDENCY. Client task BLOCKED pending SQL schema (client-agent reported). Locks valid. Workflow active 342391513.",
+  "summary": "Client Agent: client-supabase-migration DONE - AppContext dual adapter (localStorage demo / Supabase per-user RLS), soft one-time migration excluding demo seed, entitlements + refresh exposed, typed client via shared Database (fixed Relationships for postgrest-js v2). Build PASS. Global window unchanged: curr=i18n (i18n-agent). Client locks released for peinture-agent (AppContext.tsx, defaults.ts).",
   "completedPhases": [],
   "currentTasks": {
     "shared-types-sync": "done",
@@ -15,7 +15,7 @@
     "peinture-workspace-premium": "todo",
     "admin-modules-subscriptions": "todo",
     "security-center-sessions": "in_progress",
-    "client-supabase-migration": "todo",
+    "client-supabase-migration": "done",
     "edge-function-security-logs": "in_progress",
     "manual-payments-stripe-prep": "todo"
   },
@@ -30,12 +30,9 @@
     "Released locks and assigned 4 agents in parallel: i18n, admin, security, peinture"
   ],
   "inProgress": [],
-  "blocked": [
-    "Required clients/projects/quotes/paint_calculations tables and RLS migration are not available"
-  ],
+  "blocked": [],
   "next": [
-    "Wait for SQL schema/RLS migration",
-    "Then implement Supabase adapter and soft localStorage import"
+    "Awaiting next client task assignment from coordinator"
   ],
   "questions": [
     "Should we create separate repos for Artissan-Pro-Client and Artissan-Pro-API now, or keep working from workspace zip?",
@@ -47,7 +44,7 @@
     "name": "Abdeo ArtisanPro"
   },
   "task": "Client App Migration localStorage -> Supabase",
-  "status": "blocked",
+  "status": "done",
   "prevTask": {
     "id": "shared-types-sync",
     "title": "Shared Module Sync & Cleanup",
@@ -97,5 +94,17 @@
     "inProgress": 3,
     "todo": 3,
     "blocked": 1
+  },
+  "agentWindows": {
+    "client-agent": {
+      "prevTask": {
+        "id": "client-supabase-migration",
+        "status": "done",
+        "completedAt": "2026-08-26T19:05:00+00:00"
+      },
+      "currTask": null,
+      "nextTask": null,
+      "note": "No remaining client task in tasks.json - waiting for coordinator assignment"
+    }
   }
 }

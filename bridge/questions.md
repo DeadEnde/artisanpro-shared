@@ -94,3 +94,35 @@
 2. Update tasks.json -> questions[]
 3. Attends réponse dans decisions.md ou ici en Resolution
 4. Ne bloque pas tout - travaille sur autre task si bloqué
+
+## Answers from client-agent (2026-08-26) - client-supabase-migration DONE
+
+### A1: Migration douce - import automatique ou bouton manuel? (RESOLVED)
+**From:** lead-engineer | **Answered by:** client-agent | **Date:** 2026-08-26
+**Resolution:** Both, prioritized:
+1. **Automatic one-time import** on the first authenticated session when the user's remote scope is empty AND localStorage holds user-generated records. Idempotent via flag `artisanpro-migrated-v1` (set on success, skip, or definitive decision).
+2. **Manual import** exposed as `runLocalImport()` in AppContext when remote already has data but local user records exist (status `available`).
+Safety rules implemented: demo seed rows (ids c1/p1/q1) are NEVER imported (D3 no fake data); localStorage is kept read-only as backup (never deleted); remote data is never overwritten (import only into empty scope).
+
+### A2: RLS policies - par table ou générique? (RESOLVED)
+**From:** lead-engineer | **Answered by:** client-agent | **Date:** 2026-08-26
+**Resolution:** Per-table explicit policies, matching `supabase/client-migration.sql` as created by shared-agent: `for all using (user_id = auth.uid() or public.is_admin()) with check (...)` on each of clients/projects/quotes/paint_calculations. Explicit per-table is more auditable and avoids accidental over-exposure; admin write goes through admin RPCs, not direct policies.
+
+### Q9: Entitlement UI display awaits i18n lock - NEW (info, not blocking)
+**From:** client-agent
+**To:** lead-engineer, i18n-agent
+**Date:** 2026-08-26
+**Question/Note:** Acceptance criterion "Entitlement status / expiry affiché dans module card + CTA upgrade/contact admin" requires editing `src/main.tsx` (ModuleCard), which is locked by i18n-agent. The data layer is DONE: AppContext now exposes `moduleEntitlements` (status + expires_at per module) and `refreshEntitlements()`. Once the i18n lock on src/main.tsx is released, the ModuleCard wiring is a small follow-up (peinture-agent or client-agent can pick it up).
+**Status:** OPEN - needs i18n-agent lock release or lead reassignment.
+
+### Q10: Shared types fixed for postgrest-js v2 - NEW (done, affects everyone)
+**From:** client-agent
+**To:** shared-agent, lead-engineer, admin-agent
+**Date:** 2026-08-26
+**Note:** `createClient<Database>()` with supabase-js 2.112.3 resolved all tables to `never` because the shared Database type lacked `Relationships: []` on tables/views (required by GenericSchema in postgrest-js v2). Fixed by adding `Relationships: []` to all 11 tables + module_entitlements view in `supabase/types.ts`. Client build now passes WITH full type safety (sessionPresence.ts rpc calls and moduleAccess.ts view queries are type-checked too). Admin app should get the same benefit via submodule bump.
+**Status:** RESOLVED - committed to shared.
+
+### Q11: Runtime verification of Supabase flows - OPEN (same as Q2)
+**From:** client-agent | **Date:** 2026-08-26
+**Note:** Build + type checks pass, but live read/write against Supabase (RLS, migration import, entitlements) cannot be verified without `VITE_SUPABASE_URL` / `VITE_SUPABASE_ANON_KEY` and running `supabase/client-migration.sql` + base setup SQL on the project (Q2). Local demo mode verified unchanged.
+**Status:** OPEN - blocked on env vars (Q2).

@@ -31,6 +31,7 @@ export interface Database {
           updated_at?: string;
         };
         Update: Partial<Database['public']['Tables']['profiles']['Insert']>;
+          Relationships: [];
       };
       modules: {
         Row: {
@@ -45,6 +46,7 @@ export interface Database {
         };
         Insert: Omit<Database['public']['Tables']['modules']['Row'], 'id' | 'created_at'>;
         Update: Partial<Database['public']['Tables']['modules']['Insert']>;
+          Relationships: [];
       };
       app_sessions: {
         Row: {
@@ -76,6 +78,7 @@ export interface Database {
           status?: 'active' | 'expired' | 'forced_logout' | 'ended';
         };
         Update: Partial<Database['public']['Tables']['app_sessions']['Insert']>;
+          Relationships: [];
       };
       user_modules: {
         Row: {
@@ -101,6 +104,7 @@ export interface Database {
           created_at?: string;
         };
         Update: Partial<Database['public']['Tables']['user_modules']['Insert']>;
+          Relationships: [];
       };
       subscriptions: {
         Row: {
@@ -130,6 +134,7 @@ export interface Database {
           created_at?: string;
         };
         Update: Partial<Database['public']['Tables']['subscriptions']['Insert']>;
+          Relationships: [];
       };
       admin_activity_logs: {
         Row: {
@@ -149,6 +154,7 @@ export interface Database {
           created_at?: string;
         };
         Update: Partial<Database['public']['Tables']['admin_activity_logs']['Insert']>;
+          Relationships: [];
       };
       security_logs: {
         Row: {
@@ -182,6 +188,7 @@ export interface Database {
           metadata?: Record<string, unknown>;
         };
         Update: Partial<Database['public']['Tables']['security_logs']['Insert']>;
+          Relationships: [];
       };
 
       clients: {
@@ -210,6 +217,7 @@ export interface Database {
           updated_at?: string;
         };
         Update: Partial<Database['public']['Tables']['clients']['Insert']>;
+          Relationships: [];
       };
       projects: {
         Row: {
@@ -239,6 +247,7 @@ export interface Database {
           updated_at?: string;
         };
         Update: Partial<Database['public']['Tables']['projects']['Insert']>;
+          Relationships: [];
       };
       quotes: {
         Row: {
@@ -280,6 +289,7 @@ export interface Database {
           updated_at?: string;
         };
         Update: Partial<Database['public']['Tables']['quotes']['Insert']>;
+          Relationships: [];
       };
       paint_calculations: {
         Row: {
@@ -323,6 +333,7 @@ export interface Database {
           updated_at?: string;
         };
         Update: Partial<Database['public']['Tables']['paint_calculations']['Insert']>;
+          Relationships: [];
       };
 
     };
@@ -336,6 +347,7 @@ export interface Database {
           expires_at: string | null;
           is_unlocked: boolean;
         };
+          Relationships: [];
       };
     };
     Functions: {

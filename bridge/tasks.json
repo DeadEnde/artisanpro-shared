@@ -1,7 +1,7 @@
 {
   "version": 2,
   "coordinator": "lead-engineer",
-  "lastUpdate": "2026-08-26T18:29:28.958909+00:00",
+  "lastUpdate": "2026-08-26T19:05:00+00:00",
   "tasks": [
     {
       "id": "shared-types-sync",
@@ -204,7 +204,7 @@
       "priority": "P2",
       "role": "client",
       "parentRepo": "Artissan-Pro-Client",
-      "status": "todo",
+      "status": "done",
       "assignee": "client-agent",
       "claimedFiles": [
         "src/context/AppContext.tsx",
@@ -224,21 +224,25 @@
       "done": [
         "AppContext existe avec mock localStorage",
         "SQL migration created: supabase/client-migration.sql with clients, projects, quotes, paint_calculations + RLS",
-        "supabase/types.ts updated with 4 new tables"
+        "supabase/types.ts updated with 4 new tables",
+        "client-agent: AppContext refactored to dual adapter (local demo / Supabase per-user RLS) - backward compatible API",
+        "client-agent: soft migration - automatic one-time import when remote empty, manual runLocalImport() otherwise, demo seed excluded (D3)",
+        "client-agent: paint_calculations import from artisanpro-paint-calculations-v1 with full payload in metadata",
+        "client-agent: moduleEntitlements + refreshEntitlements exposed in context (refresh on focus + USER_UPDATED)",
+        "client-agent: addQuote dual-write to Supabase (clients/projects/quotes) with local fallback on error",
+        "client-agent: typed supabase client via shared Database contract + fixed shared types for postgrest-js v2 (Relationships: [])",
+        "client-agent: npm run build PASS (tsc -b + vite)"
       ],
       "inProgress": [],
       "blocked": [],
-      "next": [
-        "Créer SQL done - supabase/client-migration.sql created",
-        "Mettre à jour supabase/types.ts avec 4 nouvelles tables",
-        "Créer parent repos Artissan-Pro-Client et Artissan-Pro-Admin depuis zip pour débloquer i18n",
-        "Refactor AppContext to Supabase"
-      ],
+      "next": [],
       "dependencies": [
         "shared-types-sync",
         "security-center-sessions"
       ],
-      "claimedAt": "2026-08-25T20:00:00Z"
+      "claimedAt": "2026-08-25T20:00:00Z",
+      "completedAt": "2026-08-26T19:05:00+00:00",
+      "notes": "Entitlement status/expiry UI display in ModuleCard (src/main.tsx) is data-ready via context.moduleEntitlements but JSX wiring waits for i18n-agent lock release on src/main.tsx. Runtime verification of Supabase flows needs VITE_SUPABASE_URL/KEY (Q2)."
     },
     {
       "id": "edge-function-security-logs",
