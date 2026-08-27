@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "lastUpdate": "2026-08-27T17:36:50+00:00",
+  "lastUpdate": "2026-08-27T17:39:32+00:00",
   "locks": [
     {
       "agent": "i18n-agent",
@@ -70,17 +70,6 @@
       "taskId": "client-saved-calculations"
     },
     {
-      "agent": "admin-agent",
-      "files": [
-        "src/components/OverviewPanel.tsx",
-        "src/components/Card.tsx",
-        "src/style.css",
-        "src/components/ProfileSettings.tsx"
-      ],
-      "since": "2026-08-27T16:49:09.831107+00:00",
-      "taskId": "design-admin-mosk"
-    },
-    {
       "agent": "client-agent",
       "files": [
         "src/features/modules/ModulesPanel.tsx",
@@ -145,7 +134,9 @@
     "src/components/SecurityPanel.tsx",
     "src/components/SecurityCenter.tsx",
     "src/lib/sessionPresence.ts",
-    "src/components/ContentPanel.tsx"
+    "src/components/ContentPanel.tsx",
+    "src/style.css",
+    "src/components/ProfileSettings.tsx"
   ],
   "rules": "No overlapping file scopes. Check tasks.json deps before assigning. Human override allowed for admin task (no overlap). Continuous runner checks every 60s.",
   "releasedByClientAgent": [
@@ -167,6 +158,8 @@
     "src/components/SecurityPanel.tsx",
     "src/components/SecurityCenter.tsx",
     "src/lib/sessionPresence.ts",
-    "src/components/ContentPanel.tsx"
+    "src/components/ContentPanel.tsx",
+    "src/style.css",
+    "src/components/ProfileSettings.tsx"
   ]
 }
