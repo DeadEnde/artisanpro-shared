@@ -1,13 +1,13 @@
 {
-  "version": 9,
+  "version": 10,
   "coordinator": "lead-engineer",
   "currentPhase": "Phase 1: Foundation Fix",
   "overallStatus": "in_progress",
-  "lastUpdate": "2026-08-27T16:44:54.321020+00:00",
+  "lastUpdate": "2026-08-27T16:49:29.935251+00:00",
   "activeTask": "multi-agent-parallel-execution",
   "parentRepo": "artisanpro-shared",
   "role": "client-agent",
-  "summary": "Kamlin all future plan: A i18n bottleneck split into 2 smaller tasks (admin-audit, peinture-keys) to unblock, B peinture parallel already IN_PROGRESS client ~95%, C security handoff to admin DONE, api IN_PROGRESS, D billing IN_PROGRESS auto-unblocked, E parent repos exist locally from zip, F Q2 env vars open needs human, G Python-only 3 runners ACTIVE 24/7 every 10s fast fetch, H scaled to 17 tasks. Admin 3 DONE + 2 IN_PROGRESS, Client 1 DONE + 4 IN_PROGRESS differentiated.",
+  "summary": "Staying on project with HorizonX design inspiration: Dispatched 5 design tasks (Mosk admin, Aether client, Energy peinture, Good Move landing, Vantra security) while keeping green construction SaaS approved design. Admin has 3 design tasks IN_PROGRESS (Mosk, Security Vantra, Content, Revenue), Client has 3 design tasks IN_PROGRESS (Aether, Landing, Entitlement, Saved, Peinture, Projects). No file overlap, safe parallel. Runners Python ACTIVE every 10s fast fetch. Tb9a 3la project.",
   "completedPhases": [],
   "currentTasks": {
     "shared-types-sync": "done",
@@ -26,7 +26,12 @@
     "client-entitlement-ui": "in_progress",
     "client-saved-calculations": "in_progress",
     "i18n-admin-audit": "in_progress",
-    "i18n-peinture-keys": "in_progress"
+    "i18n-peinture-keys": "in_progress",
+    "design-admin-mosk": "in_progress",
+    "design-client-aether": "in_progress",
+    "design-peinture-energy": "todo",
+    "design-landing-goodmove": "in_progress",
+    "design-security-vantra": "in_progress"
   },
   "claimedFiles": [],
   "done": [
@@ -75,29 +80,30 @@
     "role": "admin"
   },
   "currTask": {
-    "id": "i18n-complete-audit",
-    "title": "i18n Audit P0 bottleneck",
+    "id": "design-admin-mosk",
+    "title": "Design Admin Mosk",
     "status": "in_progress",
-    "assignee": "i18n-agent",
-    "priority": "P0",
-    "stuck": "24h+"
+    "assignee": "admin-agent",
+    "role": "admin",
+    "priority": "P1",
+    "designSource": "https://horizonx.so/explore/mosk"
   },
   "nextTask": {
-    "id": "peinture-validation-exports",
-    "title": "Peinture Validation",
-    "status": "todo",
-    "assignee": "peinture-agent",
-    "waitingFor": [
-      "peinture-workspace-premium"
-    ]
+    "id": "design-client-aether",
+    "title": "Design Client Aether Grid",
+    "status": "in_progress",
+    "assignee": "client-agent",
+    "role": "client",
+    "priority": "P1",
+    "designSource": "https://horizonx.so/explore/aether-grid"
   },
   "queue": {
-    "total": 17,
+    "total": 22,
     "done": 6,
-    "inProgress": 9,
-    "todo": 0,
+    "inProgress": 13,
+    "todo": 1,
     "blocked": 2,
-    "note": "Kamlin all future plan A-H executing"
+    "note": "Design-focused tasks staying on project - Mosk, Aether Grid, Energy Command, Good Move, Vantra"
   },
   "agentWindows": {
     "client-agent": {
@@ -129,5 +135,24 @@
       "nextTask": null,
       "note": "Admin content work is partial until a shared content/SEO contract is available"
     }
+  },
+  "designFocus": {
+    "source": "https://horizonx.so/explore",
+    "inspiration": [
+      "Mosk dark-mode SaaS analytics",
+      "Aether Grid smart-home device cards + live telemetry",
+      "Energy Command 18-floor selector + glassmorphic + savings forecast",
+      "Good Move + Vantro conversion landing",
+      "Vantra Facility OS chantier monitoring"
+    ],
+    "stayOnProject": [
+      "Keep dark green sidebar approved",
+      "Keep light/dark themes",
+      "Keep 4 overview cards real data",
+      "Keep no fake data",
+      "Keep FR/EN/AR RTL",
+      "Keep simple fast for Android no 3D/WebGL",
+      "Enhance not replace existing panels"
+    ]
   }
 }
