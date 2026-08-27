@@ -1,7 +1,7 @@
 {
   "version": 2,
   "coordinator": "lead-engineer",
-  "lastUpdate": "2026-08-27T16:44:42.663615+00:00",
+  "lastUpdate": "2026-08-27T16:49:04.484812+00:00",
   "tasks": [
     {
       "id": "shared-types-sync",
@@ -670,6 +670,210 @@
         "shared-types-sync"
       ],
       "claimedAt": "2026-08-27T16:44:42.663601+00:00"
+    },
+    {
+      "id": "design-admin-mosk",
+      "title": "Design Admin Mosk - Abstract Chart + High-Contrast CTA",
+      "priority": "P1",
+      "role": "admin",
+      "parentRepo": "Artissan-Pro-Admin",
+      "status": "in_progress",
+      "assignee": "admin-agent",
+      "claimedFiles": [
+        "src/components/OverviewPanel.tsx",
+        "src/components/Card.tsx",
+        "src/style.css"
+      ],
+      "description": "Apply Mosk design to admin dashboard while staying on project: Keep dark green sidebar approved, add abstract analytics chart imagery to revenue chart empty state (keep 0 MAD but premium look), high-contrast CTA for Export and Security logs buttons, integration badges Supabase/Vercel/Google like Mosk shows Notion/Slack.",
+      "acceptanceCriteria": [
+        "Keep dark green sidebar #0f2a1f approved",
+        "Revenue chart empty state with abstract chart background (Mosk) not just icon",
+        "Export button high-contrast CTA (Mosk style)",
+        "Security logs button prominent",
+        "Integration badges Supabase/Vercel/Google in Settings",
+        "FR/EN/AR + RTL logical CSS",
+        "Build passes"
+      ],
+      "done": [],
+      "inProgress": [
+        "Starting Mosk design application"
+      ],
+      "blocked": [],
+      "next": [
+        "Add abstract chart background",
+        "Update CTA styles",
+        "Add integration badges"
+      ],
+      "dependencies": [
+        "shared-types-sync",
+        "admin-overview-enhancements"
+      ],
+      "claimedAt": "2026-08-27T16:49:04.484767+00:00",
+      "designSource": "https://horizonx.so/explore/mosk",
+      "stayOnProject": "Keep existing green construction SaaS, enhance not replace"
+    },
+    {
+      "id": "design-client-aether",
+      "title": "Design Client Aether Grid - Device Cards + Live Telemetry",
+      "priority": "P1",
+      "role": "client",
+      "parentRepo": "Artissan-Pro-Client",
+      "status": "in_progress",
+      "assignee": "client-agent",
+      "claimedFiles": [
+        "src/features/modules/ModulesPanel.tsx",
+        "src/components/SessionRow.tsx"
+      ],
+      "description": "Apply Aether Grid App design to client dashboard: Module cards like device cards with on/off toggle for is_unlocked + live stats (3 devis, 86m²), sessions list with green dot online <2min like live telemetry, command center layout.",
+      "acceptanceCriteria": [
+        "Module cards like Aether device cards with toggle is_unlocked",
+        "Live stats: devis count, m² calculated",
+        "Sessions list green dot online <2min, gray offline, device/browser/OS",
+        "Command center layout: sidebar modules, center projects/quotes, right entitlements",
+        "FR/EN/AR + RTL",
+        "Build passes"
+      ],
+      "done": [],
+      "inProgress": [
+        "Starting Aether Grid design"
+      ],
+      "blocked": [],
+      "next": [
+        "Redesign module cards",
+        "Add live telemetry to sessions",
+        "Update layout"
+      ],
+      "dependencies": [
+        "shared-types-sync",
+        "client-supabase-migration",
+        "client-entitlement-ui"
+      ],
+      "claimedAt": "2026-08-27T16:49:04.484779+00:00",
+      "designSource": "https://horizonx.so/explore/aether-grid",
+      "stayOnProject": "Keep real data, no fake, keep green construction"
+    },
+    {
+      "id": "design-peinture-energy",
+      "title": "Design Peinture Energy Command - Room Selector + Glassmorphic + Forecast",
+      "priority": "P1",
+      "role": "peinture",
+      "parentRepo": "Artissan-Pro-Client",
+      "status": "todo",
+      "assignee": "peinture-agent",
+      "claimedFiles": [
+        "src/features/peinture/PeintureWorkspace.tsx",
+        "src/features/peinture/PricingStrategyPanel.tsx",
+        "src/features/peinture/peinture.css"
+      ],
+      "description": "Apply Energy Command Dashboard design to peinture workspace: Room selector like floor selector (visual building selectable rooms: salon, chambre, cuisine), PricingStrategyPanel glassmorphic with savings forecast Baseline/Optimized/Savings, Projects map view Morocco, light/dark themes.",
+      "acceptanceCriteria": [
+        "Room selector visual building with selectable rooms (salon, chambre, cuisine)",
+        "Room details: room type, wall condition, ceiling, doors/trims",
+        "PricingStrategyPanel glassmorphic with forecast Baseline 5050 MAD Optimized 4300 MAD Savings 750 MAD 15%",
+        "Projects map view Morocco with pins",
+        "Light/dark themes consistent",
+        "No 3D/WebGL heavy (keep fast for Android)",
+        "FR/EN/AR + RTL",
+        "Build passes"
+      ],
+      "done": [],
+      "inProgress": [
+        "Starting Energy Command design"
+      ],
+      "blocked": [
+        "Waiting for file locks - files overlap with active locks"
+      ],
+      "next": [
+        "Add room selector visual",
+        "Add glassmorphic pricing panel",
+        "Add map view"
+      ],
+      "dependencies": [
+        "shared-types-sync",
+        "peinture-workspace-premium",
+        "i18n-peinture-keys"
+      ],
+      "claimedAt": null,
+      "designSource": "https://horizonx.so/explore/energy-command-dashboard",
+      "stayOnProject": "Keep simple fast for Android, no Three.js, keep existing engine and validation"
+    },
+    {
+      "id": "design-landing-goodmove",
+      "title": "Design Landing Good Move + Vantro - Conversion Focused",
+      "priority": "P2",
+      "role": "client",
+      "parentRepo": "Artissan-Pro-Client",
+      "status": "in_progress",
+      "assignee": "client-agent",
+      "claimedFiles": [
+        "src/features/landing/LandingHero.tsx",
+        "src/features/pricing/PricingSection.tsx"
+      ],
+      "description": "Apply Good Move + Vantro AI Sales design to landing and pricing: Classical-art landing for momentum platform, conversion-focused SaaS landing for pipeline, hero with Gagnez du temps sur chaque chantier + momentum, pricing conversion-focused.",
+      "acceptanceCriteria": [
+        "Landing hero with momentum (Good Move) + conversion CTA (Vantro)",
+        "Hero text: Gagnez du temps sur chaque chantier",
+        "Pricing page conversion-focused with 0 MAD Découverte and 99 MAD Peinture Pro featured",
+        "Lead page with resources",
+        "FR/EN/AR + RTL",
+        "Build passes"
+      ],
+      "done": [],
+      "inProgress": [
+        "Starting landing design"
+      ],
+      "blocked": [],
+      "next": [
+        "Update hero",
+        "Update pricing",
+        "Update lead"
+      ],
+      "dependencies": [
+        "shared-types-sync",
+        "i18n-client-audit"
+      ],
+      "claimedAt": "2026-08-27T16:49:04.484786+00:00",
+      "designSource": "https://horizonx.so/explore/good-move and vantro-ai-sales-platform",
+      "stayOnProject": "Keep existing landing structure, enhance not replace, keep FR/EN/AR"
+    },
+    {
+      "id": "design-security-vantra",
+      "title": "Design Security Vantra Facility OS - Chantier Monitoring",
+      "priority": "P2",
+      "role": "security",
+      "parentRepo": "Artissan-Pro-Admin + Artissan-Pro-Client",
+      "status": "in_progress",
+      "assignee": "security-agent",
+      "claimedFiles": [
+        "src/components/SecurityCenter.tsx",
+        "src/lib/sessionPresence.ts"
+      ],
+      "description": "Apply Vantra Facility OS design to Security Center: Interactive facility monitoring wards/people/cameras/lighting/climate/room capacity adapted to chantier monitoring artisans/materials/lighting/climate/room capacity.",
+      "acceptanceCriteria": [
+        "Security Center like facility OS: monitoring chantiers, artisans, materials",
+        "Sessions with ward/people metaphor: chantiers/artisans",
+        "Device/browser/OS like cameras/lighting",
+        "Room capacity like chantier capacity",
+        "Empty/loading/error localized",
+        "Build passes"
+      ],
+      "done": [],
+      "inProgress": [
+        "Starting Vantra design for Security Center"
+      ],
+      "blocked": [],
+      "next": [
+        "Wire facility monitoring UI",
+        "Add chantier monitoring",
+        "Add capacity"
+      ],
+      "dependencies": [
+        "shared-types-sync",
+        "admin-security-center"
+      ],
+      "claimedAt": "2026-08-27T16:49:04.484789+00:00",
+      "designSource": "https://horizonx.so/explore/vantra-facility-os",
+      "stayOnProject": "Keep simple, no 3D, keep real sessions data, 2min online window"
     }
   ]
 }

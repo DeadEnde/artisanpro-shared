@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "lastUpdate": "2026-08-27T13:11:33+00:00",
+  "lastUpdate": "2026-08-27T16:49:09.831184+00:00",
   "locks": [
     {
       "agent": "i18n-agent",
@@ -68,6 +68,43 @@
       ],
       "since": "2026-08-27T13:03:02.161722+00:00",
       "taskId": "client-saved-calculations"
+    },
+    {
+      "agent": "admin-agent",
+      "files": [
+        "src/components/OverviewPanel.tsx",
+        "src/components/Card.tsx",
+        "src/style.css"
+      ],
+      "since": "2026-08-27T16:49:09.831107+00:00",
+      "taskId": "design-admin-mosk"
+    },
+    {
+      "agent": "client-agent",
+      "files": [
+        "src/features/modules/ModulesPanel.tsx",
+        "src/components/SessionRow.tsx"
+      ],
+      "since": "2026-08-27T16:49:09.831118+00:00",
+      "taskId": "design-client-aether"
+    },
+    {
+      "agent": "client-agent",
+      "files": [
+        "src/features/landing/LandingHero.tsx",
+        "src/features/pricing/PricingSection.tsx"
+      ],
+      "since": "2026-08-27T16:49:09.831122+00:00",
+      "taskId": "design-landing-goodmove"
+    },
+    {
+      "agent": "security-agent",
+      "files": [
+        "src/components/SecurityCenter.tsx",
+        "src/lib/sessionPresence.ts"
+      ],
+      "since": "2026-08-27T16:49:09.831123+00:00",
+      "taskId": "design-security-vantra"
     }
   ],
   "releasedByLead": [
