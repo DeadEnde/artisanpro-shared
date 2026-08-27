@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "lastUpdate": "2026-08-27T17:40:57.969Z",
+  "lastUpdate": "2026-08-27T17:44:17.675761+00:00",
   "locks": [
     {
       "agent": "i18n-agent",
@@ -121,6 +121,15 @@
       ],
       "since": "2026-08-27T17:40:57.968Z",
       "taskId": "admin-content-seo"
+    },
+    {
+      "agent": "shared-agent",
+      "files": [
+        "types/content.ts",
+        "constants/content.ts"
+      ],
+      "since": "2026-08-27T17:44:17.675722+00:00",
+      "taskId": "shared-content-seo-types"
     }
   ],
   "releasedByLead": [

@@ -1,7 +1,7 @@
 {
   "version": 2,
   "coordinator": "lead-engineer",
-  "lastUpdate": "2026-08-27T17:40:57.969Z",
+  "lastUpdate": "2026-08-27T17:44:12.461970+00:00",
   "tasks": [
     {
       "id": "shared-types-sync",
@@ -876,6 +876,122 @@
       "claimedAt": "2026-08-27T16:49:04.484789+00:00",
       "designSource": "https://horizonx.so/explore/vantra-facility-os",
       "stayOnProject": "Keep simple, no 3D, keep real sessions data, 2min online window"
+    },
+    {
+      "id": "peinture-engine-tests",
+      "title": "Peinture Engine Tests + Validation Polish",
+      "priority": "P1",
+      "role": "peinture",
+      "parentRepo": "Artissan-Pro-Client",
+      "status": "todo",
+      "assignee": "peinture-agent",
+      "claimedFiles": [
+        "src/features/peinture/engine.test.ts",
+        "src/features/peinture/validation.ts"
+      ],
+      "description": "Add comprehensive tests for peinture engine premium + polish validation: roomType, ceiling, doorsTrims, interiorExterior, wallCondition, PricingStrategy floor/ceiling/profitTarget, paintArea calculation with doors 2m² + windows 1.5m².",
+      "acceptanceCriteria": [
+        "Engine tests for roomType factors",
+        "Ceiling toggle tests",
+        "DoorsTrims tests",
+        "Interior/exterior tests",
+        "Wall condition tests",
+        "PricingStrategy floor/ceiling/profit validation tests",
+        "paintArea with doors/windows tests",
+        "Build passes + tests pass"
+      ],
+      "done": [],
+      "inProgress": [
+        "Starting engine tests"
+      ],
+      "blocked": [
+        "Waiting for file locks - overlap with active locks, will auto-assign when released"
+      ],
+      "next": [
+        "Add roomType tests",
+        "Add validation tests",
+        "Run tests"
+      ],
+      "dependencies": [
+        "shared-types-sync",
+        "peinture-workspace-premium"
+      ],
+      "claimedAt": null
+    },
+    {
+      "id": "shared-content-seo-types",
+      "title": "Shared Content SEO Types + Constants",
+      "priority": "P2",
+      "role": "shared",
+      "parentRepo": "artisanpro-shared",
+      "status": "in_progress",
+      "assignee": "shared-agent",
+      "claimedFiles": [
+        "types/content.ts",
+        "constants/content.ts",
+        "supabase/types.ts"
+      ],
+      "description": "Create shared types and constants for content & SEO: content_sections and seo_metadata tables, plus i18n keys for content.*. Update shared module.",
+      "acceptanceCriteria": [
+        "types/content.ts with ContentSection and SeoMetadata interfaces",
+        "constants/content.ts with default slugs",
+        "supabase/types.ts already has tables (verify)",
+        "Build passes tsc --noEmit",
+        "No breaking changes"
+      ],
+      "done": [],
+      "inProgress": [
+        "Starting content SEO shared types"
+      ],
+      "blocked": [],
+      "next": [
+        "Create types/content.ts",
+        "Create constants/content.ts",
+        "Verify supabase/types.ts"
+      ],
+      "dependencies": [
+        "shared-types-sync"
+      ],
+      "claimedAt": "2026-08-27T17:44:12.461946+00:00"
+    },
+    {
+      "id": "admin-billing-payments",
+      "title": "Admin Billing Payments - Manual Payment History Real",
+      "priority": "P3",
+      "role": "admin",
+      "parentRepo": "Artissan-Pro-Admin",
+      "status": "todo",
+      "assignee": "admin-agent",
+      "claimedFiles": [
+        "src/components/PaymentHistory.tsx",
+        "src/components/SubscriptionsPanel.tsx"
+      ],
+      "description": "Build real manual payment history UI with amount, currency, date, plan, confirmation workflow, expiry/renewal automation, prep Stripe webhook architecture.",
+      "acceptanceCriteria": [
+        "Payment history real from subscriptions",
+        "Amount/currency/date/plan display",
+        "Confirmation workflow",
+        "Expiry/renewal automation",
+        "Stripe webhook prep (no Stripe impl)",
+        "Build passes"
+      ],
+      "done": [],
+      "inProgress": [
+        "Starting billing payments"
+      ],
+      "blocked": [
+        "Waiting for file locks - overlap with active locks, will auto-assign when released"
+      ],
+      "next": [
+        "Wire payment history",
+        "Add confirmation",
+        "Add expiry automation"
+      ],
+      "dependencies": [
+        "shared-types-sync",
+        "admin-modules-subscriptions"
+      ],
+      "claimedAt": null
     }
   ]
 }
