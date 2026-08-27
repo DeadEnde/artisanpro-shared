@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "lastUpdate": "2026-08-27T13:03:02.166025+00:00",
+  "lastUpdate": "2026-08-27T13:11:33+00:00",
   "locks": [
     {
       "agent": "i18n-agent",
@@ -53,23 +53,6 @@
       "taskId": "client-projects-quotes-ui"
     },
     {
-      "agent": "admin-agent",
-      "files": [
-        "src/components/ContentPanel.tsx"
-      ],
-      "since": "2026-08-27T13:03:02.161705+00:00",
-      "taskId": "admin-content-seo"
-    },
-    {
-      "agent": "admin-agent",
-      "files": [
-        "src/components/OverviewPanel.tsx",
-        "src/components/Card.tsx"
-      ],
-      "since": "2026-08-27T13:03:02.161717+00:00",
-      "taskId": "admin-revenue-analytics"
-    },
-    {
       "agent": "client-agent",
       "files": [
         "src/features/modules/ModulesPanel.tsx"
@@ -106,7 +89,8 @@
     "src/components/AdminShell.tsx",
     "src/components/SecurityPanel.tsx",
     "src/components/SecurityCenter.tsx",
-    "src/lib/sessionPresence.ts"
+    "src/lib/sessionPresence.ts",
+    "src/components/ContentPanel.tsx"
   ],
   "rules": "No overlapping file scopes. Check tasks.json deps before assigning. Human override allowed for admin task (no overlap). Continuous runner checks every 60s.",
   "releasedByClientAgent": [
@@ -127,6 +111,7 @@
     "src/components/AdminShell.tsx",
     "src/components/SecurityPanel.tsx",
     "src/components/SecurityCenter.tsx",
-    "src/lib/sessionPresence.ts"
+    "src/lib/sessionPresence.ts",
+    "src/components/ContentPanel.tsx"
   ]
 }

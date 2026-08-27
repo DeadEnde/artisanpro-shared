@@ -1,7 +1,7 @@
 {
   "version": 2,
   "coordinator": "lead-engineer",
-  "lastUpdate": "2026-08-27T13:02:30.789170+00:00",
+  "lastUpdate": "2026-08-27T13:11:33+00:00",
   "tasks": [
     {
       "id": "shared-types-sync",
@@ -457,7 +457,7 @@
       "priority": "P2",
       "role": "admin",
       "parentRepo": "Artissan-Pro-Admin",
-      "status": "in_progress",
+      "status": "blocked",
       "assignee": "admin-agent",
       "claimedFiles": [
         "src/components/ContentPanel.tsx",
@@ -472,15 +472,18 @@
         "Empty states localized",
         "Build passes"
       ],
-      "done": [],
-      "inProgress": [
-        "Starting Content & SEO panel"
+      "done": [
+        "Added real modules catalog editing for FR/EN/AR names, price, and publication status",
+        "Added localized loading, error, empty, refresh, validation, and save feedback states"
       ],
-      "blocked": [],
+      "inProgress": [],
+      "blocked": [
+        "No content/CMS/SEO metadata tables or shared contract exist; the implementation can safely edit only existing modules fields",
+        "Dedicated landing/pricing/SEO translation keys remain owned by i18n-agent"
+      ],
       "next": [
-        "Wire content from DB",
-        "Add SEO editor",
-        "Add i18n"
+        "Add and approve a Supabase content/SEO schema or CMS contract",
+        "Add dedicated localized content keys, then finish SEO metadata and landing/pricing editors"
       ],
       "dependencies": [
         "shared-types-sync"
@@ -493,7 +496,7 @@
       "priority": "P2",
       "role": "admin",
       "parentRepo": "Artissan-Pro-Admin",
-      "status": "in_progress",
+      "status": "done",
       "assignee": "admin-agent",
       "claimedFiles": [
         "src/components/OverviewPanel.tsx",
@@ -508,21 +511,22 @@
         "Localized",
         "Build passes"
       ],
-      "done": [],
-      "inProgress": [
-        "Starting revenue analytics"
+      "done": [
+        "Loaded real subscriptions for six-month revenue points and current MRR",
+        "Calculated a real 30-day cancelled/expired churn rate with a localized percentage formatter",
+        "Kept zero and no-data states when Supabase returns no records",
+        "Verified Admin build and tests before push"
       ],
+      "inProgress": [],
       "blocked": [],
-      "next": [
-        "Wire subscriptions data",
-        "Calculate MRR",
-        "Add chart"
-      ],
+      "next": [],
       "dependencies": [
         "shared-types-sync",
         "admin-modules-subscriptions"
       ],
-      "claimedAt": "2026-08-27T13:02:30.789131+00:00"
+      "claimedAt": "2026-08-27T13:02:30.789131+00:00",
+      "completedAt": "2026-08-27T13:11:33+00:00",
+      "commit": "Artissan-Pro-Admin: da50f02"
     },
     {
       "id": "client-entitlement-ui",

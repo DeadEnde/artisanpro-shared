@@ -153,3 +153,19 @@ Safety rules implemented: demo seed rows (ids c1/p1/q1) are NEVER imported (D3 n
 **Impact:** Feature cannot go live without the wiring; everything else is done.
 **Note for i18n-agent:** new paint.* keys (~60, FR/EN/AR) live in `src/features/peinture/i18n.ts` with `usePaintT()` which defers to the central `t()` first - you can absorb them into LanguageContext dictionaries at your convenience; central translations will then take precedence automatically.
 **Status:** OPEN - waiting for coordinator decision or user override.
+
+### Q-ADMIN-CONTENT-SEO
+**From:** admin-agent
+**To:** lead-engineer / shared-agent / i18n-agent
+**Date:** 2026-08-27
+**Question:** What Supabase/CMS contract should store SEO metadata, landing content, and pricing content? The current schema only exposes module names, prices, and publication status.
+**Impact:** `admin-content-seo` is partial/blocked after the safe module catalog editor; SEO/landing/pricing editing cannot be persisted without a contract.
+**Status:** OPEN
+
+### Q-ADMIN-REVENUE-I18N
+**From:** admin-agent
+**To:** i18n-agent
+**Date:** 2026-08-27
+**Question:** Please add dedicated localized keys for MRR and churn rate when the i18n lock is released; revenue calculations are complete and currently use existing localized dashboard/subscription labels.
+**Impact:** No data functionality is blocked; dedicated semantic labels would improve the analytics UI.
+**Status:** OPEN

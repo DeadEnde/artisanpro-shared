@@ -99,3 +99,5 @@
 - Admin overview task completed in parent commit `a5f037d` at 2026-08-26T19:57:35+00:00; real Supabase-backed overview reads were added and the security-agent `SecurityPanel.tsx` lock was respected.
 
 - Admin Security Center completed in parent commit `11b3573` at 2026-08-26T20:11:39+00:00; sessions/logs UI is delivered and all admin locks were released.
+
+- Admin revenue analytics completed in parent commit `da50f02` at 2026-08-27T13:11:33+00:00; Content/SEO stopped at the existing modules contract and is explicitly blocked pending a shared CMS schema.
