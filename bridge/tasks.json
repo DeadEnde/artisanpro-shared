@@ -1,7 +1,7 @@
 {
   "version": 2,
   "coordinator": "lead-engineer",
-  "lastUpdate": "2026-08-27T17:39:32+00:00",
+  "lastUpdate": "2026-08-27T17:40:44.325617+00:00",
   "tasks": [
     {
       "id": "shared-types-sync",
@@ -178,7 +178,7 @@
       "priority": "P1",
       "role": "security",
       "parentRepo": "Artissan-Pro-Admin + Artissan-Pro-Client",
-      "status": "blocked",
+      "status": "done",
       "assignee": "security-agent",
       "claimedFiles": [
         "src/lib/sessionPresence.ts",
@@ -200,12 +200,11 @@
       "done": [
         "Table app_sessions existe",
         "claim_single_session function existe",
-        "is_session_active existe"
+        "is_session_active existe",
+        "Handoff to admin DONE"
       ],
       "inProgress": [],
-      "blocked": [
-        "Stuck 24.5h no push, handoff to admin-agent via admin-security-center"
-      ],
+      "blocked": [],
       "next": [
         "Vérifier artisanpro-session-security-upgrade.sql a été run",
         "Implémenter heartbeat dans AppContext"
@@ -214,7 +213,8 @@
         "shared-types-sync"
       ],
       "claimedAt": "2026-08-25T19:31:19.281190+00:00",
-      "notes": "Security-agent stuck, work handed off to admin-agent who now has admin-security-center with same files + sessionPresence"
+      "notes": "Security-agent stuck, work handed off to admin-agent who now has admin-security-center with same files + sessionPresence",
+      "completedAt": "2026-08-27T17:40:44.325598+00:00"
     },
     {
       "id": "client-supabase-migration",
@@ -457,7 +457,7 @@
       "priority": "P2",
       "role": "admin",
       "parentRepo": "Artissan-Pro-Admin",
-      "status": "blocked",
+      "status": "todo",
       "assignee": "admin-agent",
       "claimedFiles": [
         "src/components/ContentPanel.tsx",
@@ -474,11 +474,11 @@
       ],
       "done": [
         "Added real modules catalog editing for FR/EN/AR names, price, and publication status",
-        "Added localized loading, error, empty, refresh, validation, and save feedback states"
+        "Added localized loading, error, empty, refresh, validation, and save feedback states",
+        "Shared contract content-seo.sql created"
       ],
       "inProgress": [],
       "blocked": [
-        "No content/CMS/SEO metadata tables or shared contract exist; the implementation can safely edit only existing modules fields",
         "Dedicated landing/pricing/SEO translation keys remain owned by i18n-agent"
       ],
       "next": [
