@@ -105,6 +105,23 @@
       ],
       "since": "2026-08-27T16:49:09.831123+00:00",
       "taskId": "design-security-vantra"
+    },
+    {
+      "agent": "i18n-agent",
+      "taskId": "i18n-admin-audit",
+      "files": [
+        "artisanpro-admin/src/components/ProfileSettings.tsx",
+        "artisanpro-admin/src/components/OverviewPanel.tsx"
+      ],
+      "since": "2026-08-27T16:44:42.663589+00:00"
+    },
+    {
+      "agent": "i18n-agent",
+      "taskId": "i18n-peinture-keys",
+      "files": [
+        "src/features/peinture/i18n.ts"
+      ],
+      "since": "2026-08-27T16:44:42.663601+00:00"
     }
   ],
   "releasedByLead": [

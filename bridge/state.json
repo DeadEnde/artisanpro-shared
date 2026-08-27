@@ -1,6 +1,6 @@
 {
-  "version": 10,
-  "coordinator": "lead-engineer",
+  "version": 11,
+  "coordinator": "shared-agent",
   "currentPhase": "Phase 1: Foundation Fix",
   "overallStatus": "in_progress",
   "lastUpdate": "2026-08-27T16:49:29.935251+00:00",
@@ -10,28 +10,207 @@
   "summary": "Staying on project with HorizonX design inspiration: Dispatched 5 design tasks (Mosk admin, Aether client, Energy peinture, Good Move landing, Vantra security) while keeping green construction SaaS approved design. Admin has 3 design tasks IN_PROGRESS (Mosk, Security Vantra, Content, Revenue), Client has 3 design tasks IN_PROGRESS (Aether, Landing, Entitlement, Saved, Peinture, Projects). No file overlap, safe parallel. Runners Python ACTIVE every 10s fast fetch. Tb9a 3la project.",
   "completedPhases": [],
   "currentTasks": {
-    "shared-types-sync": "done",
-    "i18n-complete-audit": "in_progress",
-    "peinture-workspace-premium": "in_progress",
-    "admin-modules-subscriptions": "done",
-    "security-center-sessions": "blocked",
-    "client-supabase-migration": "done",
-    "edge-function-security-logs": "in_progress",
-    "manual-payments-stripe-prep": "in_progress",
-    "admin-overview-enhancements": "done",
-    "admin-security-center": "done",
-    "client-projects-quotes-ui": "in_progress",
-    "admin-content-seo": "blocked",
-    "admin-revenue-analytics": "done",
-    "client-entitlement-ui": "in_progress",
-    "client-saved-calculations": "in_progress",
-    "i18n-admin-audit": "in_progress",
-    "i18n-peinture-keys": "in_progress",
-    "design-admin-mosk": "in_progress",
-    "design-client-aether": "in_progress",
-    "design-peinture-energy": "todo",
-    "design-landing-goodmove": "in_progress",
-    "design-security-vantra": "in_progress"
+    "i18n-complete-audit": {
+      "id": "i18n-complete-audit",
+      "title": "Full i18n Audit FR/EN/AR - Client + Admin",
+      "status": "in_progress",
+      "assignee": "i18n-agent",
+      "role": "i18n",
+      "parentRepo": "Artissan-Pro-Client + Artissan-Pro-Admin",
+      "priority": "P0",
+      "claimedFiles": [
+        "src/context/LanguageContext.tsx",
+        "src/i18n/*",
+        "artisanpro-admin/src/i18n/*",
+        "src/main.tsx (all visible strings)",
+        "artisanpro-admin/src/main.tsx (all visible strings)"
+      ],
+      "claimedAt": "2026-08-25T19:31:19.281172+00:00",
+      "completedAt": ""
+    },
+    "i18n-admin-audit": {
+      "id": "i18n-admin-audit",
+      "title": "i18n Admin Audit - Auth Gate, Profile, Overview",
+      "status": "in_progress",
+      "assignee": "i18n-agent",
+      "role": "i18n",
+      "parentRepo": "Artissan-Pro-Admin",
+      "priority": "P0",
+      "claimedFiles": [
+        "artisanpro-admin/src/components/ProfileSettings.tsx",
+        "artisanpro-admin/src/components/OverviewPanel.tsx"
+      ],
+      "claimedAt": "2026-08-27T16:44:42.663589+00:00",
+      "completedAt": ""
+    },
+    "peinture-workspace-premium": {
+      "id": "peinture-workspace-premium",
+      "title": "Premium Peinture Workspace - Finalisation",
+      "status": "in_progress",
+      "assignee": "client-agent",
+      "role": "peinture",
+      "parentRepo": "Artissan-Pro-Client",
+      "priority": "P1",
+      "claimedFiles": [
+        "src/features/peinture/*",
+        "src/context/AppContext.tsx",
+        "src/data/defaults.ts"
+      ],
+      "claimedAt": "2026-08-26T19:51:33.367686+00:00",
+      "completedAt": ""
+    },
+    "client-entitlement-ui": {
+      "id": "client-entitlement-ui",
+      "title": "Client Entitlement Status UI - Module Cards",
+      "status": "in_progress",
+      "assignee": "client-agent",
+      "role": "client",
+      "parentRepo": "Artissan-Pro-Client",
+      "priority": "P1",
+      "claimedFiles": [
+        "src/features/modules/ModulesPanel.tsx",
+        "src/context/AppContext.tsx"
+      ],
+      "claimedAt": "2026-08-27T13:02:30.789137+00:00",
+      "completedAt": ""
+    },
+    "client-saved-calculations": {
+      "id": "client-saved-calculations",
+      "title": "Client Saved Calculations Library UI",
+      "status": "in_progress",
+      "assignee": "client-agent",
+      "role": "client",
+      "parentRepo": "Artissan-Pro-Client",
+      "priority": "P1",
+      "claimedFiles": [
+        "src/features/peinture/LibraryPanel.tsx",
+        "src/features/peinture/storage.ts"
+      ],
+      "claimedAt": "2026-08-27T13:02:30.789146+00:00",
+      "completedAt": ""
+    },
+    "i18n-peinture-keys": {
+      "id": "i18n-peinture-keys",
+      "title": "i18n Peinture Keys - FR/EN/AR for Premium Workspace",
+      "status": "in_progress",
+      "assignee": "i18n-agent",
+      "role": "i18n",
+      "parentRepo": "Artissan-Pro-Client",
+      "priority": "P1",
+      "claimedFiles": [
+        "src/features/peinture/i18n.ts"
+      ],
+      "claimedAt": "2026-08-27T16:44:42.663601+00:00",
+      "completedAt": ""
+    },
+    "design-admin-mosk": {
+      "id": "design-admin-mosk",
+      "title": "Design Admin Mosk - Abstract Chart + High-Contrast CTA",
+      "status": "in_progress",
+      "assignee": "admin-agent",
+      "role": "admin",
+      "parentRepo": "Artissan-Pro-Admin",
+      "priority": "P1",
+      "claimedFiles": [
+        "src/components/OverviewPanel.tsx",
+        "src/components/Card.tsx",
+        "src/style.css"
+      ],
+      "claimedAt": "2026-08-27T16:49:04.484767+00:00",
+      "completedAt": ""
+    },
+    "design-client-aether": {
+      "id": "design-client-aether",
+      "title": "Design Client Aether Grid - Device Cards + Live Telemetry",
+      "status": "in_progress",
+      "assignee": "client-agent",
+      "role": "client",
+      "parentRepo": "Artissan-Pro-Client",
+      "priority": "P1",
+      "claimedFiles": [
+        "src/features/modules/ModulesPanel.tsx",
+        "src/components/SessionRow.tsx"
+      ],
+      "claimedAt": "2026-08-27T16:49:04.484779+00:00",
+      "completedAt": ""
+    },
+    "edge-function-security-logs": {
+      "id": "edge-function-security-logs",
+      "title": "Edge Function Security Logs + IP Hash + Retention",
+      "status": "in_progress",
+      "assignee": "api-agent",
+      "role": "api",
+      "parentRepo": "Artissan-Pro-API / Supabase",
+      "priority": "P2",
+      "claimedFiles": [
+        "supabase/functions/log-security-event/*",
+        "supabase/functions/cleanup-logs/*",
+        "artisanpro-security-logs.sql"
+      ],
+      "claimedAt": "2026-08-25T19:31:19.281193+00:00",
+      "completedAt": ""
+    },
+    "client-projects-quotes-ui": {
+      "id": "client-projects-quotes-ui",
+      "title": "Client Projects & Quotes UI with Supabase",
+      "status": "in_progress",
+      "assignee": "client-agent",
+      "role": "client",
+      "parentRepo": "Artissan-Pro-Client",
+      "priority": "P2",
+      "claimedFiles": [
+        "src/features/projects/ProjectsPanel.tsx",
+        "src/features/quotes/QuotesPanel.tsx",
+        "src/context/AppContext.tsx"
+      ],
+      "claimedAt": "2026-08-26T20:00:57.087658+00:00",
+      "completedAt": ""
+    },
+    "design-landing-goodmove": {
+      "id": "design-landing-goodmove",
+      "title": "Design Landing Good Move + Vantro - Conversion Focused",
+      "status": "in_progress",
+      "assignee": "client-agent",
+      "role": "client",
+      "parentRepo": "Artissan-Pro-Client",
+      "priority": "P2",
+      "claimedFiles": [
+        "src/features/landing/LandingHero.tsx",
+        "src/features/pricing/PricingSection.tsx"
+      ],
+      "claimedAt": "2026-08-27T16:49:04.484786+00:00",
+      "completedAt": ""
+    },
+    "design-security-vantra": {
+      "id": "design-security-vantra",
+      "title": "Design Security Vantra Facility OS - Chantier Monitoring",
+      "status": "in_progress",
+      "assignee": "security-agent",
+      "role": "security",
+      "parentRepo": "Artissan-Pro-Admin + Artissan-Pro-Client",
+      "priority": "P2",
+      "claimedFiles": [
+        "src/components/SecurityCenter.tsx",
+        "src/lib/sessionPresence.ts"
+      ],
+      "claimedAt": "2026-08-27T16:49:04.484789+00:00",
+      "completedAt": ""
+    },
+    "manual-payments-stripe-prep": {
+      "id": "manual-payments-stripe-prep",
+      "title": "Manual Payments Workflow + Stripe Prep",
+      "status": "in_progress",
+      "assignee": "billing-agent",
+      "role": "billing",
+      "parentRepo": "Artissan-Pro-Admin + Artissan-Pro-Client",
+      "priority": "P3",
+      "claimedFiles": [
+        "src/components/SubscriptionsPanel.tsx",
+        "src/components/PaymentHistory.tsx"
+      ],
+      "claimedAt": "2026-08-26T18:51:34.344Z",
+      "completedAt": ""
+    }
   },
   "claimedFiles": [],
   "done": [
@@ -74,36 +253,50 @@
   "task": "Premium Peinture Workspace - Finalisation",
   "status": "in_progress",
   "prevTask": {
-    "id": "admin-security-center",
+    "id": "admin-revenue-analytics",
+    "title": "Admin Revenue Analytics - Real Charts",
     "status": "done",
     "assignee": "admin-agent",
-    "role": "admin"
+    "role": "admin",
+    "parentRepo": "Artissan-Pro-Admin",
+    "priority": "P2",
+    "claimedFiles": [
+      "src/components/OverviewPanel.tsx",
+      "src/components/Card.tsx"
+    ],
+    "claimedAt": "2026-08-27T13:02:30.789131+00:00",
+    "completedAt": "2026-08-27T13:11:33+00:00"
   },
   "currTask": {
-    "id": "design-admin-mosk",
-    "title": "Design Admin Mosk",
+    "id": "i18n-complete-audit",
+    "title": "Full i18n Audit FR/EN/AR - Client + Admin",
     "status": "in_progress",
-    "assignee": "admin-agent",
-    "role": "admin",
-    "priority": "P1",
-    "designSource": "https://horizonx.so/explore/mosk"
+    "assignee": "i18n-agent",
+    "role": "i18n",
+    "parentRepo": "Artissan-Pro-Client + Artissan-Pro-Admin",
+    "priority": "P0",
+    "claimedFiles": [
+      "src/context/LanguageContext.tsx",
+      "src/i18n/*",
+      "artisanpro-admin/src/i18n/*",
+      "src/main.tsx (all visible strings)",
+      "artisanpro-admin/src/main.tsx (all visible strings)"
+    ],
+    "claimedAt": "2026-08-25T19:31:19.281172+00:00",
+    "completedAt": ""
   },
   "nextTask": {
-    "id": "design-client-aether",
-    "title": "Design Client Aether Grid",
-    "status": "in_progress",
-    "assignee": "client-agent",
-    "role": "client",
-    "priority": "P1",
-    "designSource": "https://horizonx.so/explore/aether-grid"
+    "id": "",
+    "status": "waiting_assignment",
+    "assignee": "",
+    "role": "",
+    "claimedFiles": []
   },
   "queue": {
-    "total": 22,
     "done": 6,
     "inProgress": 13,
     "todo": 1,
-    "blocked": 2,
-    "note": "Design-focused tasks staying on project - Mosk, Aether Grid, Energy Command, Good Move, Vantra"
+    "blocked": 2
   },
   "agentWindows": {
     "client-agent": {
@@ -154,5 +347,8 @@
       "Keep simple fast for Android no 3D/WebGL",
       "Enhance not replace existing panels"
     ]
-  }
+  },
+  "mode": "coordinator",
+  "lastSeenSha": "",
+  "updatedAt": "2026-08-27T17:31:17.740668+00:00"
 }
