@@ -1,7 +1,7 @@
 {
   "version": 2,
   "coordinator": "lead-engineer",
-  "lastUpdate": "2026-08-27T16:49:04.484812+00:00",
+  "lastUpdate": "2026-08-27T17:36:50+00:00",
   "tasks": [
     {
       "id": "shared-types-sync",
@@ -682,7 +682,8 @@
       "claimedFiles": [
         "src/components/OverviewPanel.tsx",
         "src/components/Card.tsx",
-        "src/style.css"
+        "src/style.css",
+        "src/components/ProfileSettings.tsx"
       ],
       "description": "Apply Mosk design to admin dashboard while staying on project: Keep dark green sidebar approved, add abstract analytics chart imagery to revenue chart empty state (keep 0 MAD but premium look), high-contrast CTA for Export and Security logs buttons, integration badges Supabase/Vercel/Google like Mosk shows Notion/Slack.",
       "acceptanceCriteria": [
@@ -696,13 +697,13 @@
       ],
       "done": [],
       "inProgress": [
-        "Starting Mosk design application"
+        "Add lightweight abstract chart treatment and high-contrast Admin CTAs",
+        "Add localized-safe integration badges in Profile Settings"
       ],
       "blocked": [],
       "next": [
-        "Add abstract chart background",
-        "Update CTA styles",
-        "Add integration badges"
+        "Run Admin build and tests",
+        "Push implementation and release locks"
       ],
       "dependencies": [
         "shared-types-sync",

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "lastUpdate": "2026-08-27T16:49:09.831184+00:00",
+  "lastUpdate": "2026-08-27T17:36:50+00:00",
   "locks": [
     {
       "agent": "i18n-agent",
@@ -74,7 +74,8 @@
       "files": [
         "src/components/OverviewPanel.tsx",
         "src/components/Card.tsx",
-        "src/style.css"
+        "src/style.css",
+        "src/components/ProfileSettings.tsx"
       ],
       "since": "2026-08-27T16:49:09.831107+00:00",
       "taskId": "design-admin-mosk"
