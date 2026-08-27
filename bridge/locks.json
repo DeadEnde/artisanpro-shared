@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "lastUpdate": "2026-08-27T17:39:32+00:00",
+  "lastUpdate": "2026-08-27T17:40:57.969Z",
   "locks": [
     {
       "agent": "i18n-agent",
@@ -112,6 +112,15 @@
         "src/features/peinture/i18n.ts"
       ],
       "since": "2026-08-27T16:44:42.663601+00:00"
+    },
+    {
+      "agent": "admin-agent",
+      "files": [
+        "src/components/ContentPanel.tsx",
+        "src/components/AdminShell.tsx"
+      ],
+      "since": "2026-08-27T17:40:57.968Z",
+      "taskId": "admin-content-seo"
     }
   ],
   "releasedByLead": [

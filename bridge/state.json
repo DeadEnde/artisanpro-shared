@@ -3,199 +3,35 @@
   "coordinator": "shared-agent",
   "currentPhase": "Phase 1: Foundation Fix",
   "overallStatus": "in_progress",
-  "lastUpdate": "2026-08-27T17:39:32+00:00",
+  "lastUpdate": "2026-08-27T17:40:57.969Z",
   "activeTask": "multi-agent-parallel-execution",
   "parentRepo": "artisanpro-shared",
   "role": "client-agent",
   "summary": "Admin Mosk design task DONE (parent commit c4557a6): lightweight abstract chart, high-contrast CTAs, integration badges, and responsive RTL-safe styling delivered.",
   "completedPhases": [],
   "currentTasks": {
-    "i18n-complete-audit": {
-      "id": "i18n-complete-audit",
-      "title": "Full i18n Audit FR/EN/AR - Client + Admin",
-      "status": "in_progress",
-      "assignee": "i18n-agent",
-      "role": "i18n",
-      "parentRepo": "Artissan-Pro-Client + Artissan-Pro-Admin",
-      "priority": "P0",
-      "claimedFiles": [
-        "src/context/LanguageContext.tsx",
-        "src/i18n/*",
-        "artisanpro-admin/src/i18n/*",
-        "src/main.tsx (all visible strings)",
-        "artisanpro-admin/src/main.tsx (all visible strings)"
-      ],
-      "claimedAt": "2026-08-25T19:31:19.281172+00:00",
-      "completedAt": ""
-    },
-    "i18n-admin-audit": {
-      "id": "i18n-admin-audit",
-      "title": "i18n Admin Audit - Auth Gate, Profile, Overview",
-      "status": "in_progress",
-      "assignee": "i18n-agent",
-      "role": "i18n",
-      "parentRepo": "Artissan-Pro-Admin",
-      "priority": "P0",
-      "claimedFiles": [
-        "artisanpro-admin/src/components/ProfileSettings.tsx",
-        "artisanpro-admin/src/components/OverviewPanel.tsx"
-      ],
-      "claimedAt": "2026-08-27T16:44:42.663589+00:00",
-      "completedAt": ""
-    },
-    "peinture-workspace-premium": {
-      "id": "peinture-workspace-premium",
-      "title": "Premium Peinture Workspace - Finalisation",
-      "status": "in_progress",
-      "assignee": "client-agent",
-      "role": "peinture",
-      "parentRepo": "Artissan-Pro-Client",
-      "priority": "P1",
-      "claimedFiles": [
-        "src/features/peinture/*",
-        "src/context/AppContext.tsx",
-        "src/data/defaults.ts"
-      ],
-      "claimedAt": "2026-08-26T19:51:33.367686+00:00",
-      "completedAt": ""
-    },
-    "client-entitlement-ui": {
-      "id": "client-entitlement-ui",
-      "title": "Client Entitlement Status UI - Module Cards",
-      "status": "in_progress",
-      "assignee": "client-agent",
-      "role": "client",
-      "parentRepo": "Artissan-Pro-Client",
-      "priority": "P1",
-      "claimedFiles": [
-        "src/features/modules/ModulesPanel.tsx",
-        "src/context/AppContext.tsx"
-      ],
-      "claimedAt": "2026-08-27T13:02:30.789137+00:00",
-      "completedAt": ""
-    },
-    "client-saved-calculations": {
-      "id": "client-saved-calculations",
-      "title": "Client Saved Calculations Library UI",
-      "status": "in_progress",
-      "assignee": "client-agent",
-      "role": "client",
-      "parentRepo": "Artissan-Pro-Client",
-      "priority": "P1",
-      "claimedFiles": [
-        "src/features/peinture/LibraryPanel.tsx",
-        "src/features/peinture/storage.ts"
-      ],
-      "claimedAt": "2026-08-27T13:02:30.789146+00:00",
-      "completedAt": ""
-    },
-    "i18n-peinture-keys": {
-      "id": "i18n-peinture-keys",
-      "title": "i18n Peinture Keys - FR/EN/AR for Premium Workspace",
-      "status": "in_progress",
-      "assignee": "i18n-agent",
-      "role": "i18n",
-      "parentRepo": "Artissan-Pro-Client",
-      "priority": "P1",
-      "claimedFiles": [
-        "src/features/peinture/i18n.ts"
-      ],
-      "claimedAt": "2026-08-27T16:44:42.663601+00:00",
-      "completedAt": ""
-    },
+    "shared-types-sync": "done",
+    "i18n-complete-audit": "in_progress",
+    "peinture-workspace-premium": "in_progress",
+    "admin-modules-subscriptions": "done",
+    "security-center-sessions": "done",
+    "client-supabase-migration": "done",
+    "edge-function-security-logs": "in_progress",
+    "manual-payments-stripe-prep": "in_progress",
+    "admin-overview-enhancements": "done",
+    "admin-security-center": "done",
+    "client-projects-quotes-ui": "in_progress",
+    "admin-content-seo": "in_progress",
+    "admin-revenue-analytics": "done",
+    "client-entitlement-ui": "in_progress",
+    "client-saved-calculations": "in_progress",
+    "i18n-admin-audit": "in_progress",
+    "i18n-peinture-keys": "in_progress",
     "design-admin-mosk": "done",
-    "design-client-aether": {
-      "id": "design-client-aether",
-      "title": "Design Client Aether Grid - Device Cards + Live Telemetry",
-      "status": "in_progress",
-      "assignee": "client-agent",
-      "role": "client",
-      "parentRepo": "Artissan-Pro-Client",
-      "priority": "P1",
-      "claimedFiles": [
-        "src/features/modules/ModulesPanel.tsx",
-        "src/components/SessionRow.tsx"
-      ],
-      "claimedAt": "2026-08-27T16:49:04.484779+00:00",
-      "completedAt": ""
-    },
-    "edge-function-security-logs": {
-      "id": "edge-function-security-logs",
-      "title": "Edge Function Security Logs + IP Hash + Retention",
-      "status": "in_progress",
-      "assignee": "api-agent",
-      "role": "api",
-      "parentRepo": "Artissan-Pro-API / Supabase",
-      "priority": "P2",
-      "claimedFiles": [
-        "supabase/functions/log-security-event/*",
-        "supabase/functions/cleanup-logs/*",
-        "artisanpro-security-logs.sql"
-      ],
-      "claimedAt": "2026-08-25T19:31:19.281193+00:00",
-      "completedAt": ""
-    },
-    "client-projects-quotes-ui": {
-      "id": "client-projects-quotes-ui",
-      "title": "Client Projects & Quotes UI with Supabase",
-      "status": "in_progress",
-      "assignee": "client-agent",
-      "role": "client",
-      "parentRepo": "Artissan-Pro-Client",
-      "priority": "P2",
-      "claimedFiles": [
-        "src/features/projects/ProjectsPanel.tsx",
-        "src/features/quotes/QuotesPanel.tsx",
-        "src/context/AppContext.tsx"
-      ],
-      "claimedAt": "2026-08-26T20:00:57.087658+00:00",
-      "completedAt": ""
-    },
-    "design-landing-goodmove": {
-      "id": "design-landing-goodmove",
-      "title": "Design Landing Good Move + Vantro - Conversion Focused",
-      "status": "in_progress",
-      "assignee": "client-agent",
-      "role": "client",
-      "parentRepo": "Artissan-Pro-Client",
-      "priority": "P2",
-      "claimedFiles": [
-        "src/features/landing/LandingHero.tsx",
-        "src/features/pricing/PricingSection.tsx"
-      ],
-      "claimedAt": "2026-08-27T16:49:04.484786+00:00",
-      "completedAt": ""
-    },
-    "design-security-vantra": {
-      "id": "design-security-vantra",
-      "title": "Design Security Vantra Facility OS - Chantier Monitoring",
-      "status": "in_progress",
-      "assignee": "security-agent",
-      "role": "security",
-      "parentRepo": "Artissan-Pro-Admin + Artissan-Pro-Client",
-      "priority": "P2",
-      "claimedFiles": [
-        "src/components/SecurityCenter.tsx",
-        "src/lib/sessionPresence.ts"
-      ],
-      "claimedAt": "2026-08-27T16:49:04.484789+00:00",
-      "completedAt": ""
-    },
-    "manual-payments-stripe-prep": {
-      "id": "manual-payments-stripe-prep",
-      "title": "Manual Payments Workflow + Stripe Prep",
-      "status": "in_progress",
-      "assignee": "billing-agent",
-      "role": "billing",
-      "parentRepo": "Artissan-Pro-Admin + Artissan-Pro-Client",
-      "priority": "P3",
-      "claimedFiles": [
-        "src/components/SubscriptionsPanel.tsx",
-        "src/components/PaymentHistory.tsx"
-      ],
-      "claimedAt": "2026-08-26T18:51:34.344Z",
-      "completedAt": ""
-    }
+    "design-client-aether": "in_progress",
+    "design-peinture-energy": "todo",
+    "design-landing-goodmove": "in_progress",
+    "design-security-vantra": "in_progress"
   },
   "claimedFiles": [],
   "done": [
@@ -218,7 +54,7 @@
     "Admin commit c4557a6 passed npm run build and npm run test"
   ],
   "inProgress": [
-    "Auto-assigned 1 tasks: manual-payments-stripe-prep"
+    "Auto-assigned 1 tasks: admin-content-seo"
   ],
   "blocked": [],
   "next": [
@@ -229,7 +65,7 @@
     "Should we create separate repos for Artissan-Pro-Client and Artissan-Pro-API now, or keep working from workspace zip?",
     "Stripe: confirm we stay manual until Phase 4 - user said manual now, Stripe later"
   ],
-  "lastCoordinatorMessage": "Auto-assigned 1 tasks: manual-payments-stripe-prep at 2026-08-26T18:51:34.345Z",
+  "lastCoordinatorMessage": "Auto-assigned 1 tasks: admin-content-seo at 2026-08-27T17:40:57.969Z",
   "gitConfig": {
     "email": "mesterabdeo@gmail.com",
     "name": "Abdeo ArtisanPro"
