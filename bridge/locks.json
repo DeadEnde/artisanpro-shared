@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "lastUpdate": "2026-08-27T17:44:17.675761+00:00",
+  "lastUpdate": "2026-08-27T17:49:07.709026+00:00",
   "locks": [
     {
       "agent": "i18n-agent",
@@ -130,6 +130,37 @@
       ],
       "since": "2026-08-27T17:44:17.675722+00:00",
       "taskId": "shared-content-seo-types"
+    },
+    {
+      "agent": "client-agent",
+      "files": [
+        "src/features/peinture/QuoteNumberEditor.tsx",
+        "src/features/peinture/ValidityDateEditor.tsx",
+        "src/features/peinture/PaymentTermsEditor.tsx",
+        "src/features/peinture/NotesEditor.tsx",
+        "src/features/peinture/TermsAndConditions.tsx",
+        "src/features/peinture/AcceptanceSignature.tsx"
+      ],
+      "since": "2026-08-27T17:49:07.708324+00:00",
+      "taskId": "client-quote-invoice"
+    },
+    {
+      "agent": "admin-agent",
+      "files": [
+        "src/components/AdminShell.tsx",
+        "src/components/UsersPanel.tsx"
+      ],
+      "since": "2026-08-27T17:49:07.708326+00:00",
+      "taskId": "admin-legacy-cleanup"
+    },
+    {
+      "agent": "i18n-agent",
+      "files": [
+        "src/styles.css",
+        "artisanpro-admin/src/style.css"
+      ],
+      "since": "2026-08-27T17:49:07.708331+00:00",
+      "taskId": "ui-rtl-responsive-audit"
     }
   ],
   "releasedByLead": [

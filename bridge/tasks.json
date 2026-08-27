@@ -1,7 +1,7 @@
 {
   "version": 2,
   "coordinator": "lead-engineer",
-  "lastUpdate": "2026-08-27T17:44:12.461970+00:00",
+  "lastUpdate": "2026-08-27T17:48:41.788478+00:00",
   "tasks": [
     {
       "id": "shared-types-sync",
@@ -992,6 +992,174 @@
         "admin-modules-subscriptions"
       ],
       "claimedAt": null
+    },
+    {
+      "id": "peinture-room-controls",
+      "title": "Peinture Room Controls - Room Type, Ceiling, Doors/Trims, Interior/Exterior, Wall Condition, Regional Preset, Upsell",
+      "priority": "P1",
+      "role": "peinture",
+      "parentRepo": "Artissan-Pro-Client",
+      "status": "in_progress",
+      "assignee": "peinture-agent",
+      "claimedFiles": [
+        "src/features/peinture/RoomTypeControl.tsx",
+        "src/features/peinture/CeilingToggle.tsx",
+        "src/features/peinture/DoorsTrimsToggle.tsx",
+        "src/features/peinture/InteriorExteriorSelector.tsx",
+        "src/features/peinture/WallConditionUI.tsx",
+        "src/features/peinture/RegionalPresetUI.tsx",
+        "src/features/peinture/UpsellSuggestionsUI.tsx"
+      ],
+      "description": "Add missing room controls to PeintureWorkspace: room type control, ceiling toggle, doors/trims toggle, interior/exterior selector, wall condition UI, regional preset UI, upsell suggestions UI. Keep simple fast for Android.",
+      "acceptanceCriteria": [
+        "Room type control UI",
+        "Ceiling toggle",
+        "Doors/trims toggle",
+        "Interior/exterior selector",
+        "Wall condition UI",
+        "Regional preset UI",
+        "Upsell suggestions UI",
+        "FR/EN/AR i18n keys",
+        "Build passes"
+      ],
+      "done": [],
+      "inProgress": [
+        "Starting room controls"
+      ],
+      "blocked": [],
+      "next": [
+        "Add room type",
+        "Add ceiling toggle",
+        "Add doors/trims"
+      ],
+      "dependencies": [
+        "shared-types-sync",
+        "peinture-workspace-premium"
+      ],
+      "claimedAt": "2026-08-27T17:48:41.788430+00:00",
+      "designSource": "Energy Command floor selector"
+    },
+    {
+      "id": "client-quote-invoice",
+      "title": "Client Quote/Invoice Editors - Number, Validity, Payment Terms, Notes, Terms, Signature",
+      "priority": "P1",
+      "role": "client",
+      "parentRepo": "Artissan-Pro-Client",
+      "status": "in_progress",
+      "assignee": "client-agent",
+      "claimedFiles": [
+        "src/features/peinture/QuoteNumberEditor.tsx",
+        "src/features/peinture/ValidityDateEditor.tsx",
+        "src/features/peinture/PaymentTermsEditor.tsx",
+        "src/features/peinture/NotesEditor.tsx",
+        "src/features/peinture/TermsAndConditions.tsx",
+        "src/features/peinture/AcceptanceSignature.tsx"
+      ],
+      "description": "Build quote/invoice editors: quote number editor, validity date editor, payment terms editor, notes editor, terms and conditions, acceptance/signature area polish, client/project metadata form, professional invoice line-item detail.",
+      "acceptanceCriteria": [
+        "Quote number editor",
+        "Validity date editor",
+        "Payment terms editor",
+        "Notes editor",
+        "Terms and conditions",
+        "Acceptance/signature area",
+        "Client/project metadata form",
+        "Invoice line-item detail",
+        "Build passes"
+      ],
+      "done": [],
+      "inProgress": [
+        "Starting quote/invoice editors"
+      ],
+      "blocked": [],
+      "next": [
+        "Add number editor",
+        "Add validity editor",
+        "Add payment terms"
+      ],
+      "dependencies": [
+        "shared-types-sync",
+        "peinture-workspace-premium"
+      ],
+      "claimedAt": "2026-08-27T17:48:41.788445+00:00"
+    },
+    {
+      "id": "admin-legacy-cleanup",
+      "title": "Admin Legacy Cleanup - Remove Dead Code + Split Components",
+      "priority": "P2",
+      "role": "admin",
+      "parentRepo": "Artissan-Pro-Admin",
+      "status": "in_progress",
+      "assignee": "admin-agent",
+      "claimedFiles": [
+        "src/components/AdminShell.tsx",
+        "src/components/OverviewPanel.tsx",
+        "src/components/UsersPanel.tsx"
+      ],
+      "description": "Cleanup legacy/dead code in artisanpro-admin/src/main.tsx: Remove AdminApp, Overview, Manage, labels dictionary. Split AdminPro into reusable components: AdminShell, UserDetailDrawer, ModuleAccessPanel, SubscriptionPanel, SecurityCenter.",
+      "acceptanceCriteria": [
+        "Remove AdminApp legacy",
+        "Remove Overview legacy",
+        "Remove Manage legacy",
+        "Remove labels dictionary",
+        "Split into reusable components AdminShell, UserDetailDrawer, ModuleAccessPanel, SubscriptionPanel, SecurityCenter",
+        "Recommended structure i18n/components/features/lib",
+        "Build passes"
+      ],
+      "done": [],
+      "inProgress": [
+        "Starting legacy cleanup"
+      ],
+      "blocked": [],
+      "next": [
+        "Remove AdminApp",
+        "Remove Overview",
+        "Split components"
+      ],
+      "dependencies": [
+        "shared-types-sync",
+        "admin-modules-subscriptions",
+        "admin-overview-enhancements"
+      ],
+      "claimedAt": "2026-08-27T17:48:41.788451+00:00"
+    },
+    {
+      "id": "ui-rtl-responsive-audit",
+      "title": "UI RTL Responsive Audit - Arabic FR/EN/AR",
+      "priority": "P1",
+      "role": "i18n",
+      "parentRepo": "Artissan-Pro-Client + Artissan-Pro-Admin",
+      "status": "in_progress",
+      "assignee": "i18n-agent",
+      "claimedFiles": [
+        "src/styles.css",
+        "artisanpro-admin/src/style.css"
+      ],
+      "description": "Check Arabic RTL in: client sidebar, admin sidebar, mobile navigation, tables, module panels, subscription panels, peinture workspace, quote preview, print layout, icons and button spacing, forms, badges, drawer alignment. Replace directional CSS with logical CSS.",
+      "acceptanceCriteria": [
+        "Arabic RTL verified in sidebar, tables, forms, modals, mobile nav",
+        "Replace margin-left/right with margin-inline-start/end",
+        "Replace padding-left/right with padding-inline",
+        "Replace left/right with inset-inline-start/end",
+        "text-align start/end not left/right",
+        "Icons and button spacing logical",
+        "Build passes FR/EN/AR"
+      ],
+      "done": [],
+      "inProgress": [
+        "Starting RTL audit"
+      ],
+      "blocked": [],
+      "next": [
+        "Check sidebar RTL",
+        "Check tables RTL",
+        "Replace directional CSS"
+      ],
+      "dependencies": [
+        "shared-types-sync",
+        "i18n-complete-audit"
+      ],
+      "claimedAt": "2026-08-27T17:48:41.788456+00:00"
     }
   ]
 }
