@@ -1,13 +1,13 @@
 {
-  "version": 6,
+  "version": 8,
   "coordinator": "lead-engineer",
   "currentPhase": "Phase 1: Foundation Fix",
   "overallStatus": "in_progress",
-  "lastUpdate": "2026-08-26T20:11:39+00:00",
+  "lastUpdate": "2026-08-27T13:03:13.930192+00:00",
   "activeTask": "multi-agent-parallel-execution",
   "parentRepo": "artisanpro-shared",
   "role": "client-agent",
-  "summary": "Admin Security Center task DONE (parent commit 11b3573); real sessions, online/offline, duration, force logout, and app/event filters delivered.",
+  "summary": "Manual dispatch per user request: Admin and client were waiting for new tasks. Dispatched 4 new tasks: admin-content-seo IN_PROGRESS (admin), admin-revenue-analytics IN_PROGRESS (admin), client-entitlement-ui IN_PROGRESS (client), client-saved-calculations IN_PROGRESS (client). Now admin has 2 new IN_PROGRESS + 3 DONE, client has 2 new + 2 existing IN_PROGRESS + 1 DONE. Differentiated: admin Content+Revenue+Security, client Peinture+Projects+Entitlement+SavedCalcs. Locks 9 no cross-agent overlap. Runners 3 Python ACTIVE 24/7.",
   "completedPhases": [],
   "currentTasks": {
     "shared-types-sync": "done",
@@ -20,7 +20,11 @@
     "manual-payments-stripe-prep": "in_progress",
     "admin-overview-enhancements": "done",
     "admin-security-center": "done",
-    "client-projects-quotes-ui": "in_progress"
+    "client-projects-quotes-ui": "in_progress",
+    "admin-content-seo": "in_progress",
+    "admin-revenue-analytics": "in_progress",
+    "client-entitlement-ui": "in_progress",
+    "client-saved-calculations": "in_progress"
   },
   "claimedFiles": [],
   "done": [
@@ -58,8 +62,8 @@
   "task": "Premium Peinture Workspace - Finalisation",
   "status": "in_progress",
   "prevTask": {
-    "id": "admin-overview-enhancements",
-    "title": "Admin Overview",
+    "id": "admin-security-center",
+    "title": "Admin Security Center",
     "status": "done",
     "assignee": "admin-agent",
     "completedAt": "2026-08-26T19:57:53+00:00",
@@ -67,29 +71,28 @@
   },
   "currTask": {
     "id": "peinture-workspace-premium",
-    "title": "Peinture Workspace",
+    "title": "Peinture Workspace ~95%",
     "status": "in_progress",
     "assignee": "client-agent",
     "role": "peinture",
-    "priority": "P1"
+    "priority": "P1",
+    "note": "Client-agent 11 done, wiring pending Q14"
   },
   "nextTask": {
-    "id": "admin-security-center",
-    "title": "Admin Security Center",
-    "status": "done",
+    "id": "admin-content-seo",
+    "title": "Admin Content & SEO",
+    "status": "in_progress",
     "assignee": "admin-agent",
     "role": "admin",
-    "priority": "P1",
-    "completedAt": "2026-08-26T20:11:39+00:00",
-    "commit": "11b3573"
+    "priority": "P2"
   },
   "queue": {
-    "prev": "admin-overview DONE",
-    "curr": "peinture (client) + admin-security (admin) + billing + api + i18n IN_PROGRESS",
-    "next": "client-projects-quotes (client) IN_PROGRESS",
-    "total": 11,
-    "done": 4,
-    "inProgress": 5,
+    "prev": "admin-security DONE",
+    "curr": "peinture (client) + client-projects (client) + admin-security (admin) + billing + api + i18n IN_PROGRESS + 4 new tasks",
+    "next": "peinture-validation, security-heartbeat, i18n-client TODO waiting locks",
+    "total": 15,
+    "done": 5,
+    "inProgress": 8,
     "todo": 1,
     "blocked": 1
   },

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "lastUpdate": "2026-08-26T20:11:39+00:00",
+  "lastUpdate": "2026-08-27T13:03:02.166025+00:00",
   "locks": [
     {
       "agent": "i18n-agent",
@@ -51,6 +51,40 @@
       ],
       "since": "2026-08-26T20:01:08.929398+00:00",
       "taskId": "client-projects-quotes-ui"
+    },
+    {
+      "agent": "admin-agent",
+      "files": [
+        "src/components/ContentPanel.tsx"
+      ],
+      "since": "2026-08-27T13:03:02.161705+00:00",
+      "taskId": "admin-content-seo"
+    },
+    {
+      "agent": "admin-agent",
+      "files": [
+        "src/components/OverviewPanel.tsx",
+        "src/components/Card.tsx"
+      ],
+      "since": "2026-08-27T13:03:02.161717+00:00",
+      "taskId": "admin-revenue-analytics"
+    },
+    {
+      "agent": "client-agent",
+      "files": [
+        "src/features/modules/ModulesPanel.tsx"
+      ],
+      "since": "2026-08-27T13:03:02.161720+00:00",
+      "taskId": "client-entitlement-ui"
+    },
+    {
+      "agent": "client-agent",
+      "files": [
+        "src/features/peinture/LibraryPanel.tsx",
+        "src/features/peinture/storage.ts"
+      ],
+      "since": "2026-08-27T13:03:02.161722+00:00",
+      "taskId": "client-saved-calculations"
     }
   ],
   "releasedByLead": [

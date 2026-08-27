@@ -1,7 +1,7 @@
 {
   "version": 2,
   "coordinator": "lead-engineer",
-  "lastUpdate": "2026-08-26T20:11:39+00:00",
+  "lastUpdate": "2026-08-27T13:02:30.789170+00:00",
   "tasks": [
     {
       "id": "shared-types-sync",
@@ -450,6 +450,157 @@
         "client-supabase-migration"
       ],
       "claimedAt": "2026-08-26T20:00:57.087658+00:00"
+    },
+    {
+      "id": "admin-content-seo",
+      "title": "Admin Content & SEO Panel - Real Implementation",
+      "priority": "P2",
+      "role": "admin",
+      "parentRepo": "Artissan-Pro-Admin",
+      "status": "in_progress",
+      "assignee": "admin-agent",
+      "claimedFiles": [
+        "src/components/ContentPanel.tsx",
+        "src/components/AdminShell.tsx"
+      ],
+      "description": "Build real Content & SEO panel: currently empty state, needs real implementation for SEO metadata, landing content, pricing content, with i18n FR/EN/AR.",
+      "acceptanceCriteria": [
+        "ContentPanel shows real content from DB or CMS",
+        "SEO metadata editable",
+        "Landing content FR/EN/AR",
+        "Pricing content",
+        "Empty states localized",
+        "Build passes"
+      ],
+      "done": [],
+      "inProgress": [
+        "Starting Content & SEO panel"
+      ],
+      "blocked": [],
+      "next": [
+        "Wire content from DB",
+        "Add SEO editor",
+        "Add i18n"
+      ],
+      "dependencies": [
+        "shared-types-sync"
+      ],
+      "claimedAt": "2026-08-27T13:02:30.789110+00:00"
+    },
+    {
+      "id": "admin-revenue-analytics",
+      "title": "Admin Revenue Analytics - Real Charts",
+      "priority": "P2",
+      "role": "admin",
+      "parentRepo": "Artissan-Pro-Admin",
+      "status": "in_progress",
+      "assignee": "admin-agent",
+      "claimedFiles": [
+        "src/components/OverviewPanel.tsx",
+        "src/components/Card.tsx"
+      ],
+      "description": "Build real revenue analytics: monthly revenue chart from subscriptions, MRR, churn, with real data not fake, localized.",
+      "acceptanceCriteria": [
+        "Revenue chart real from subscriptions",
+        "MRR calculation",
+        "Churn rate",
+        "No fake data (0 if none)",
+        "Localized",
+        "Build passes"
+      ],
+      "done": [],
+      "inProgress": [
+        "Starting revenue analytics"
+      ],
+      "blocked": [],
+      "next": [
+        "Wire subscriptions data",
+        "Calculate MRR",
+        "Add chart"
+      ],
+      "dependencies": [
+        "shared-types-sync",
+        "admin-modules-subscriptions"
+      ],
+      "claimedAt": "2026-08-27T13:02:30.789131+00:00"
+    },
+    {
+      "id": "client-entitlement-ui",
+      "title": "Client Entitlement Status UI - Module Cards",
+      "priority": "P1",
+      "role": "client",
+      "parentRepo": "Artissan-Pro-Client",
+      "status": "in_progress",
+      "assignee": "client-agent",
+      "claimedFiles": [
+        "src/features/modules/ModulesPanel.tsx",
+        "src/context/AppContext.tsx"
+      ],
+      "description": "Wire entitlement status/expiry UI in module cards: show status, expiry, is_unlocked from moduleEntitlements, upgrade CTA, contact admin CTA, refresh after admin changes. Was blocked by i18n lock on src/main.tsx, now data-ready.",
+      "acceptanceCriteria": [
+        "Module cards show entitlement status",
+        "Expiry displayed with formatDate",
+        "is_unlocked logic",
+        "Upgrade CTA for locked",
+        "Contact admin CTA",
+        "Refresh on focus",
+        "Build passes"
+      ],
+      "done": [],
+      "inProgress": [
+        "Starting entitlement UI wiring"
+      ],
+      "blocked": [],
+      "next": [
+        "Wire ModuleCard status",
+        "Add expiry display",
+        "Add CTA"
+      ],
+      "dependencies": [
+        "shared-types-sync",
+        "client-supabase-migration"
+      ],
+      "claimedAt": "2026-08-27T13:02:30.789137+00:00"
+    },
+    {
+      "id": "client-saved-calculations",
+      "title": "Client Saved Calculations Library UI",
+      "priority": "P1",
+      "role": "client",
+      "parentRepo": "Artissan-Pro-Client",
+      "status": "in_progress",
+      "assignee": "client-agent",
+      "claimedFiles": [
+        "src/features/peinture/LibraryPanel.tsx",
+        "src/features/peinture/storage.ts"
+      ],
+      "description": "Build saved calculations library UI: My Calculations screen, save/open/rename/duplicate/delete/import JSON/export JSON/CSV, inline errors, using paint_calculations table.",
+      "acceptanceCriteria": [
+        "My Calculations screen",
+        "Save calculation",
+        "Open calculation",
+        "Rename/duplicate/delete",
+        "Import JSON",
+        "Export JSON/CSV",
+        "Inline errors",
+        "Build passes"
+      ],
+      "done": [],
+      "inProgress": [
+        "Starting saved calculations UI"
+      ],
+      "blocked": [],
+      "next": [
+        "Create LibraryPanel",
+        "Wire storage",
+        "Add import/export"
+      ],
+      "dependencies": [
+        "shared-types-sync",
+        "client-supabase-migration",
+        "peinture-workspace-premium"
+      ],
+      "claimedAt": "2026-08-27T13:02:30.789146+00:00"
     }
   ]
 }
