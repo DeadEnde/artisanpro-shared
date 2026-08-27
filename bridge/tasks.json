@@ -1,7 +1,7 @@
 {
   "version": 2,
   "coordinator": "lead-engineer",
-  "lastUpdate": "2026-08-27T13:11:33+00:00",
+  "lastUpdate": "2026-08-27T16:44:42.663615+00:00",
   "tasks": [
     {
       "id": "shared-types-sync",
@@ -605,6 +605,71 @@
         "peinture-workspace-premium"
       ],
       "claimedAt": "2026-08-27T13:02:30.789146+00:00"
+    },
+    {
+      "id": "i18n-admin-audit",
+      "title": "i18n Admin Audit - Auth Gate, Profile, Overview",
+      "priority": "P0",
+      "role": "i18n",
+      "parentRepo": "Artissan-Pro-Admin",
+      "status": "in_progress",
+      "assignee": "i18n-agent",
+      "claimedFiles": [
+        "artisanpro-admin/src/components/ProfileSettings.tsx",
+        "artisanpro-admin/src/components/OverviewPanel.tsx"
+      ],
+      "description": "Admin i18n audit for ProfileSettings, OverviewPanel, auth gate, header. No hardcoded text.",
+      "acceptanceCriteria": [
+        "No hardcoded in ProfileSettings",
+        "No hardcoded in Overview",
+        "FR/EN/AR dicts",
+        "Build passes"
+      ],
+      "done": [],
+      "inProgress": [
+        "Starting admin i18n audit"
+      ],
+      "blocked": [],
+      "next": [
+        "Scan ProfileSettings",
+        "Scan Overview"
+      ],
+      "dependencies": [
+        "shared-types-sync"
+      ],
+      "claimedAt": "2026-08-27T16:44:42.663589+00:00"
+    },
+    {
+      "id": "i18n-peinture-keys",
+      "title": "i18n Peinture Keys - FR/EN/AR for Premium Workspace",
+      "priority": "P1",
+      "role": "i18n",
+      "parentRepo": "Artissan-Pro-Client",
+      "status": "in_progress",
+      "assignee": "i18n-agent",
+      "claimedFiles": [
+        "src/features/peinture/i18n.ts"
+      ],
+      "description": "Create paint.* keys FR/EN/AR for premium workspace: validation, pricing strategy, package selector, quote preview, library, exports.",
+      "acceptanceCriteria": [
+        "paint.* keys FR/EN/AR ~60 keys",
+        "usePaintT hook",
+        "Build passes"
+      ],
+      "done": [],
+      "inProgress": [
+        "Starting peinture i18n keys"
+      ],
+      "blocked": [],
+      "next": [
+        "Add paint keys FR",
+        "Add EN",
+        "Add AR"
+      ],
+      "dependencies": [
+        "shared-types-sync"
+      ],
+      "claimedAt": "2026-08-27T16:44:42.663601+00:00"
     }
   ]
 }

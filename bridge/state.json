@@ -1,13 +1,13 @@
 {
-  "version": 8,
+  "version": 9,
   "coordinator": "lead-engineer",
   "currentPhase": "Phase 1: Foundation Fix",
   "overallStatus": "in_progress",
-  "lastUpdate": "2026-08-27T13:11:33+00:00",
+  "lastUpdate": "2026-08-27T16:44:54.321020+00:00",
   "activeTask": "multi-agent-parallel-execution",
   "parentRepo": "artisanpro-shared",
   "role": "client-agent",
-  "summary": "Admin revenue analytics DONE (parent da50f02). Admin content editor is PARTIAL/BLOCKED: existing module content is editable, but SEO/landing/pricing content lacks a DB/CMS contract and dedicated i18n keys.",
+  "summary": "Kamlin all future plan: A i18n bottleneck split into 2 smaller tasks (admin-audit, peinture-keys) to unblock, B peinture parallel already IN_PROGRESS client ~95%, C security handoff to admin DONE, api IN_PROGRESS, D billing IN_PROGRESS auto-unblocked, E parent repos exist locally from zip, F Q2 env vars open needs human, G Python-only 3 runners ACTIVE 24/7 every 10s fast fetch, H scaled to 17 tasks. Admin 3 DONE + 2 IN_PROGRESS, Client 1 DONE + 4 IN_PROGRESS differentiated.",
   "completedPhases": [],
   "currentTasks": {
     "shared-types-sync": "done",
@@ -24,7 +24,9 @@
     "admin-content-seo": "blocked",
     "admin-revenue-analytics": "done",
     "client-entitlement-ui": "in_progress",
-    "client-saved-calculations": "in_progress"
+    "client-saved-calculations": "in_progress",
+    "i18n-admin-audit": "in_progress",
+    "i18n-peinture-keys": "in_progress"
   },
   "claimedFiles": [],
   "done": [
@@ -68,46 +70,34 @@
   "status": "in_progress",
   "prevTask": {
     "id": "admin-security-center",
-    "title": "Admin Security Center",
     "status": "done",
     "assignee": "admin-agent",
-    "completedAt": "2026-08-26T19:57:53+00:00",
     "role": "admin"
   },
   "currTask": {
-    "id": "peinture-workspace-premium",
-    "title": "Peinture Workspace ~95%",
+    "id": "i18n-complete-audit",
+    "title": "i18n Audit P0 bottleneck",
     "status": "in_progress",
-    "assignee": "client-agent",
-    "role": "peinture",
-    "priority": "P1",
-    "note": "Client-agent 11 done, wiring pending Q14"
+    "assignee": "i18n-agent",
+    "priority": "P0",
+    "stuck": "24h+"
   },
   "nextTask": {
-    "id": "admin-content-seo",
-    "title": "Admin Content & SEO",
-    "status": "blocked",
-    "assignee": "admin-agent",
-    "role": "admin",
-    "priority": "P2",
-    "blocked": [
-      "No content/CMS/SEO metadata tables or shared contract exist; the implementation can safely edit only existing modules fields",
-      "Dedicated landing/pricing/SEO translation keys remain owned by i18n-agent"
-    ],
-    "next": [
-      "Add and approve a Supabase content/SEO schema or CMS contract",
-      "Add dedicated localized content keys, then finish SEO metadata and landing/pricing editors"
+    "id": "peinture-validation-exports",
+    "title": "Peinture Validation",
+    "status": "todo",
+    "assignee": "peinture-agent",
+    "waitingFor": [
+      "peinture-workspace-premium"
     ]
   },
   "queue": {
-    "prev": "admin-security DONE",
-    "curr": "peinture (client) + client-projects (client) + admin-security (admin) + billing + api + i18n IN_PROGRESS + 4 new tasks",
-    "next": "peinture-validation, security-heartbeat, i18n-client TODO waiting locks",
-    "total": 15,
-    "done": 5,
-    "inProgress": 8,
-    "todo": 1,
-    "blocked": 1
+    "total": 17,
+    "done": 6,
+    "inProgress": 9,
+    "todo": 0,
+    "blocked": 2,
+    "note": "Kamlin all future plan A-H executing"
   },
   "agentWindows": {
     "client-agent": {
