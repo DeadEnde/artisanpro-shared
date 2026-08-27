@@ -700,3 +700,51 @@ AGENT_ID=your-agent python3 bridge/auto-coordinator/agent-watcher.py
 **2026-08-26 19:40 UTC**
 **Version 5**
 **End of Report**
+
+---
+
+## UPDATE 2026-08-27 - Latest Queue After Design Tasks
+
+**Total:** 22 tasks
+**Status:** 6 DONE, 13 IN_PROGRESS, 1 TODO waiting locks, 2 BLOCKED
+
+**DONE (6):**
+- shared-types-sync (lead)
+- admin-modules-subscriptions (admin-agent) 6 done
+- client-supabase-migration (client-agent) 10 done
+- admin-overview-enhancements (admin-agent) 6 done
+- admin-security-center (admin-agent) 6 done
+- +1 more
+
+**IN_PROGRESS (13):**
+- i18n-complete-audit (i18n-agent) P0 bottleneck 24h+ - 0 hardcoded text FR/EN/AR RTL
+- peinture-workspace-premium (client-agent) P1 - 11 done ~95% wiring pending Q14 blocked by i18n lock on src/main.tsx
+- edge-function-security-logs (api-agent) P2
+- manual-payments-stripe-prep (billing-agent) P3 auto-unblocked after admin DONE
+- client-projects-quotes-ui (client-agent) P2
+- admin-content-seo (admin-agent) P2
+- admin-revenue-analytics (admin-agent) P2
+- client-entitlement-ui (client-agent) P1
+- client-saved-calculations (client-agent) P1
+- design-admin-mosk (admin-agent) P1 - Mosk abstract chart + CTA - https://horizonx.so/explore/mosk
+- design-client-aether (client-agent) P1 - Aether Grid device cards + live telemetry - https://horizonx.so/explore/aether-grid
+- design-landing-goodmove (client-agent) P2 - Good Move + Vantro conversion
+- design-security-vantra (security-agent) P2 - Vantra Facility OS chantier monitoring
+
+**TODO waiting locks (1):**
+- design-peinture-energy (peinture-agent) P1 - Energy Command room selector + glassmorphic + forecast - waiting peinture/* lock (client has it) - https://horizonx.so/explore/energy-command-dashboard
+
+**BLOCKED (2):**
+- security-center-sessions (security-agent) - Stuck 24.5h handoff to admin via admin-security-center
+- security-session-heartbeat (security-agent) - Waiting file locks
+
+**Locks:** 11 active, no cross-agent overlap, safe parallel
+**Runners:** 3 Python ACTIVE 24/7 every 10s fast fetch (not 60s) - continuous-runner.py, client-watcher Python resilient (agent-watcher.py), admin-watcher Python resilient
+**Workflow:** GitHub Action ID 342391513 ACTIVE - triggers on push + cron 30min + manual dispatch
+
+**Design Focus (tb9a 3la project):**
+- Keep dark green sidebar approved, light/dark themes, 4 overview cards real data, no fake data, FR/EN/AR RTL logical CSS, simple fast for Android no 3D/WebGL
+- Enhance existing panels with HorizonX inspiration: Mosk abstract chart + high-contrast CTA, Aether device cards + live telemetry, Energy room selector + glassmorphic + forecast
+
+**For AI Models:** This is current structure we work with. Read bridge/tasks.json for task queue, bridge/locks.json for file ownership, bridge/state.json v10 for 3-task window, bridge/questions.md for blockers Q1-Q12, bridge/decisions.md D1-D12, bridge/agents.md 9 roles, bridge/roadmap.md 4 phases P0-P3.
+

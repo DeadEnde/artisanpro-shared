@@ -52,3 +52,22 @@
 - Designs: Mosk, Aether Grid, Energy Command, Vantra Facility OS, Focus App
 
 End - Stay on Project, Use HorizonX as Inspiration
+
+---
+
+## UPDATE 2026-08-27 - Design Tasks Dispatched Staying on Project
+
+**Dispatched 5 design tasks based on HorizonX analysis, staying on project (tb9a 3la project):**
+
+- design-admin-mosk IN_PROGRESS admin-agent - Mosk abstract chart + high-contrast CTA - Keep green sidebar, enhance revenue empty state
+- design-client-aether IN_PROGRESS client-agent - Aether Grid device cards + live telemetry - Module cards toggle is_unlocked + sessions green dot
+- design-peinture-energy TODO peinture-agent - Energy Command room selector + glassmorphic + forecast - Waiting lock, no 3D heavy
+- design-landing-goodmove IN_PROGRESS client-agent - Good Move + Vantro conversion landing
+- design-security-vantra IN_PROGRESS security-agent - Vantra Facility OS chantier monitoring
+
+**Queue:** 22 total, 6 done, 13 in_progress, 1 todo, 2 blocked
+**Locks:** 11 active no overlap
+**Runners:** 3 Python ACTIVE 24/7 every 10s
+
+**For AI Models:** We stay on project - keep approved green construction SaaS, enhance not replace, no fake data, FR/EN/AR RTL, simple fast for Android. Use HorizonX as inspiration (Mosk, Aether Grid, Energy Command) for UI composition, not 3D/WebGL.
+
