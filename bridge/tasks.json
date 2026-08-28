@@ -1,7 +1,7 @@
 {
   "version": 2,
   "coordinator": "lead-engineer",
-  "lastUpdate": "2026-08-28T12:53:50.248Z",
+  "lastUpdate": "2026-08-28T16:59:25.277Z",
   "tasks": [
     {
       "id": "shared-types-sync",
@@ -734,7 +734,7 @@
       "priority": "P1",
       "role": "client",
       "parentRepo": "Artissan-Pro-Client",
-      "status": "in_progress",
+      "status": "done",
       "assignee": "client-agent",
       "claimedFiles": [
         "src/features/modules/ModulesPanel.tsx",
@@ -749,15 +749,19 @@
         "FR/EN/AR + RTL",
         "Build passes"
       ],
-      "done": [],
+      "done": [
+        "Aether design system shipped: warm paper/ink/clay tokens, Space Grotesk + Instrument Serif + Tajawal, logical CSS RTL-ready, reduced-motion + print + responsive (Artissan-Pro @ ef4f5c0)",
+        "framer-motion installed: staggered hero, count-up estimator, whileInView reveals, spring values, page fades, button shine/lift",
+        "Dashboard shell + widgets restyled; formatted main.tsx 24->415 readable lines",
+        "Verified: npm test 20/20 + build PASS"
+      ],
       "inProgress": [
         "Starting Aether Grid design"
       ],
       "blocked": [],
       "next": [
-        "Redesign module cards",
-        "Add live telemetry to sessions",
-        "Update layout"
+        "Design QA screenshots FR/EN/AR",
+        "Peinture workspace skin alignment (design-peinture-energy)"
       ],
       "dependencies": [
         "shared-types-sync",
@@ -766,7 +770,8 @@
       ],
       "claimedAt": "2026-08-27T16:49:04.484779+00:00",
       "designSource": "https://horizonx.so/explore/aether-grid",
-      "stayOnProject": "Keep real data, no fake, keep green construction"
+      "stayOnProject": "Keep real data, no fake, keep green construction",
+      "completedAt": "2026-08-28T16:59:25.277Z"
     },
     {
       "id": "design-peinture-energy",
@@ -819,7 +824,7 @@
       "priority": "P2",
       "role": "client",
       "parentRepo": "Artissan-Pro-Client",
-      "status": "in_progress",
+      "status": "done",
       "assignee": "client-agent",
       "claimedFiles": [
         "src/features/landing/LandingHero.tsx",
@@ -834,23 +839,25 @@
         "FR/EN/AR + RTL",
         "Build passes"
       ],
-      "done": [],
+      "done": [
+        "Home rebuilt: glow hero, live estimator card (animated count-up + gauge), dark feature band, mini footer (Artissan-Pro @ ef4f5c0)",
+        "Pricing rebuilt: featured dark plan, hover lift, localized CTA rows",
+        "Login rebuilt: split ink intro with staggered benefits + quote",
+        "Verified: build PASS"
+      ],
       "inProgress": [
         "Starting landing design"
       ],
       "blocked": [],
-      "next": [
-        "Update hero",
-        "Update pricing",
-        "Update lead"
-      ],
+      "next": [],
       "dependencies": [
         "shared-types-sync",
         "i18n-client-audit"
       ],
       "claimedAt": "2026-08-27T16:49:04.484786+00:00",
       "designSource": "https://horizonx.so/explore/good-move and vantro-ai-sales-platform",
-      "stayOnProject": "Keep existing landing structure, enhance not replace, keep FR/EN/AR"
+      "stayOnProject": "Keep existing landing structure, enhance not replace, keep FR/EN/AR",
+      "completedAt": "2026-08-28T16:59:25.277Z"
     },
     {
       "id": "design-security-vantra",

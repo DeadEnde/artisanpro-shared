@@ -113,3 +113,8 @@
 **Date:** 2026-08-28
 **Decision:** The CMS schema is the existing supabase/content-seo.sql (content_sections + seo_metadata), formalized in shared types/constants (shared @ 6cacd86) with RLS policies: public reads published content, is_admin() manages everything. Admin ContentPanel manages seo_metadata from Artissan-Pro-Admin @ bacd06b. Client public pages keep their localized static copy until a follow-up wires them to seo_metadata.
 **Reason:** Unblocks admin-content-seo without migrating the client public pages' rendering (stack preserved per D10).
+
+### D15: Aether Design Direction for Client App
+**Date:** 2026-08-28
+**Decision:** Client app visual identity rebuilt as "Aether": warm paper #f6f3ec / ink #181410 / clay #e0511e; display type Space Grotesk with Instrument Serif italic accents; Tajawal as Arabic face; framer-motion for all motion (no CSS keyframe anims outside pulse/dot). Dark ink bands used for feature/auth-intro/result panels. RTL via logical CSS properties.
+**Reason:** Human request to redo the design from scratch using modern motion/component inspiration (21st.dev-style micro-interactions). Stack preserved per D10.
