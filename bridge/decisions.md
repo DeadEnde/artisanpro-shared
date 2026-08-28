@@ -132,3 +132,8 @@
 - Projects panel upgraded with search filter, status tabs, summary metrics, and print/duplicate actions (client-projects-quotes-ui)
 - Peinture room controls, pricing strategy panel, and test suite verified passing 20/20 (peinture-room-controls, design-peinture-energy, peinture-engine-tests)
 - Shipped on DeadEnde/Artissan-Pro @ 2e01b11.
+
+### D17: Security Logging Architecture — Edge Functions with Hashed IP
+**Date:** 2026-08-29
+**Decision:** Security events are logged exclusively through the log-security-event Edge Function. Clients send only whitelisted event payloads; the server derives the IP from proxy headers and persists only a salted SHA-256 hash (raw IP never stored). Retention enforced by cleanup-security-logs (90 days, CRON_SECRET gated). Client emits session_started/login_success/logout via fire-and-forget securityLog.ts that can never break UX.
+**Reason:** Compliance + D3 (no raw secrets in browser), no DB schema change; remaining step is owner deployment (secrets + supabase functions deploy).

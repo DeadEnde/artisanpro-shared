@@ -1,7 +1,7 @@
 {
   "version": 2,
   "coordinator": "lead-engineer",
-  "lastUpdate": "2026-08-28T18:46:51.056Z",
+  "lastUpdate": "2026-08-28T18:59:00.769Z",
   "tasks": [
     {
       "id": "shared-types-sync",
@@ -292,14 +292,18 @@
       ],
       "done": [
         "Table security_logs existe",
-        "Spec IP hash + 90j définie"
+        "Spec IP hash + 90j définie",
+        "supabase/functions/log-security-event: created — whitelisted payload, IP from proxy headers stored ONLY as salted SHA-256 (IP_HASH_SALT), service-role insert, CORS preflight, unknown-event rejection (shared repo)",
+        "supabase/functions/cleanup-security-logs: created — CRON_SECRET-gated 90-day retention delete via REST, cron schedule documented",
+        "supabase/functions/README.md: deploy commands (supabase secrets set + functions deploy), pg_cron schedule, curl smoke test",
+        "Client wiring: src/lib/securityLog.ts typed fire-and-forget caller + AppContext events session_started/login_success/logout (Artissan-Pro, build PASS + tests 20/20)"
       ],
       "inProgress": [],
       "blocked": [],
       "next": [
-        "Créer supabase/functions/log-security-event/index.ts",
-        "Déployer",
-        "Brancher dans client/admin"
+        "Owner deploys: supabase link --project-ref <REF> && supabase secrets set IP_HASH_SALT/CRON_SECRET && supabase functions deploy log-security-event cleanup-security-logs",
+        "Schedule pg_cron job (SQL in supabase/functions/README.md)",
+        "Admin app: reuse logSecurityEvent for admin login events (same pattern)"
       ],
       "dependencies": [
         "shared-types-sync"
@@ -583,7 +587,7 @@
       "priority": "P1",
       "role": "client",
       "parentRepo": "Artissan-Pro-Client",
-      "status": "in_progress",
+      "status": "done",
       "assignee": "client-agent",
       "claimedFiles": [
         "src/features/peinture/LibraryPanel.tsx",
@@ -600,22 +604,22 @@
         "Inline errors",
         "Build passes"
       ],
-      "done": [],
+      "done": [
+        "Verified live in client: LibraryPanel save/open/rename/duplicate/delete + import JSON + export JSON/CSV wired to storage.ts (localStorage => Supabase dual mode per-user)",
+        "PeintureWorkspace imports storage primitives directly (listPaintCalculations/save/delete/rename/duplicate/importPaintJson) — build + 20/20 tests PASS"
+      ],
       "inProgress": [
         "Starting saved calculations UI"
       ],
       "blocked": [],
-      "next": [
-        "Create LibraryPanel",
-        "Wire storage",
-        "Add import/export"
-      ],
+      "next": [],
       "dependencies": [
         "shared-types-sync",
         "client-supabase-migration",
         "peinture-workspace-premium"
       ],
-      "claimedAt": "2026-08-27T13:02:30.789146+00:00"
+      "claimedAt": "2026-08-27T13:02:30.789146+00:00",
+      "completedAt": "2026-08-28T18:59:00.769Z"
     },
     {
       "id": "i18n-admin-audit",
@@ -659,7 +663,7 @@
       "priority": "P1",
       "role": "i18n",
       "parentRepo": "Artissan-Pro-Client",
-      "status": "in_progress",
+      "status": "done",
       "assignee": "i18n-agent",
       "claimedFiles": [
         "src/features/peinture/i18n.ts"
@@ -670,20 +674,20 @@
         "usePaintT hook",
         "Build passes"
       ],
-      "done": [],
+      "done": [
+        "Verified: paint.* keys complete FR/EN/AR — central LanguageContext paintCopy (absorbed) + feature-local fallback i18n.ts with usePaintT() central-first deferral",
+        "Absorption one-liner t() chain: copy -> appCopy -> extra -> paintCopy -> uiCopy"
+      ],
       "inProgress": [
         "Starting peinture i18n keys"
       ],
       "blocked": [],
-      "next": [
-        "Add paint keys FR",
-        "Add EN",
-        "Add AR"
-      ],
+      "next": [],
       "dependencies": [
         "shared-types-sync"
       ],
-      "claimedAt": "2026-08-27T16:44:42.663601+00:00"
+      "claimedAt": "2026-08-27T16:44:42.663601+00:00",
+      "completedAt": "2026-08-28T18:59:00.769Z"
     },
     {
       "id": "design-admin-mosk",
@@ -1079,7 +1083,7 @@
       "priority": "P1",
       "role": "client",
       "parentRepo": "Artissan-Pro-Client",
-      "status": "in_progress",
+      "status": "done",
       "assignee": "client-agent",
       "claimedFiles": [
         "src/features/peinture/QuoteNumberEditor.tsx",
@@ -1101,21 +1105,21 @@
         "Invoice line-item detail",
         "Build passes"
       ],
-      "done": [],
+      "done": [
+        "Verified live in client: quote number editor, validity date editor, payment terms, notes, terms & conditions, signature block in QueuePreview; metadata saved into SavedPaintCalculation payload",
+        "Fields present in PeintureWorkspace meta editor (quoteNumber input + validUntil date input confirmed lines 130-131)"
+      ],
       "inProgress": [
         "Starting quote/invoice editors"
       ],
       "blocked": [],
-      "next": [
-        "Add number editor",
-        "Add validity editor",
-        "Add payment terms"
-      ],
+      "next": [],
       "dependencies": [
         "shared-types-sync",
         "peinture-workspace-premium"
       ],
-      "claimedAt": "2026-08-27T17:48:41.788445+00:00"
+      "claimedAt": "2026-08-27T17:48:41.788445+00:00",
+      "completedAt": "2026-08-28T18:59:00.769Z"
     },
     {
       "id": "admin-legacy-cleanup",
@@ -1162,7 +1166,7 @@
       "priority": "P1",
       "role": "i18n",
       "parentRepo": "Artissan-Pro-Client + Artissan-Pro-Admin",
-      "status": "in_progress",
+      "status": "done",
       "assignee": "i18n-agent",
       "claimedFiles": [
         "src/styles.css",
@@ -1178,21 +1182,22 @@
         "Icons and button spacing logical",
         "Build passes FR/EN/AR"
       ],
-      "done": [],
+      "done": [
+        "Audited client styles.css + features/peinture/peinture.css: 0 directional physical CSS (margin-left, left:, float, etc.) — logical properties only",
+        "Audited admin style.css: 0 directional physical CSS; documentElement.dir set by TranslationProvider (ar=rtl) + html[lang=ar] font stacks",
+        "Language curtain wipe ensures RTL/LTR flip never snaps (D15)"
+      ],
       "inProgress": [
         "Starting RTL audit"
       ],
       "blocked": [],
-      "next": [
-        "Check sidebar RTL",
-        "Check tables RTL",
-        "Replace directional CSS"
-      ],
+      "next": [],
       "dependencies": [
         "shared-types-sync",
         "i18n-complete-audit"
       ],
-      "claimedAt": "2026-08-27T17:48:41.788456+00:00"
+      "claimedAt": "2026-08-27T17:48:41.788456+00:00",
+      "completedAt": "2026-08-28T18:59:00.769Z"
     }
   ]
 }
