@@ -1,19 +1,7 @@
 {
   "version": 2,
-  "lastUpdate": "2026-08-28T18:59:15.960Z",
+  "lastUpdate": "2026-08-28T19:16:04.771Z",
   "locks": [
-    {
-      "agent": "i18n-agent",
-      "files": [
-        "src/context/LanguageContext.tsx",
-        "src/i18n/*",
-        "artisanpro-admin/src/i18n/*",
-        "src/main.tsx",
-        "artisanpro-admin/src/main.tsx"
-      ],
-      "since": "2026-08-25T19:31:19.281828+00:00",
-      "taskId": "i18n-complete-audit"
-    },
     {
       "agent": "api-agent",
       "files": [
@@ -23,24 +11,6 @@
       ],
       "since": "2026-08-25T19:31:19.281838+00:00",
       "taskId": "edge-function-security-logs"
-    },
-    {
-      "agent": "billing-agent",
-      "files": [
-        "src/components/SubscriptionsPanel.tsx",
-        "src/components/PaymentHistory.tsx"
-      ],
-      "since": "2026-08-26T18:51:34.344Z",
-      "taskId": "manual-payments-stripe-prep"
-    },
-    {
-      "agent": "security-agent",
-      "files": [
-        "src/components/SecurityCenter.tsx",
-        "src/lib/sessionPresence.ts"
-      ],
-      "since": "2026-08-27T16:49:09.831123+00:00",
-      "taskId": "design-security-vantra"
     }
   ],
   "releasedByLead": [
