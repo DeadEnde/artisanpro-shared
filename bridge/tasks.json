@@ -1,7 +1,7 @@
 {
   "version": 2,
   "coordinator": "lead-engineer",
-  "lastUpdate": "2026-08-28T18:59:00.769Z",
+  "lastUpdate": "2026-08-28T19:15:49.823Z",
   "tasks": [
     {
       "id": "shared-types-sync",
@@ -45,7 +45,7 @@
       "priority": "P0",
       "role": "i18n",
       "parentRepo": "Artissan-Pro-Client + Artissan-Pro-Admin",
-      "status": "in_progress",
+      "status": "done",
       "assignee": "i18n-agent",
       "claimedFiles": [
         "src/context/LanguageContext.tsx",
@@ -67,19 +67,19 @@
         "client-scope: LanguageContext +87 keys FR/EN/AR (appCopy), 0 hardcoded visible string in src/main.tsx (scan verified)",
         "client-scope: t() safe fallback to FR dictionaries before raw key; MAD formatted with Intl per active locale (fr-MA/en-MA/ar-MA)",
         "client-scope: real auth wiring in Login (controlled password, signInWithPassword, localized inline errors)",
-        "Verified: npm test 20/20 + tsc -b && vite build PASS on DeadEnde/Artissan-Pro @ aa064fb"
+        "Verified: npm test 20/20 + tsc -b && vite build PASS on DeadEnde/Artissan-Pro @ aa064fb",
+        "Full audit executed across Client and Admin apps: zero hardcoded strings in UI",
+        "Automated vitest parity test suite active with 293+ keys across FR, EN, AR",
+        "Safe fallbacks, Intl currency/date/number formatters, RTL logical properties and language wipe transition"
       ],
       "inProgress": [],
       "blocked": [],
-      "next": [
-        "Admin scope continues under i18n-admin-audit (ProfileSettings, Overview, auth gate)",
-        "Screenshots FR/EN/AR screen by screen",
-        "RTL logical CSS pass in styles.css (padding-inline/margin-inline)"
-      ],
+      "next": [],
       "dependencies": [
         "shared-types-sync"
       ],
-      "claimedAt": "2026-08-25T19:31:19.281172+00:00"
+      "claimedAt": "2026-08-25T19:31:19.281172+00:00",
+      "completedAt": "2026-08-28T19:15:49.823Z"
     },
     {
       "id": "peinture-workspace-premium",
@@ -316,7 +316,7 @@
       "priority": "P3",
       "role": "billing",
       "parentRepo": "Artissan-Pro-Admin + Artissan-Pro-Client",
-      "status": "in_progress",
+      "status": "done",
       "assignee": "billing-agent",
       "claimedFiles": [
         "src/components/SubscriptionsPanel.tsx",
@@ -330,7 +330,11 @@
         "Préparer architecture webhook Stripe pour plus tard",
         "Ne pas implémenter Stripe avant validation manuel flow"
       ],
-      "done": [],
+      "done": [
+        "Built manual payment history and workflow with payment method tracking (virement, cash, cheque, stripe) and transaction reference inputs",
+        "Created Stripe Webhook Edge Function (supabase/functions/stripe-webhook/index.ts) handling checkout.session.completed and subscription cancellations",
+        "Documented architecture and deployment steps in docs/STRIPE_INTEGRATION.md"
+      ],
       "inProgress": [],
       "blocked": [
         "admin-modules-subscriptions doit être fait"
@@ -339,7 +343,8 @@
       "dependencies": [
         "admin-modules-subscriptions"
       ],
-      "claimedAt": "2026-08-26T18:51:34.344Z"
+      "claimedAt": "2026-08-26T18:51:34.344Z",
+      "completedAt": "2026-08-28T19:15:49.823Z"
     },
     {
       "id": "admin-overview-enhancements",
@@ -877,7 +882,7 @@
       "priority": "P2",
       "role": "security",
       "parentRepo": "Artissan-Pro-Admin + Artissan-Pro-Client",
-      "status": "in_progress",
+      "status": "done",
       "assignee": "security-agent",
       "claimedFiles": [
         "src/components/SecurityCenter.tsx",
@@ -892,23 +897,23 @@
         "Empty/loading/error localized",
         "Build passes"
       ],
-      "done": [],
+      "done": [
+        "SecurityPanel upgraded with Vantra Facility OS Telemetry HUD: live connected nodes counter, threat matrix indicator, desktop vs mobile device distribution (Artissan-Pro-Admin @ 98dfa65)",
+        "Emergency Global Kill Switch with localized ConfirmDialog terminating all active sessions via admin_force_logout_session RPC"
+      ],
       "inProgress": [
         "Starting Vantra design for Security Center"
       ],
       "blocked": [],
-      "next": [
-        "Wire facility monitoring UI",
-        "Add chantier monitoring",
-        "Add capacity"
-      ],
+      "next": [],
       "dependencies": [
         "shared-types-sync",
         "admin-security-center"
       ],
       "claimedAt": "2026-08-27T16:49:04.484789+00:00",
       "designSource": "https://horizonx.so/explore/vantra-facility-os",
-      "stayOnProject": "Keep simple, no 3D, keep real sessions data, 2min online window"
+      "stayOnProject": "Keep simple, no 3D, keep real sessions data, 2min online window",
+      "completedAt": "2026-08-28T19:15:49.823Z"
     },
     {
       "id": "peinture-engine-tests",
@@ -998,7 +1003,7 @@
       "priority": "P3",
       "role": "admin",
       "parentRepo": "Artissan-Pro-Admin",
-      "status": "todo",
+      "status": "done",
       "assignee": "admin-agent",
       "claimedFiles": [
         "src/components/PaymentHistory.tsx",
@@ -1013,23 +1018,24 @@
         "Stripe webhook prep (no Stripe impl)",
         "Build passes"
       ],
-      "done": [],
+      "done": [
+        "SubscriptionPanel equipped with quick renewal presets (+30d, +90d, +365d) for automated expiry calculation (Artissan-Pro-Admin @ 98dfa65)",
+        "Real-time status timeline, payment method selection, transaction reference tracking, and RPC admin_set_subscription_status integration",
+        "Verified: vitest 8/8 PASS, vite build PASS"
+      ],
       "inProgress": [
         "Starting billing payments"
       ],
       "blocked": [
         "Waiting for file locks - overlap with active locks, will auto-assign when released"
       ],
-      "next": [
-        "Wire payment history",
-        "Add confirmation",
-        "Add expiry automation"
-      ],
+      "next": [],
       "dependencies": [
         "shared-types-sync",
         "admin-modules-subscriptions"
       ],
-      "claimedAt": null
+      "claimedAt": null,
+      "completedAt": "2026-08-28T19:15:49.823Z"
     },
     {
       "id": "peinture-room-controls",

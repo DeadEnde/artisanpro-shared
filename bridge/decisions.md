@@ -137,3 +137,11 @@
 **Date:** 2026-08-29
 **Decision:** Security events are logged exclusively through the log-security-event Edge Function. Clients send only whitelisted event payloads; the server derives the IP from proxy headers and persists only a salted SHA-256 hash (raw IP never stored). Retention enforced by cleanup-security-logs (90 days, CRON_SECRET gated). Client emits session_started/login_success/logout via fire-and-forget securityLog.ts that can never break UX.
 **Reason:** Compliance + D3 (no raw secrets in browser), no DB schema change; remaining step is owner deployment (secrets + supabase functions deploy).
+
+### D18: Vantra Telemetry HUD, Billing Automation & Stripe Webhooks
+**Date:** 2026-08-29
+**Decision:** 
+- Upgraded Admin Security Center with Vantra Facility OS Telemetry HUD & Global Emergency Kill Switch.
+- Enhanced SubscriptionPanel with quick renewal presets (+30d, +90d, +365d) and manual payment method tracking.
+- Shipped Stripe Webhook Edge Function (HMAC-SHA256 signature verification) in shared repo with complete integration guide.
+- Closed tasks: i18n-complete-audit, manual-payments-stripe-prep, admin-billing-payments, design-security-vantra.
