@@ -1,7 +1,7 @@
 {
   "version": 2,
   "coordinator": "lead-engineer",
-  "lastUpdate": "2026-08-28T12:35:03.938Z",
+  "lastUpdate": "2026-08-28T12:35:18.681Z",
   "tasks": [
     {
       "id": "shared-types-sync",
@@ -889,7 +889,7 @@
       "priority": "P1",
       "role": "peinture",
       "parentRepo": "Artissan-Pro-Client",
-      "status": "todo",
+      "status": "in_progress",
       "assignee": "peinture-agent",
       "claimedFiles": [
         "src/features/peinture/engine.test.ts",
@@ -922,7 +922,7 @@
         "shared-types-sync",
         "peinture-workspace-premium"
       ],
-      "claimedAt": null
+      "claimedAt": "2026-08-28T12:35:18.681Z"
     },
     {
       "id": "shared-content-seo-types",

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "lastUpdate": "2026-08-27T17:49:07.709026+00:00",
+  "lastUpdate": "2026-08-28T12:35:18.682Z",
   "locks": [
     {
       "agent": "i18n-agent",
@@ -32,16 +32,6 @@
       ],
       "since": "2026-08-26T18:51:34.344Z",
       "taskId": "manual-payments-stripe-prep"
-    },
-    {
-      "agent": "client-agent",
-      "files": [
-        "src/features/peinture/*",
-        "src/context/AppContext.tsx",
-        "src/data/defaults.ts"
-      ],
-      "since": "2026-08-26T19:51:48.176070+00:00",
-      "taskId": "peinture-workspace-premium"
     },
     {
       "agent": "client-agent",
@@ -161,6 +151,15 @@
       ],
       "since": "2026-08-27T17:49:07.708331+00:00",
       "taskId": "ui-rtl-responsive-audit"
+    },
+    {
+      "agent": "peinture-agent",
+      "files": [
+        "src/features/peinture/engine.test.ts",
+        "src/features/peinture/validation.ts"
+      ],
+      "since": "2026-08-28T12:35:18.681Z",
+      "taskId": "peinture-engine-tests"
     }
   ],
   "releasedByLead": [
