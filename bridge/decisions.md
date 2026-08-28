@@ -145,3 +145,7 @@
 - Enhanced SubscriptionPanel with quick renewal presets (+30d, +90d, +365d) and manual payment method tracking.
 - Shipped Stripe Webhook Edge Function (HMAC-SHA256 signature verification) in shared repo with complete integration guide.
 - Closed tasks: i18n-complete-audit, manual-payments-stripe-prep, admin-billing-payments, design-security-vantra.
+
+### D19: Security Logs — Both Apps Emit Through Edge Function
+**Date:** 2026-08-29
+**Decision:** Roadmap complete (29/29 tasks). The admin app now emits login_success / access_denied / logout through the same log-security-event edge function (meta.app discriminator), closing edge-function-security-logs. Remaining items are owner operations only: Supabase secrets + functions deploy + pg_cron schedule (documented, cannot run without project CLI auth).

@@ -1,7 +1,7 @@
 {
   "version": 2,
   "coordinator": "lead-engineer",
-  "lastUpdate": "2026-08-28T19:15:49.823Z",
+  "lastUpdate": "2026-08-28T19:24:03.253Z",
   "tasks": [
     {
       "id": "shared-types-sync",
@@ -274,7 +274,7 @@
       "priority": "P2",
       "role": "api",
       "parentRepo": "Artissan-Pro-API / Supabase",
-      "status": "in_progress",
+      "status": "done",
       "assignee": "api-agent",
       "claimedFiles": [
         "supabase/functions/log-security-event/*",
@@ -296,19 +296,20 @@
         "supabase/functions/log-security-event: created — whitelisted payload, IP from proxy headers stored ONLY as salted SHA-256 (IP_HASH_SALT), service-role insert, CORS preflight, unknown-event rejection (shared repo)",
         "supabase/functions/cleanup-security-logs: created — CRON_SECRET-gated 90-day retention delete via REST, cron schedule documented",
         "supabase/functions/README.md: deploy commands (supabase secrets set + functions deploy), pg_cron schedule, curl smoke test",
-        "Client wiring: src/lib/securityLog.ts typed fire-and-forget caller + AppContext events session_started/login_success/logout (Artissan-Pro, build PASS + tests 20/20)"
+        "Client wiring: src/lib/securityLog.ts typed fire-and-forget caller + AppContext events session_started/login_success/logout (Artissan-Pro, build PASS + tests 20/20)",
+        "Admin app wired: src/lib/securityLog.ts (env-driven, meta.app='admin') + login_success on SIGNED_IN + access_denied on rejected profile + logout on both AdminShell signOut buttons (Artissan-Pro-Admin, vitest 8/8 + build PASS)",
+        "All acceptance criteria satisfied on the code side: edge function receives event/email/app+device meta and hashes IP server-side; insert via service role (RLS admin-only read already in place); cleanup function + cron documented; client AND admin both call the edge function"
       ],
       "inProgress": [],
       "blocked": [],
       "next": [
-        "Owner deploys: supabase link --project-ref <REF> && supabase secrets set IP_HASH_SALT/CRON_SECRET && supabase functions deploy log-security-event cleanup-security-logs",
-        "Schedule pg_cron job (SQL in supabase/functions/README.md)",
-        "Admin app: reuse logSecurityEvent for admin login events (same pattern)"
+        "Owner ops (cannot be automated from CI): supabase link --project-ref <REF>, supabase secrets set IP_HASH_SALT CRON_SECRET, supabase functions deploy log-security-event cleanup-security-logs stripe-webhook, then schedule the pg_cron retention job (SQL in supabase/functions/README.md)"
       ],
       "dependencies": [
         "shared-types-sync"
       ],
-      "claimedAt": "2026-08-25T19:31:19.281193+00:00"
+      "claimedAt": "2026-08-25T19:31:19.281193+00:00",
+      "completedAt": "2026-08-28T19:24:03.253Z"
     },
     {
       "id": "manual-payments-stripe-prep",
