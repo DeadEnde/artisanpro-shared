@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "lastUpdate": "2026-08-28T12:54:03.978Z",
+  "lastUpdate": "2026-08-28T16:59:42.070Z",
   "locks": [
     {
       "agent": "i18n-agent",
@@ -58,24 +58,6 @@
       ],
       "since": "2026-08-27T13:03:02.161722+00:00",
       "taskId": "client-saved-calculations"
-    },
-    {
-      "agent": "client-agent",
-      "files": [
-        "src/features/modules/ModulesPanel.tsx",
-        "src/components/SessionRow.tsx"
-      ],
-      "since": "2026-08-27T16:49:09.831118+00:00",
-      "taskId": "design-client-aether"
-    },
-    {
-      "agent": "client-agent",
-      "files": [
-        "src/features/landing/LandingHero.tsx",
-        "src/features/pricing/PricingSection.tsx"
-      ],
-      "since": "2026-08-27T16:49:09.831122+00:00",
-      "taskId": "design-landing-goodmove"
     },
     {
       "agent": "security-agent",
