@@ -1,7 +1,7 @@
 {
   "version": 2,
   "coordinator": "lead-engineer",
-  "lastUpdate": "2026-08-28T18:15:15.246Z",
+  "lastUpdate": "2026-08-28T18:31:37.965Z",
   "tasks": [
     {
       "id": "shared-types-sync",
@@ -848,7 +848,9 @@
         "styles.css token flip (deep ink #0E0B08 + flame #FF5C28); hero type bolder/tighter, flame CTAs with glow, glass cards, film grain",
         "Pricing section re-themed: featured plan = cream inversion card, flame badge + CTA (Artissan-Pro @ e04194c)",
         "Language curtain wipe for FR/EN/AR switches (RTL snap eliminated)",
-        "Verified: npm test 20/20 PASS + build PASS"
+        "Verified: npm test 20/20 PASS + build PASS",
+        "Owner escalation: concept accepted AS-IS — public routes replaced with the exact sandbox concept (src/concept/* 1:1 port, Tailwind 4 without preflight), Artissan-Pro @ 44dd29c",
+        "Functional-only diffs: nav/pricing/final CTAs point to /connexion|/dashboard; deep links scroll to sections"
       ],
       "inProgress": [
         "Starting landing design"
