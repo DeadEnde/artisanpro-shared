@@ -108,3 +108,8 @@
 **Date:** 2026-08-28
 **Decision:** Repo owner authorized direct completion outside the agent-lock workflow. Route wiring of PeintureWorkspace confirmed shipped (Artissan-Pro @ caacc78). P0 client i18n audit completed and verified (0 hardcoded strings, 87 keys x3, FR fallback, Intl locale-aware MAD, real auth wiring) in Artissan-Pro @ aa064fb.
 **Reason:** i18n-agent lock on src/main.tsx was stale (Q7/Q14); human override is the documented escape hatch. Stack preserved per D10 (Vite + React + Supabase), no Next.js migration.
+
+### D14: Shared CMS Contract for Content & SEO
+**Date:** 2026-08-28
+**Decision:** The CMS schema is the existing supabase/content-seo.sql (content_sections + seo_metadata), formalized in shared types/constants (shared @ 6cacd86) with RLS policies: public reads published content, is_admin() manages everything. Admin ContentPanel manages seo_metadata from Artissan-Pro-Admin @ bacd06b. Client public pages keep their localized static copy until a follow-up wires them to seo_metadata.
+**Reason:** Unblocks admin-content-seo without migrating the client public pages' rendering (stack preserved per D10).

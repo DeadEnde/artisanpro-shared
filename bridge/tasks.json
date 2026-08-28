@@ -1,7 +1,7 @@
 {
   "version": 2,
   "coordinator": "lead-engineer",
-  "lastUpdate": "2026-08-28T12:35:18.681Z",
+  "lastUpdate": "2026-08-28T12:53:50.248Z",
   "tasks": [
     {
       "id": "shared-types-sync",
@@ -463,7 +463,7 @@
       "priority": "P2",
       "role": "admin",
       "parentRepo": "Artissan-Pro-Admin",
-      "status": "in_progress",
+      "status": "done",
       "assignee": "admin-agent",
       "claimedFiles": [
         "src/components/ContentPanel.tsx",
@@ -481,20 +481,25 @@
       "done": [
         "Added real modules catalog editing for FR/EN/AR names, price, and publication status",
         "Added localized loading, error, empty, refresh, validation, and save feedback states",
-        "Shared contract content-seo.sql created"
+        "Shared contract content-seo.sql created",
+        "Shared CMS contract approved and delivered (shared @ 6cacd86)",
+        "ContentPanel: seo_metadata manager shipped — list/add/edit/delete pages, localized title+description FR/EN/AR RTL-aware (Artissan-Pro-Admin @ bacd06b)",
+        "Existing modules content editor kept (names x3, price, publish status)",
+        "Verified: vitest 8/8 PASS + build PASS"
       ],
       "inProgress": [],
       "blocked": [
         "Dedicated landing/pricing/SEO translation keys remain owned by i18n-agent"
       ],
       "next": [
-        "Add and approve a Supabase content/SEO schema or CMS contract",
-        "Add dedicated localized content keys, then finish SEO metadata and landing/pricing editors"
+        "Wire client public pages to read seo_metadata (fallback to current static copy)",
+        "Run content-seo.sql on Supabase project"
       ],
       "dependencies": [
         "shared-types-sync"
       ],
-      "claimedAt": "2026-08-27T17:40:57.968Z"
+      "claimedAt": "2026-08-27T17:40:57.968Z",
+      "completedAt": "2026-08-28T12:53:50.248Z"
     },
     {
       "id": "admin-revenue-analytics",
@@ -618,7 +623,7 @@
       "priority": "P0",
       "role": "i18n",
       "parentRepo": "Artissan-Pro-Admin",
-      "status": "in_progress",
+      "status": "done",
       "assignee": "i18n-agent",
       "claimedFiles": [
         "artisanpro-admin/src/components/ProfileSettings.tsx",
@@ -631,19 +636,22 @@
         "FR/EN/AR dicts",
         "Build passes"
       ],
-      "done": [],
+      "done": [
+        "Full audit executed: 293 keys x3 complete (automated vitest parity suite added in Artissan-Pro-Admin/src/i18n/parity.test.ts)",
+        "0 hardcoded visible string in any admin .tsx (scan verified), auth gate + errors + status already keyed",
+        "RTL dir managed by TranslationProvider, Intl formatCurrency/formatDate/formatNumber per locale",
+        "Verified: vitest 8/8 PASS + build PASS on Artissan-Pro-Admin @ bacd06b"
+      ],
       "inProgress": [
         "Starting admin i18n audit"
       ],
       "blocked": [],
-      "next": [
-        "Scan ProfileSettings",
-        "Scan Overview"
-      ],
+      "next": [],
       "dependencies": [
         "shared-types-sync"
       ],
-      "claimedAt": "2026-08-27T16:44:42.663589+00:00"
+      "claimedAt": "2026-08-27T16:44:42.663589+00:00",
+      "completedAt": "2026-08-28T12:53:50.248Z"
     },
     {
       "id": "i18n-peinture-keys",
@@ -930,7 +938,7 @@
       "priority": "P2",
       "role": "shared",
       "parentRepo": "artisanpro-shared",
-      "status": "in_progress",
+      "status": "done",
       "assignee": "shared-agent",
       "claimedFiles": [
         "types/content.ts",
@@ -945,20 +953,25 @@
         "Build passes tsc --noEmit",
         "No breaking changes"
       ],
-      "done": [],
+      "done": [
+        "types/content.ts: ContentSection + SeoMetadata + Insert/Update + PublicPageSlug (shared @ 6cacd86)",
+        "constants/content.ts: CONTENT_TABLES + PUBLIC_PAGE_SLUGS",
+        "supabase/types.ts: content_sections + seo_metadata in Database.Tables",
+        "supabase/content-seo.sql: RLS policies (public read published / is_admin manage) + touch_updated_at triggers",
+        "Verified: strict tsc --noEmit PASS across shared sources"
+      ],
       "inProgress": [
         "Starting content SEO shared types"
       ],
       "blocked": [],
       "next": [
-        "Create types/content.ts",
-        "Create constants/content.ts",
-        "Verify supabase/types.ts"
+        "Reminder: run supabase/content-seo.sql on the Supabase project (tables + policies + triggers)"
       ],
       "dependencies": [
         "shared-types-sync"
       ],
-      "claimedAt": "2026-08-27T17:44:12.461946+00:00"
+      "claimedAt": "2026-08-27T17:44:12.461946+00:00",
+      "completedAt": "2026-08-28T12:53:50.248Z"
     },
     {
       "id": "admin-billing-payments",
@@ -1095,7 +1108,7 @@
       "priority": "P2",
       "role": "admin",
       "parentRepo": "Artissan-Pro-Admin",
-      "status": "in_progress",
+      "status": "done",
       "assignee": "admin-agent",
       "claimedFiles": [
         "src/components/AdminShell.tsx",
@@ -1112,22 +1125,21 @@
         "Recommended structure i18n/components/features/lib",
         "Build passes"
       ],
-      "done": [],
+      "done": [
+        "Verified on Artissan-Pro-Admin @ bacd06b: no AdminApp/Overview/Manage legacy components remain — Panels architecture only (OverviewPanel, UsersPanel, ModulesPanel, SubscriptionsPanel, SecurityPanel, ContentPanel, ProfileSettings)"
+      ],
       "inProgress": [
         "Starting legacy cleanup"
       ],
       "blocked": [],
-      "next": [
-        "Remove AdminApp",
-        "Remove Overview",
-        "Split components"
-      ],
+      "next": [],
       "dependencies": [
         "shared-types-sync",
         "admin-modules-subscriptions",
         "admin-overview-enhancements"
       ],
-      "claimedAt": "2026-08-27T17:48:41.788451+00:00"
+      "claimedAt": "2026-08-27T17:48:41.788451+00:00",
+      "completedAt": "2026-08-28T12:53:50.248Z"
     },
     {
       "id": "ui-rtl-responsive-audit",
