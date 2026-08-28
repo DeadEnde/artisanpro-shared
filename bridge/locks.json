@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "lastUpdate": "2026-08-28T16:59:42.070Z",
+  "lastUpdate": "2026-08-28T18:47:06.724Z",
   "locks": [
     {
       "agent": "i18n-agent",
@@ -32,23 +32,6 @@
       ],
       "since": "2026-08-26T18:51:34.344Z",
       "taskId": "manual-payments-stripe-prep"
-    },
-    {
-      "agent": "client-agent",
-      "files": [
-        "src/features/projects/ProjectsPanel.tsx",
-        "src/features/quotes/QuotesPanel.tsx"
-      ],
-      "since": "2026-08-26T20:01:08.929398+00:00",
-      "taskId": "client-projects-quotes-ui"
-    },
-    {
-      "agent": "client-agent",
-      "files": [
-        "src/features/modules/ModulesPanel.tsx"
-      ],
-      "since": "2026-08-27T13:03:02.161720+00:00",
-      "taskId": "client-entitlement-ui"
     },
     {
       "agent": "client-agent",
@@ -97,15 +80,6 @@
       ],
       "since": "2026-08-27T17:49:07.708331+00:00",
       "taskId": "ui-rtl-responsive-audit"
-    },
-    {
-      "agent": "peinture-agent",
-      "files": [
-        "src/features/peinture/engine.test.ts",
-        "src/features/peinture/validation.ts"
-      ],
-      "since": "2026-08-28T12:35:18.681Z",
-      "taskId": "peinture-engine-tests"
     }
   ],
   "releasedByLead": [
