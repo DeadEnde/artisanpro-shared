@@ -1,7 +1,7 @@
 {
   "version": 2,
   "coordinator": "lead-engineer",
-  "lastUpdate": "2026-08-27T17:48:41.788478+00:00",
+  "lastUpdate": "2026-08-28T12:35:03.938Z",
   "tasks": [
     {
       "id": "shared-types-sync",
@@ -63,12 +63,18 @@
         "Build FR/EN/AR testé screen by screen + screenshots"
       ],
       "done": [
-        "Admin i18n audit initial fait (commit acb8ec4)"
+        "Admin i18n audit initial fait (commit acb8ec4)",
+        "client-scope: LanguageContext +87 keys FR/EN/AR (appCopy), 0 hardcoded visible string in src/main.tsx (scan verified)",
+        "client-scope: t() safe fallback to FR dictionaries before raw key; MAD formatted with Intl per active locale (fr-MA/en-MA/ar-MA)",
+        "client-scope: real auth wiring in Login (controlled password, signInWithPassword, localized inline errors)",
+        "Verified: npm test 20/20 + tsc -b && vite build PASS on DeadEnde/Artissan-Pro @ aa064fb"
       ],
       "inProgress": [],
       "blocked": [],
       "next": [
-        "Scanner Client src/main.tsx pour pricing, login, dashboard, projects, quotes, lead page"
+        "Admin scope continues under i18n-admin-audit (ProfileSettings, Overview, auth gate)",
+        "Screenshots FR/EN/AR screen by screen",
+        "RTL logical CSS pass in styles.css (padding-inline/margin-inline)"
       ],
       "dependencies": [
         "shared-types-sync"
@@ -81,7 +87,7 @@
       "priority": "P1",
       "role": "peinture",
       "parentRepo": "Artissan-Pro-Client",
-      "status": "in_progress",
+      "status": "done",
       "assignee": "client-agent",
       "claimedFiles": [
         "src/features/peinture/*",
@@ -108,22 +114,22 @@
         "client-agent: exporters CSV/JSON/Excel(SpreadsheetML)/PDF(généré à la main, vérifié pdftotext)/print CSS",
         "client-agent: QuotePreview avec paymentTerms/notes/terms + locale + RTL; éditeur métadonnées devis (numéro/validité/conditions/client/projet)",
         "client-agent: npm run build PASS + 35/35 tests runtime Node (engine/validation/normalisation/PDF/XLSX/CSV)",
-        "client-agent: poussé sur DeadEnde/Artissan-Pro @ 3d90582"
+        "client-agent: poussé sur DeadEnde/Artissan-Pro @ 3d90582",
+        "Route wiring shipped: <PeintureWorkspace/> replaces <Calculator/> in Painting() (Artissan-Pro @ caacc78, human override -> Q14 RESOLVED)",
+        "Re-verified after client i18n completion: build PASS + 20/20 engine tests (Artissan-Pro @ aa064fb)"
       ],
       "inProgress": [],
-      "blocked": [
-        "Route wiring dans src/main.tsx bloqué par le lock i18n-agent (Q14): remplacer <Calculator/> par <PeintureWorkspace/> dans Painting()"
-      ],
+      "blocked": [],
       "next": [
-        "Q14: décision sur le wiring main.tsx (release du lock i18n OU override humain OU wiring par i18n-agent)",
-        "Absorption des clés paint.* locales dans LanguageContext par i18n-agent",
-        "PDF arabe complet nécessite police embarquée (follow-up)"
+        "Follow-up: embedded font for full Arabic PDF export",
+        "peinture-engine-tests: roomType/validation coverage"
       ],
       "dependencies": [
         "i18n-complete-audit"
       ],
       "claimedAt": "2026-08-26T19:51:33.367686+00:00",
-      "notes": "Human override: Admin and client waiting for new tasks. Peinture assigned to client-agent to keep client busy. No file overlap. i18n keys TODO will be added as placeholders."
+      "notes": "Human override: Admin and client waiting for new tasks. Peinture assigned to client-agent to keep client busy. No file overlap. i18n keys TODO will be added as placeholders.",
+      "completedAt": "2026-08-28T12:35:03.938Z"
     },
     {
       "id": "admin-modules-subscriptions",

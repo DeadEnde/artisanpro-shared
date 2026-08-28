@@ -103,3 +103,8 @@
 - Admin revenue analytics completed in parent commit `da50f02` at 2026-08-27T13:11:33+00:00; Content/SEO stopped at the existing modules contract and is explicitly blocked pending a shared CMS schema.
 
 - Admin Mosk design completed in parent commit `c4557a6` at 2026-08-27T17:39:32+00:00; the design task lock was released after build/test verification.
+
+### D13: Human Override - Q14 Wiring & Client i18n Completion
+**Date:** 2026-08-28
+**Decision:** Repo owner authorized direct completion outside the agent-lock workflow. Route wiring of PeintureWorkspace confirmed shipped (Artissan-Pro @ caacc78). P0 client i18n audit completed and verified (0 hardcoded strings, 87 keys x3, FR fallback, Intl locale-aware MAD, real auth wiring) in Artissan-Pro @ aa064fb.
+**Reason:** i18n-agent lock on src/main.tsx was stale (Q7/Q14); human override is the documented escape hatch. Stack preserved per D10 (Vite + React + Supabase), no Next.js migration.

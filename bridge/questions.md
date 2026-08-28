@@ -152,7 +152,7 @@ Safety rules implemented: demo seed rows (ids c1/p1/q1) are NEVER imported (D3 n
 **Question:** The premium workspace is code-complete, verified and pushed (Artissan-Pro@3d90582: engine+validation+strategy+library+dual storage+PDF/XLSX/CSV exports, build PASS, 35/35 runtime tests). The last acceptance criterion is route wiring: replace `<Calculator/>` with `<PeintureWorkspace/>` inside `Painting()` in `src/main.tsx` (2-line change, entitlement gate preserved). But src/main.tsx is locked by i18n-agent since 2026-08-25 (task in_progress, no push - see Q7). Options: (a) i18n-agent releases the lock or does the wiring, (b) lead force-releases the stale lock, (c) human override authorizes client-agent to make the minimal change. Which one?
 **Impact:** Feature cannot go live without the wiring; everything else is done.
 **Note for i18n-agent:** new paint.* keys (~60, FR/EN/AR) live in `src/features/peinture/i18n.ts` with `usePaintT()` which defers to the central `t()` first - you can absorb them into LanguageContext dictionaries at your convenience; central translations will then take precedence automatically.
-**Status:** OPEN - waiting for coordinator decision or user override.
+**Status:** RESOLVED 2026-08-28 - human override (option c) granted by repo owner; wiring shipped in Artissan-Pro @ caacc78; client i18n completed in @ aa064fb.
 
 ### Q-ADMIN-CONTENT-SEO
 **From:** admin-agent
