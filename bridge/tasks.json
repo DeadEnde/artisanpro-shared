@@ -1,7 +1,7 @@
 {
   "version": 2,
   "coordinator": "lead-engineer",
-  "lastUpdate": "2026-08-28T16:59:25.277Z",
+  "lastUpdate": "2026-08-28T18:15:15.246Z",
   "tasks": [
     {
       "id": "shared-types-sync",
@@ -843,13 +843,20 @@
         "Home rebuilt: glow hero, live estimator card (animated count-up + gauge), dark feature band, mini footer (Artissan-Pro @ ef4f5c0)",
         "Pricing rebuilt: featured dark plan, hover lift, localized CTA rows",
         "Login rebuilt: split ink intro with staggered benefits + quote",
-        "Verified: build PASS"
+        "Verified: build PASS",
+        "Approval: owner selected the dark 'Ink & Flame' concept over Aether light",
+        "styles.css token flip (deep ink #0E0B08 + flame #FF5C28); hero type bolder/tighter, flame CTAs with glow, glass cards, film grain",
+        "Pricing section re-themed: featured plan = cream inversion card, flame badge + CTA (Artissan-Pro @ e04194c)",
+        "Language curtain wipe for FR/EN/AR switches (RTL snap eliminated)",
+        "Verified: npm test 20/20 PASS + build PASS"
       ],
       "inProgress": [
         "Starting landing design"
       ],
       "blocked": [],
-      "next": [],
+      "next": [
+        "design-client-aether: module cards telemetry + sessions live still open"
+      ],
       "dependencies": [
         "shared-types-sync",
         "i18n-client-audit"
@@ -857,7 +864,7 @@
       "claimedAt": "2026-08-27T16:49:04.484786+00:00",
       "designSource": "https://horizonx.so/explore/good-move and vantro-ai-sales-platform",
       "stayOnProject": "Keep existing landing structure, enhance not replace, keep FR/EN/AR",
-      "completedAt": "2026-08-28T16:59:25.277Z"
+      "completedAt": "2026-08-28T18:15:15.246Z"
     },
     {
       "id": "design-security-vantra",

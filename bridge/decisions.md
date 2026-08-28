@@ -118,3 +118,8 @@
 **Date:** 2026-08-28
 **Decision:** Client app visual identity rebuilt as "Aether": warm paper #f6f3ec / ink #181410 / clay #e0511e; display type Space Grotesk with Instrument Serif italic accents; Tajawal as Arabic face; framer-motion for all motion (no CSS keyframe anims outside pulse/dot). Dark ink bands used for feature/auth-intro/result panels. RTL via logical CSS properties.
 **Reason:** Human request to redo the design from scratch using modern motion/component inspiration (21st.dev-style micro-interactions). Stack preserved per D10.
+
+### D15: Visual Direction — Ink & Flame (Dark)
+**Date:** 2026-08-28
+**Decision:** Product owner approved the dark "Ink & Flame" design language (deep ink #0E0B08, flame #FF5C28, cream inversion panels, Space Grotesk x Instrument Serif x Tajawal, framer-motion language curtain) as the official ArtisanPro visual identity, replacing the Aether light theme. Reference implementation: sandbox concept prod build; ported to the client in Artissan-Pro @ e04194c via token-level re-theme (no markup churn).
+**Reason:** Owner preference after side-by-side review; token flip kept all components/contracts intact (tests 20/20 + build green).
