@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "lastUpdate": "2026-08-28T12:35:18.682Z",
+  "lastUpdate": "2026-08-28T12:54:03.978Z",
   "locks": [
     {
       "agent": "i18n-agent",
@@ -88,38 +88,11 @@
     },
     {
       "agent": "i18n-agent",
-      "taskId": "i18n-admin-audit",
-      "files": [
-        "artisanpro-admin/src/components/ProfileSettings.tsx",
-        "artisanpro-admin/src/components/OverviewPanel.tsx"
-      ],
-      "since": "2026-08-27T16:44:42.663589+00:00"
-    },
-    {
-      "agent": "i18n-agent",
       "taskId": "i18n-peinture-keys",
       "files": [
         "src/features/peinture/i18n.ts"
       ],
       "since": "2026-08-27T16:44:42.663601+00:00"
-    },
-    {
-      "agent": "admin-agent",
-      "files": [
-        "src/components/ContentPanel.tsx",
-        "src/components/AdminShell.tsx"
-      ],
-      "since": "2026-08-27T17:40:57.968Z",
-      "taskId": "admin-content-seo"
-    },
-    {
-      "agent": "shared-agent",
-      "files": [
-        "types/content.ts",
-        "constants/content.ts"
-      ],
-      "since": "2026-08-27T17:44:17.675722+00:00",
-      "taskId": "shared-content-seo-types"
     },
     {
       "agent": "client-agent",
@@ -133,15 +106,6 @@
       ],
       "since": "2026-08-27T17:49:07.708324+00:00",
       "taskId": "client-quote-invoice"
-    },
-    {
-      "agent": "admin-agent",
-      "files": [
-        "src/components/AdminShell.tsx",
-        "src/components/UsersPanel.tsx"
-      ],
-      "since": "2026-08-27T17:49:07.708326+00:00",
-      "taskId": "admin-legacy-cleanup"
     },
     {
       "agent": "i18n-agent",
