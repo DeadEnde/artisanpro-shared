@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "lastUpdate": "2026-08-28T18:47:06.724Z",
+  "lastUpdate": "2026-08-28T18:59:15.960Z",
   "locks": [
     {
       "agent": "i18n-agent",
@@ -34,15 +34,6 @@
       "taskId": "manual-payments-stripe-prep"
     },
     {
-      "agent": "client-agent",
-      "files": [
-        "src/features/peinture/LibraryPanel.tsx",
-        "src/features/peinture/storage.ts"
-      ],
-      "since": "2026-08-27T13:03:02.161722+00:00",
-      "taskId": "client-saved-calculations"
-    },
-    {
       "agent": "security-agent",
       "files": [
         "src/components/SecurityCenter.tsx",
@@ -50,36 +41,6 @@
       ],
       "since": "2026-08-27T16:49:09.831123+00:00",
       "taskId": "design-security-vantra"
-    },
-    {
-      "agent": "i18n-agent",
-      "taskId": "i18n-peinture-keys",
-      "files": [
-        "src/features/peinture/i18n.ts"
-      ],
-      "since": "2026-08-27T16:44:42.663601+00:00"
-    },
-    {
-      "agent": "client-agent",
-      "files": [
-        "src/features/peinture/QuoteNumberEditor.tsx",
-        "src/features/peinture/ValidityDateEditor.tsx",
-        "src/features/peinture/PaymentTermsEditor.tsx",
-        "src/features/peinture/NotesEditor.tsx",
-        "src/features/peinture/TermsAndConditions.tsx",
-        "src/features/peinture/AcceptanceSignature.tsx"
-      ],
-      "since": "2026-08-27T17:49:07.708324+00:00",
-      "taskId": "client-quote-invoice"
-    },
-    {
-      "agent": "i18n-agent",
-      "files": [
-        "src/styles.css",
-        "artisanpro-admin/src/style.css"
-      ],
-      "since": "2026-08-27T17:49:07.708331+00:00",
-      "taskId": "ui-rtl-responsive-audit"
     }
   ],
   "releasedByLead": [
