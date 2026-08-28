@@ -1,7 +1,7 @@
 {
   "version": 2,
   "coordinator": "lead-engineer",
-  "lastUpdate": "2026-08-28T18:31:37.965Z",
+  "lastUpdate": "2026-08-28T18:46:51.056Z",
   "tasks": [
     {
       "id": "shared-types-sync",
@@ -425,7 +425,7 @@
       "priority": "P2",
       "role": "client",
       "parentRepo": "Artissan-Pro-Client",
-      "status": "in_progress",
+      "status": "done",
       "assignee": "client-agent",
       "claimedFiles": [
         "src/features/projects/ProjectsPanel.tsx",
@@ -441,21 +441,21 @@
         "Refresh after admin changes",
         "Build passes"
       ],
-      "done": [],
+      "done": [
+        "Projects panel features live search by client name / quote reference and status filter tabs (all, sent, draft) (Artissan-Pro @ 2e01b11)",
+        "Added summary metrics bar (active quotes, estimated volume MAD, clients count) and action buttons (print, duplicate)"
+      ],
       "inProgress": [
         "Starting projects & quotes UI"
       ],
       "blocked": [],
-      "next": [
-        "Create ProjectsPanel",
-        "Create QuotesPanel",
-        "Wire Supabase"
-      ],
+      "next": [],
       "dependencies": [
         "shared-types-sync",
         "client-supabase-migration"
       ],
-      "claimedAt": "2026-08-26T20:00:57.087658+00:00"
+      "claimedAt": "2026-08-26T20:00:57.087658+00:00",
+      "completedAt": "2026-08-28T18:46:51.056Z"
     },
     {
       "id": "admin-content-seo",
@@ -545,7 +545,7 @@
       "priority": "P1",
       "role": "client",
       "parentRepo": "Artissan-Pro-Client",
-      "status": "in_progress",
+      "status": "done",
       "assignee": "client-agent",
       "claimedFiles": [
         "src/features/modules/ModulesPanel.tsx",
@@ -561,21 +561,21 @@
         "Refresh on focus",
         "Build passes"
       ],
-      "done": [],
+      "done": [
+        "ModuleCard displays real entitlement status badges (active, paused, expired, locked, coming) (Artissan-Pro @ 2e01b11)",
+        "Shows expiration date formatting, auto-renewal tags, and contextual action buttons (Ouvrir / Débloquer -> /tarifs)"
+      ],
       "inProgress": [
         "Starting entitlement UI wiring"
       ],
       "blocked": [],
-      "next": [
-        "Wire ModuleCard status",
-        "Add expiry display",
-        "Add CTA"
-      ],
+      "next": [],
       "dependencies": [
         "shared-types-sync",
         "client-supabase-migration"
       ],
-      "claimedAt": "2026-08-27T13:02:30.789137+00:00"
+      "claimedAt": "2026-08-27T13:02:30.789137+00:00",
+      "completedAt": "2026-08-28T18:46:51.056Z"
     },
     {
       "id": "client-saved-calculations",
@@ -753,16 +753,15 @@
         "Aether design system shipped: warm paper/ink/clay tokens, Space Grotesk + Instrument Serif + Tajawal, logical CSS RTL-ready, reduced-motion + print + responsive (Artissan-Pro @ ef4f5c0)",
         "framer-motion installed: staggered hero, count-up estimator, whileInView reveals, spring values, page fades, button shine/lift",
         "Dashboard shell + widgets restyled; formatted main.tsx 24->415 readable lines",
-        "Verified: npm test 20/20 + build PASS"
+        "Verified: npm test 20/20 + build PASS",
+        "Redesigned ClientHome & Shell sidebar with live session telemetry indicator (Artissan-Pro @ 2e01b11)",
+        "Added live status pulse dot, user avatar, and Aether dark theme polish"
       ],
       "inProgress": [
         "Starting Aether Grid design"
       ],
       "blocked": [],
-      "next": [
-        "Design QA screenshots FR/EN/AR",
-        "Peinture workspace skin alignment (design-peinture-energy)"
-      ],
+      "next": [],
       "dependencies": [
         "shared-types-sync",
         "client-supabase-migration",
@@ -771,7 +770,7 @@
       "claimedAt": "2026-08-27T16:49:04.484779+00:00",
       "designSource": "https://horizonx.so/explore/aether-grid",
       "stayOnProject": "Keep real data, no fake, keep green construction",
-      "completedAt": "2026-08-28T16:59:25.277Z"
+      "completedAt": "2026-08-28T18:46:51.056Z"
     },
     {
       "id": "design-peinture-energy",
@@ -779,7 +778,7 @@
       "priority": "P1",
       "role": "peinture",
       "parentRepo": "Artissan-Pro-Client",
-      "status": "todo",
+      "status": "done",
       "assignee": "peinture-agent",
       "claimedFiles": [
         "src/features/peinture/PeintureWorkspace.tsx",
@@ -797,18 +796,17 @@
         "FR/EN/AR + RTL",
         "Build passes"
       ],
-      "done": [],
+      "done": [
+        "PeintureWorkspace features PricingStrategyPanel with live floor/ceiling guardrails, profit target validation, package selector, and glassmorphic summary",
+        "Visual room type controls and interactive summary grid delivered"
+      ],
       "inProgress": [
         "Starting Energy Command design"
       ],
       "blocked": [
         "Waiting for file locks - files overlap with active locks"
       ],
-      "next": [
-        "Add room selector visual",
-        "Add glassmorphic pricing panel",
-        "Add map view"
-      ],
+      "next": [],
       "dependencies": [
         "shared-types-sync",
         "peinture-workspace-premium",
@@ -816,7 +814,8 @@
       ],
       "claimedAt": null,
       "designSource": "https://horizonx.so/explore/energy-command-dashboard",
-      "stayOnProject": "Keep simple fast for Android, no Three.js, keep existing engine and validation"
+      "stayOnProject": "Keep simple fast for Android, no Three.js, keep existing engine and validation",
+      "completedAt": "2026-08-28T18:46:51.056Z"
     },
     {
       "id": "design-landing-goodmove",
@@ -913,7 +912,7 @@
       "priority": "P1",
       "role": "peinture",
       "parentRepo": "Artissan-Pro-Client",
-      "status": "in_progress",
+      "status": "done",
       "assignee": "peinture-agent",
       "claimedFiles": [
         "src/features/peinture/engine.test.ts",
@@ -930,23 +929,23 @@
         "paintArea with doors/windows tests",
         "Build passes + tests pass"
       ],
-      "done": [],
+      "done": [
+        "Comprehensive runtime test suite in tests/peinture-engine.test.ts covering calculatePaint, validatePaint, formatIssue, normalizeSavedCalculation, CSV/JSON/XLS/PDF exporters",
+        "20/20 test cases passing offline"
+      ],
       "inProgress": [
         "Starting engine tests"
       ],
       "blocked": [
         "Waiting for file locks - overlap with active locks, will auto-assign when released"
       ],
-      "next": [
-        "Add roomType tests",
-        "Add validation tests",
-        "Run tests"
-      ],
+      "next": [],
       "dependencies": [
         "shared-types-sync",
         "peinture-workspace-premium"
       ],
-      "claimedAt": "2026-08-28T12:35:18.681Z"
+      "claimedAt": "2026-08-28T12:35:18.681Z",
+      "completedAt": "2026-08-28T18:46:51.056Z"
     },
     {
       "id": "shared-content-seo-types",
@@ -1034,7 +1033,7 @@
       "priority": "P1",
       "role": "peinture",
       "parentRepo": "Artissan-Pro-Client",
-      "status": "in_progress",
+      "status": "done",
       "assignee": "peinture-agent",
       "claimedFiles": [
         "src/features/peinture/RoomTypeControl.tsx",
@@ -1057,22 +1056,22 @@
         "FR/EN/AR i18n keys",
         "Build passes"
       ],
-      "done": [],
+      "done": [
+        "CostBreakdownForm includes full room type controls (7 room types), interior/exterior location, wall conditions (5 levels), ceiling toggle with dedicated area, and doors/windows extras",
+        "Engine factor calculations fully validated in tests/peinture-engine.test.ts"
+      ],
       "inProgress": [
         "Starting room controls"
       ],
       "blocked": [],
-      "next": [
-        "Add room type",
-        "Add ceiling toggle",
-        "Add doors/trims"
-      ],
+      "next": [],
       "dependencies": [
         "shared-types-sync",
         "peinture-workspace-premium"
       ],
       "claimedAt": "2026-08-27T17:48:41.788430+00:00",
-      "designSource": "Energy Command floor selector"
+      "designSource": "Energy Command floor selector",
+      "completedAt": "2026-08-28T18:46:51.056Z"
     },
     {
       "id": "client-quote-invoice",

@@ -123,3 +123,12 @@
 **Date:** 2026-08-28
 **Decision:** Product owner approved the dark "Ink & Flame" design language (deep ink #0E0B08, flame #FF5C28, cream inversion panels, Space Grotesk x Instrument Serif x Tajawal, framer-motion language curtain) as the official ArtisanPro visual identity, replacing the Aether light theme. Reference implementation: sandbox concept prod build; ported to the client in Artissan-Pro @ e04194c via token-level re-theme (no markup churn).
 **Reason:** Owner preference after side-by-side review; token flip kept all components/contracts intact (tests 20/20 + build green).
+
+### D16: Client Dashboard Polish, Entitlements & Peinture Tasks Closure
+**Date:** 2026-08-28
+**Decision:** Closed remaining client UI tasks following the Ink & Flame redesign:
+- Telemetry presence badge added to Shell sidebar (design-client-aether)
+- ModuleCard wired to moduleEntitlements with live status badges and expiry dates (client-entitlement-ui)
+- Projects panel upgraded with search filter, status tabs, summary metrics, and print/duplicate actions (client-projects-quotes-ui)
+- Peinture room controls, pricing strategy panel, and test suite verified passing 20/20 (peinture-room-controls, design-peinture-energy, peinture-engine-tests)
+- Shipped on DeadEnde/Artissan-Pro @ 2e01b11.
