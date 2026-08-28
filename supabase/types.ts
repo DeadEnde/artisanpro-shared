@@ -336,6 +336,42 @@ export interface Database {
           Relationships: [];
       };
 
+      content_sections: {
+        Row: {
+          id: string;
+          slug: string;
+          title_fr: string;
+          title_en: string;
+          title_ar: string;
+          body_fr: string | null;
+          body_en: string | null;
+          body_ar: string | null;
+          metadata: Record<string, unknown>;
+          is_published: boolean;
+          created_at: string;
+          updated_at: string;
+        };
+        Insert: Omit<Database['public']['Tables']['content_sections']['Row'], 'id' | 'created_at' | 'updated_at'> & { id?: string; created_at?: string; updated_at?: string };
+        Update: Partial<Database['public']['Tables']['content_sections']['Insert']>;
+          Relationships: [];
+      };
+      seo_metadata: {
+        Row: {
+          id: string;
+          page_slug: string;
+          title_fr: string;
+          title_en: string;
+          title_ar: string;
+          description_fr: string | null;
+          description_en: string | null;
+          description_ar: string | null;
+          created_at: string;
+          updated_at: string;
+        };
+        Insert: Omit<Database['public']['Tables']['seo_metadata']['Row'], 'id' | 'created_at' | 'updated_at'> & { id?: string; created_at?: string; updated_at?: string };
+        Update: Partial<Database['public']['Tables']['seo_metadata']['Insert']>;
+          Relationships: [];
+      };
     };
     Views: {
       module_entitlements: {

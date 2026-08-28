@@ -104,3 +104,4 @@ export interface AdminActivityLog {
 export type Language = 'fr' | 'en' | 'ar';
 
 export type AdminView = 'overview' | 'users' | 'modules' | 'plans' | 'security' | 'content' | 'settings';
+export * from './content';
