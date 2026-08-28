@@ -1,18 +1,7 @@
 {
   "version": 2,
-  "lastUpdate": "2026-08-28T19:16:04.771Z",
-  "locks": [
-    {
-      "agent": "api-agent",
-      "files": [
-        "supabase/functions/log-security-event/*",
-        "supabase/functions/cleanup-logs/*",
-        "artisanpro-security-logs.sql"
-      ],
-      "since": "2026-08-25T19:31:19.281838+00:00",
-      "taskId": "edge-function-security-logs"
-    }
-  ],
+  "lastUpdate": "2026-08-28T19:24:16.148Z",
+  "locks": [],
   "releasedByLead": [
     "types/index.ts",
     "constants/index.ts",
