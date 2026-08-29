@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "lastUpdate": "2026-08-29T17:19:20.111Z",
+  "lastUpdate": "2026-08-29T18:22:02.795Z",
   "locks": [
     {
       "agent": "",
@@ -12,16 +12,6 @@
       ],
       "since": "2026-08-29T01:54:30.970Z",
       "taskId": "profile-edit-avatar-presence"
-    },
-    {
-      "agent": "",
-      "files": [
-        "src/features/signature/",
-        "src/features/peinture/QuotePreview.tsx",
-        "src/features/peinture/PeintureWorkspace.tsx"
-      ],
-      "since": "2026-08-29T17:19:20.111Z",
-      "taskId": "signature-canvas"
     }
   ],
   "releasedByLead": [
