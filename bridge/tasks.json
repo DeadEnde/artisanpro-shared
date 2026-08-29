@@ -1300,7 +1300,7 @@
       "priority": "P1",
       "role": "peinture-agent",
       "parentRepo": "Artissan-Pro",
-      "status": "todo",
+      "status": "done",
       "assignee": "",
       "claimedFiles": [
         "src/features/carrelage/",
@@ -1318,7 +1318,12 @@
       "dependencies": [
         "clients-crm-page"
       ],
-      "notes": "Gros chantier \u2014 2-3 sessions, d\u00e9coupper en sous-t\u00e2ches"
+      "notes": "Gros chantier \u2014 2-3 sessions, d\u00e9coupper en sous-t\u00e2ches",
+      "done": [
+        "Built Carrelage Pro Workspace with presets (Standard, Grand Format, R\u00e9novation)",
+        "Full tiling calculator with tile dimensions, waste, boxes count, adhesive, grout, labor",
+        "Added '+ Enregistrer comme devis' action saving directly into quotes database"
+      ]
     },
     {
       "id": "settings-supabase-sync",
@@ -1326,7 +1331,7 @@
       "priority": "P2",
       "role": "client-agent",
       "parentRepo": "Artissan-Pro",
-      "status": "todo",
+      "status": "done",
       "assignee": "",
       "claimedFiles": [
         "src/features/settings/",
@@ -1342,7 +1347,11 @@
       "dependencies": [
         "devis-branding"
       ],
-      "notes": "Apr\u00e8s migration clients data vers Supabase"
+      "notes": "Apr\u00e8s migration clients data vers Supabase",
+      "done": [
+        "Implemented syncSettingsWithRemote and hydrateSettingsFromRemote in settingsLib",
+        "Settings automatically sync to Supabase profile (company, phone, avatar, full_name) with local fallback"
+      ]
     },
     {
       "id": "fix-import-parse",
@@ -1443,7 +1452,7 @@
       "priority": "P1",
       "role": "client-agent",
       "parentRepo": "Artissan-Pro",
-      "status": "in_progress",
+      "status": "done",
       "assignee": "",
       "claimedFiles": [
         "src/features/settings/",
@@ -1460,7 +1469,12 @@
       ],
       "dependencies": [],
       "notes": "Demande owner \u2014 settings edit + photo + statut online/offline",
-      "claimedAt": "2026-08-29T01:54:30.970Z"
+      "claimedAt": "2026-08-29T01:54:30.970Z",
+      "done": [
+        "Added userAvatar, phone, city to User and AppSettings interfaces",
+        "Built Avatar upload in SettingsPage with circular preview and removal",
+        "Displayed user avatar in sidebar and mobile drawer with green online presence badge"
+      ]
     },
     {
       "id": "revenue-progress-widget",
@@ -1468,7 +1482,7 @@
       "priority": "P2",
       "role": "client-agent",
       "parentRepo": "Artissan-Pro",
-      "status": "todo",
+      "status": "done",
       "assignee": "",
       "claimedFiles": [
         "src/main.tsx",
@@ -1484,7 +1498,12 @@
       "dependencies": [
         "quotes-pipeline-actions"
       ],
-      "notes": "Demande owner \u2014 revenue progress"
+      "notes": "Demande owner \u2014 revenue progress",
+      "done": [
+        "Built RevenueProgressWidget in ClientHome with current monthly revenue and percentage progress",
+        "Added 6-month interactive sparkline bar chart showing revenue history",
+        "Added editable monthlyRevenueGoal in Settings with target pill badge"
+      ]
     }
   ]
 }
