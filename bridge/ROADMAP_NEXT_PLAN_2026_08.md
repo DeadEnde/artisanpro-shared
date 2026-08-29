@@ -39,3 +39,33 @@ appareils ; `localStorage` reste le fallback hors-ligne.
 - `npm test` 20/20 + `tsc -b && vite build` doivent passer
 - `package.json` propre (pas de devDeps de QA committés)
 - Wrap-up en fin de session → source ajoutée au **NotebookLM Brain**
+
+---
+
+## Amendement 2026-08-29 (owner feedback — 5 nouvelles tâches)
+
+### 0. fix-import-parse · P0 🔴 (priorité absolue)
+Bug terrain: l'import JSON/CSV **ne charge rien**. Parser robuste (BOM, guillemets,
+virgules, valeurs FR/AR), auto-détection, toast succès/erreur, chargement des
+données du fichier dans le calculateur + bibliothèque.
+
+### 2b. company-logo-branding · P1
+Upload du **logo d'entreprise** dans les Réglages (local + Supabase Storage),
+affiché sur l'en-tête de la facture/devis et dans les exports.
+
+### 2c. signature-canvas · P1
+**Signature dessinée à l'écran** (doigt/souris) sauvegardée par devis et
+imprimée dans la zone "bon pour accord" + exports.
+
+### 3b. profile-edit-avatar-presence · P1
+Réglages: édition des informations, **photo de profil** (avatar dans sidebar/topbar),
+badge de **présence en ligne** (vert si heartbeat actif, gris sinon).
+
+### 4b. revenue-progress-widget · P2
+Widget dashboard: **CA du mois** en temps réel, courbe 6 mois, barre de
+progression vers un objectif mensuel éditable.
+
+**Ordre d'exécution actualisé:**
+fix-import-parse → devis-branding → company-logo-branding → signature-canvas →
+quotes-pipeline-actions → clients-crm-page → profile-edit-avatar-presence →
+revenue-progress-widget → carrelage-module → settings-supabase-sync

@@ -1,7 +1,7 @@
 {
-  "version": 3,
+  "version": 4,
   "coordinator": "lead-engineer",
-  "lastUpdate": "2026-08-29T01:45:49.983Z",
+  "lastUpdate": "2026-08-29T03:00:00.000Z",
   "tasks": [
     {
       "id": "shared-types-sync",
@@ -1212,7 +1212,7 @@
       "priority": "P1",
       "role": "client-agent",
       "parentRepo": "Artissan-Pro",
-      "status": "in_progress",
+      "status": "todo",
       "assignee": "",
       "claimedFiles": [
         "src/features/peinture/QuotePreview.tsx",
@@ -1227,8 +1227,7 @@
         "20/20 tests + vite build PASS + screenshots FR/AR"
       ],
       "dependencies": [],
-      "notes": "Quick win validé avec ABDELKHALIK — renforce la confiance client",
-      "claimedAt": "2026-08-29T01:45:49.983Z"
+      "notes": "Quick win validé avec ABDELKHALIK — renforce la confiance client"
     },
     {
       "id": "quotes-pipeline-actions",
@@ -1329,6 +1328,129 @@
         "devis-branding"
       ],
       "notes": "Après migration clients data vers Supabase"
+    },
+    {
+      "id": "fix-import-parse",
+      "title": "FIX — Import JSON/CSV ne charge rien : parser robuste + feedback visible",
+      "priority": "P0",
+      "role": "peinture-agent",
+      "parentRepo": "Artissan-Pro",
+      "status": "todo",
+      "assignee": "",
+      "claimedFiles": [
+        "src/features/peinture/storage.ts",
+        "src/features/peinture/PeintureWorkspace.tsx",
+        "src/features/peinture/LibraryPanel.tsx"
+      ],
+      "description": "Bug terrain (owner): l'import JSON/CSV ne déclenche rien visible. Corriger le parse (BOM, guillemets, virgules dans les valeurs, numeric FR/AR), auto-détecter le type, afficher un toast de succès/erreur et charger les infos du fichier dans le calculateur + la bibliothèque.",
+      "acceptanceCriteria": [
+        "Importer un export JSON existant recharge inputs+meta+totals correctement",
+        "CSV avec guillemets/virgules/BOM/accents parsé sans erreur",
+        "Message de succès avec nom du calcul importé + erreur claire si fichier illisible",
+        "Le calcul importé apparaît dans la bibliothèque ET se charge dans le workspace",
+        "20/20 tests + QA visuelle FR/AR"
+      ],
+      "dependencies": [],
+      "notes": "Bug signalé par ABDELKHALIK — P0 avant les nouvelles features"
+    },
+    {
+      "id": "company-logo-branding",
+      "title": "Logo entreprise — upload, stockage et affichage sur facture/devis",
+      "priority": "P1",
+      "role": "client-agent",
+      "parentRepo": "Artissan-Pro",
+      "status": "todo",
+      "assignee": "",
+      "claimedFiles": [
+        "src/features/settings/",
+        "src/features/peinture/QuotePreview.tsx",
+        "src/features/peinture/exporters.ts"
+      ],
+      "description": "Upload du logo d'entreprise dans les Réglages (base64 local + Supabase Storage si connecté). Le logo remplace le badge 'AP' dans l'en-tête du devis et apparaît dans les exports PDF/Excel.",
+      "acceptanceCriteria": [
+        "Upload logo (PNG/JPG) persisté, aperçu immédiat dans les réglages",
+        "Devis affiche le logo à la place du monogramme AP quand présent",
+        "Export PDF/Excel embarque l'image",
+        "20/20 tests + screenshots FR/AR"
+      ],
+      "dependencies": [
+        "devis-branding"
+      ],
+      "notes": "Suggestion owner — renforce la facture professionnelle"
+    },
+    {
+      "id": "signature-canvas",
+      "title": "Signature — dessiner à l'écran (doigt/souris) intégrée au devis",
+      "priority": "P1",
+      "role": "client-agent",
+      "parentRepo": "Artissan-Pro",
+      "status": "todo",
+      "assignee": "",
+      "claimedFiles": [
+        "src/features/signature/",
+        "src/features/peinture/QuotePreview.tsx",
+        "src/features/peinture/PeintureWorkspace.tsx"
+      ],
+      "description": "Canvas tactile/mouse pour dessiner la signature de l'artisan dans le workspace peinture: sauvegarde PNG, bouton effacer, la signature s'imprime dans la zone 'bon pour accord' du devis et des exports.",
+      "acceptanceCriteria": [
+        "Canvas réactif desktop + mobile avec effacer/recommencer",
+        "Signature persistée par devis et réutilisée au chargement",
+        "Devis preview + PDF incluent la signature",
+        "Désactivable (supprimer la signature)",
+        "20/20 tests + QA visuelle"
+      ],
+      "dependencies": [
+        "devis-branding"
+      ],
+      "notes": "Demande owner — possibilité de dessiner la signature à l'écran"
+    },
+    {
+      "id": "profile-edit-avatar-presence",
+      "title": "Réglages profil — édition infos, photo client et statut en ligne",
+      "priority": "P1",
+      "role": "client-agent",
+      "parentRepo": "Artissan-Pro",
+      "status": "todo",
+      "assignee": "",
+      "claimedFiles": [
+        "src/features/settings/",
+        "src/context/AppContext.tsx",
+        "src/lib/sessionPresence.ts",
+        "src/main.tsx"
+      ],
+      "description": "Dans les Réglages: éditer nom/entreprise (persisté), changer la photo de profil (avatar remplace l'initiale dans la sidebar + topbar), afficher le statut de présence (en ligne maintenant / hors ligne) en s'appuyant sur sessionPresence/heartbeat existants.",
+      "acceptanceCriteria": [
+        "Nom/entreprise éditables et reflétés dans la sidebar sans reload",
+        "Upload avatar persisté et affiché partout (sidebar, drawer, réglages)",
+        "Badge présence: vert 'en ligne' si heartbeat actif < 2min, gris sinon",
+        "20/20 tests + matrice FR/EN/AR"
+      ],
+      "dependencies": [],
+      "notes": "Demande owner — settings edit + photo + statut online/offline"
+    },
+    {
+      "id": "revenue-progress-widget",
+      "title": "Revenue Progress — CA cumulé, objectif et courbe sur le dashboard",
+      "priority": "P2",
+      "role": "client-agent",
+      "parentRepo": "Artissan-Pro",
+      "status": "todo",
+      "assignee": "",
+      "claimedFiles": [
+        "src/main.tsx",
+        "src/features/analytics/"
+      ],
+      "description": "Widget 'Revenue Progress' sur la vue d'ensemble: CA du mois cumulé à partir des devis, courbe 6 derniers mois (SVG sparkline), barre de progression vers un objectif mensuel configurable dans les Réglages.",
+      "acceptanceCriteria": [
+        "Cumul CA du mois en temps réel depuis les devis enregistrés",
+        "Sparkline 6 mois + barre de progression vers objectif",
+        "Objectif mensuel éditable dans les Réglages",
+        "20/20 tests + screenshots FR/EN/AR"
+      ],
+      "dependencies": [
+        "quotes-pipeline-actions"
+      ],
+      "notes": "Demande owner — revenue progress"
     }
   ]
 }
