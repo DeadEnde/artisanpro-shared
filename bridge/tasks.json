@@ -1,7 +1,7 @@
 {
   "version": 3,
   "coordinator": "lead-engineer",
-  "lastUpdate": "2026-08-29T02:00:00.000Z",
+  "lastUpdate": "2026-08-29T01:45:49.983Z",
   "tasks": [
     {
       "id": "shared-types-sync",
@@ -1212,7 +1212,7 @@
       "priority": "P1",
       "role": "client-agent",
       "parentRepo": "Artissan-Pro",
-      "status": "todo",
+      "status": "in_progress",
       "assignee": "",
       "claimedFiles": [
         "src/features/peinture/QuotePreview.tsx",
@@ -1227,7 +1227,8 @@
         "20/20 tests + vite build PASS + screenshots FR/AR"
       ],
       "dependencies": [],
-      "notes": "Quick win validé avec ABDELKHALIK — renforce la confiance client"
+      "notes": "Quick win validé avec ABDELKHALIK — renforce la confiance client",
+      "claimedAt": "2026-08-29T01:45:49.983Z"
     },
     {
       "id": "quotes-pipeline-actions",

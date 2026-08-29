@@ -1,7 +1,18 @@
 {
   "version": 2,
-  "lastUpdate": "2026-08-28T19:24:16.148Z",
-  "locks": [],
+  "lastUpdate": "2026-08-29T01:45:49.985Z",
+  "locks": [
+    {
+      "agent": "",
+      "files": [
+        "src/features/peinture/QuotePreview.tsx",
+        "src/features/peinture/exporters.ts",
+        "src/features/settings/settingsLib.ts"
+      ],
+      "since": "2026-08-29T01:45:49.983Z",
+      "taskId": "devis-branding"
+    }
+  ],
   "releasedByLead": [
     "types/index.ts",
     "constants/index.ts",
