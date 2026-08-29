@@ -1,7 +1,7 @@
 {
   "version": 4,
   "coordinator": "lead-engineer",
-  "lastUpdate": "2026-08-29T03:00:00.000Z",
+  "lastUpdate": "2026-08-29T01:54:30.970Z",
   "tasks": [
     {
       "id": "shared-types-sync",
@@ -1335,7 +1335,7 @@
       "priority": "P0",
       "role": "peinture-agent",
       "parentRepo": "Artissan-Pro",
-      "status": "todo",
+      "status": "in_progress",
       "assignee": "",
       "claimedFiles": [
         "src/features/peinture/storage.ts",
@@ -1351,7 +1351,8 @@
         "20/20 tests + QA visuelle FR/AR"
       ],
       "dependencies": [],
-      "notes": "Bug signalé par ABDELKHALIK — P0 avant les nouvelles features"
+      "notes": "Bug signalé par ABDELKHALIK — P0 avant les nouvelles features",
+      "claimedAt": "2026-08-29T01:54:30.969Z"
     },
     {
       "id": "company-logo-branding",
@@ -1410,7 +1411,7 @@
       "priority": "P1",
       "role": "client-agent",
       "parentRepo": "Artissan-Pro",
-      "status": "todo",
+      "status": "in_progress",
       "assignee": "",
       "claimedFiles": [
         "src/features/settings/",
@@ -1426,7 +1427,8 @@
         "20/20 tests + matrice FR/EN/AR"
       ],
       "dependencies": [],
-      "notes": "Demande owner — settings edit + photo + statut online/offline"
+      "notes": "Demande owner — settings edit + photo + statut online/offline",
+      "claimedAt": "2026-08-29T01:54:30.970Z"
     },
     {
       "id": "revenue-progress-widget",

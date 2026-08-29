@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "lastUpdate": "2026-08-29T01:45:49.985Z",
+  "lastUpdate": "2026-08-29T01:54:30.971Z",
   "locks": [
     {
       "agent": "",
@@ -11,6 +11,27 @@
       ],
       "since": "2026-08-29T01:45:49.983Z",
       "taskId": "devis-branding"
+    },
+    {
+      "agent": "",
+      "files": [
+        "src/features/peinture/storage.ts",
+        "src/features/peinture/PeintureWorkspace.tsx",
+        "src/features/peinture/LibraryPanel.tsx"
+      ],
+      "since": "2026-08-29T01:54:30.970Z",
+      "taskId": "fix-import-parse"
+    },
+    {
+      "agent": "",
+      "files": [
+        "src/features/settings/",
+        "src/context/AppContext.tsx",
+        "src/lib/sessionPresence.ts",
+        "src/main.tsx"
+      ],
+      "since": "2026-08-29T01:54:30.970Z",
+      "taskId": "profile-edit-avatar-presence"
     }
   ],
   "releasedByLead": [
