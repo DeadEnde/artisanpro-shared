@@ -1,13 +1,13 @@
 {
-  "version": 17,
+  "version": 18,
   "coordinator": "shared-agent",
   "currentPhase": "Phase 2: Product Depth (owner roadmap 2026-08-29)",
   "overallStatus": "sprint_in_progress",
-  "lastUpdate": "2026-08-29T17:19:20.111Z",
-  "activeTask": "company-logo-branding",
+  "lastUpdate": "2026-08-29T19:30:00.000Z",
+  "activeTask": "profile-edit-avatar-presence",
   "parentRepo": "artisanpro-shared",
   "role": "client-agent",
-  "summary": "Sprint 2 Product Depth en cours: P0 fix-import-parse LIVRÉ ✅ (parsers résilients JSON/CSV + chargement immédiat workspace), devis-branding LIVRÉ ✅ (nom entreprise + téléphone + ville sur devis), quotes-pipeline-actions LIVRÉ ✅ (page devis Pro Max, filtres avec compteurs, actions par ligne, vue mobile). Prochaine étape: company-logo-branding, signature-canvas, clients-crm-page.",
+  "summary": "Sprint 2 Product Depth en grand progr\u00e8s: company-logo-branding LIVR\u00c9 \u2705, signature-canvas LIVR\u00c9 \u2705, clients-crm-page LIVR\u00c9 \u2705, fix-import-parse LIVR\u00c9 \u2705, devis-branding LIVR\u00c9 \u2705, quotes-pipeline-actions LIVR\u00c9 \u2705. T\u00e2ches suivantes: profile-edit-avatar-presence, revenue-progress-widget, carrelage-module, settings-supabase-sync.",
   "completedPhases": [],
   "currentTasks": {
     "shared-types-sync": "done",
@@ -41,12 +41,12 @@
     "ui-rtl-responsive-audit": "done",
     "devis-branding": "done",
     "quotes-pipeline-actions": "done",
-    "clients-crm-page": "todo",
+    "clients-crm-page": "done",
     "carrelage-module": "todo",
     "settings-supabase-sync": "todo",
     "fix-import-parse": "done",
-    "company-logo-branding": "todo",
-    "signature-canvas": "in_progress",
+    "company-logo-branding": "done",
+    "signature-canvas": "done",
     "profile-edit-avatar-presence": "in_progress",
     "revenue-progress-widget": "todo"
   },
@@ -74,10 +74,7 @@
     "Auto-assigned 1 tasks: signature-canvas"
   ],
   "blocked": [],
-  "next": [
-    "company-logo-branding",
-    "signature-canvas"
-  ],
+  "next": [],
   "questions": [
     "Should we create separate repos for Artissan-Pro-Client and Artissan-Pro-API now, or keep working from workspace zip?",
     "Stripe: confirm we stay manual until Phase 4 - user said manual now, Stripe later"
