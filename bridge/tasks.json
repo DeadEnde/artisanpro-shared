@@ -1,7 +1,7 @@
 {
-  "version": 2,
+  "version": 3,
   "coordinator": "lead-engineer",
-  "lastUpdate": "2026-08-28T19:24:03.253Z",
+  "lastUpdate": "2026-08-29T02:00:00.000Z",
   "tasks": [
     {
       "id": "shared-types-sync",
@@ -1205,6 +1205,129 @@
       ],
       "claimedAt": "2026-08-27T17:48:41.788456+00:00",
       "completedAt": "2026-08-28T18:59:00.769Z"
+    },
+    {
+      "id": "devis-branding",
+      "title": "Devis Branding — Nom entreprise + coordonnées sur le devis PDF (settings → quote)",
+      "priority": "P1",
+      "role": "client-agent",
+      "parentRepo": "Artissan-Pro",
+      "status": "todo",
+      "assignee": "",
+      "claimedFiles": [
+        "src/features/peinture/QuotePreview.tsx",
+        "src/features/peinture/exporters.ts",
+        "src/features/settings/settingsLib.ts"
+      ],
+      "description": "Afficher automatiquement companyName/phone/city (réglages) dans l'en-tête et le pied de page du devis affiché et des exports PDF/XLS.",
+      "acceptanceCriteria": [
+        "QuotePreview affiche nom entreprise/téléphone/ville depuis ap-settings",
+        "Export PDF et Excel incluent le même bloc identité",
+        "Fallback discret quand les champs sont vides",
+        "20/20 tests + vite build PASS + screenshots FR/AR"
+      ],
+      "dependencies": [],
+      "notes": "Quick win validé avec ABDELKHALIK — renforce la confiance client"
+    },
+    {
+      "id": "quotes-pipeline-actions",
+      "title": "Quotes Pipeline — statuts (brouillon/envoyé/accepté) + actions par ligne",
+      "priority": "P1",
+      "role": "client-agent",
+      "parentRepo": "Artissan-Pro",
+      "status": "todo",
+      "assignee": "",
+      "claimedFiles": [
+        "src/main.tsx",
+        "src/context/AppContext.tsx",
+        "src/lib/moduleAccess.ts"
+      ],
+      "description": "Sur la page Devis & chantiers: marquer un devis envoyé/accepté, passer en 'accepté', puis export/PDF par ligne avec persistance locale + Supabase.",
+      "acceptanceCriteria": [
+        "Boutons statut par ligne (draft → sent → accepted)",
+        "Persistance du statut (local + supabase si connecté)",
+        "Action imprimer/PDF par devis",
+        "UI cohérente Ink & Flame + matrice FR/EN/AR + 20/20 tests"
+      ],
+      "dependencies": [
+        "devis-branding"
+      ],
+      "notes": "Complète le cycle vie du devis"
+    },
+    {
+      "id": "clients-crm-page",
+      "title": "Clients — page CRM légère (liste clients, téléphone, ville, CA)",
+      "priority": "P2",
+      "role": "client-agent",
+      "parentRepo": "Artissan-Pro",
+      "status": "todo",
+      "assignee": "",
+      "claimedFiles": [
+        "src/main.tsx",
+        "src/features/clients/",
+        "src/context/AppContext.tsx"
+      ],
+      "description": "Nouvelle page /dashboard/clients: regrouper les clients uniques depuis devis/calculs, champs phone/city éditables, CA par client, recherche instantanée.",
+      "acceptanceCriteria": [
+        "Liste clients unique par nom avec métrics (nb devis, total MAD)",
+        "Champs phone/ville persistés localement",
+        "Recherche + tri par chiffre",
+        "Sidebar gagne lien Clients + drawer mobile OK + RTL"
+      ],
+      "dependencies": [
+        "quotes-pipeline-actions"
+      ],
+      "notes": "CRM léger avant module carrelage"
+    },
+    {
+      "id": "carrelage-module",
+      "title": "Module Carrelage — calculateur complet (surface, carreaux, cartons, pose)",
+      "priority": "P1",
+      "role": "peinture-agent",
+      "parentRepo": "Artissan-Pro",
+      "status": "todo",
+      "assignee": "",
+      "claimedFiles": [
+        "src/features/carrelage/",
+        "src/main.tsx",
+        "src/context/AppContext.tsx",
+        "src/lib/moduleAccess.ts"
+      ],
+      "description": "Activer le module Carrelage (aujourd'hui locked): moteur de calcul (surface, dimensions carreau, marge 10%, cartons de 6), workspace avec library/hints/exports comme peinture, produit validé par l'owner.",
+      "acceptanceCriteria": [
+        "Moteur: carreaux + cartons + budget (prix m² + pose)",
+        "Workspace moderne: hints par champ, validation, exports PDF/CSV/JSON",
+        "Bibliothèque de calculs partagée avec l'existante",
+        "Tests moteur ajoutés (pattern peinture) + 20/20 PASS + QA visuelle FR/EN/AR"
+      ],
+      "dependencies": [
+        "clients-crm-page"
+      ],
+      "notes": "Gros chantier — 2-3 sessions, découpper en sous-tâches"
+    },
+    {
+      "id": "settings-supabase-sync",
+      "title": "Settings Sync Supabase — réglages par utilisateur sur tous les appareils",
+      "priority": "P2",
+      "role": "client-agent",
+      "parentRepo": "Artissan-Pro",
+      "status": "todo",
+      "assignee": "",
+      "claimedFiles": [
+        "src/features/settings/",
+        "supabase/"
+      ],
+      "description": "Table user_settings (RLS par utilisateur) + sync automatique: les réglages suivent le compte, localStorage reste le fallback offline.",
+      "acceptanceCriteria": [
+        "Table user_settings + policies RLS documentées",
+        "Save/restore automatique au login/logout",
+        "Aucun écart de comportement en mode démo local",
+        "Migrations SQL propres + types partagés à jour"
+      ],
+      "dependencies": [
+        "devis-branding"
+      ],
+      "notes": "Après migration clients data vers Supabase"
     }
   ]
 }
