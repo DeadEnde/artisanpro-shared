@@ -1,13 +1,13 @@
 {
-  "version": 19,
+  "version": 20,
   "coordinator": "shared-agent",
   "currentPhase": "Phase 2: Product Depth (owner roadmap 2026-08-29)",
   "overallStatus": "sprint_completed",
-  "lastUpdate": "2026-08-29T20:45:00.000Z",
-  "activeTask": "sprint-2-completed",
+  "lastUpdate": "2026-08-29T21:15:00.000Z",
+  "activeTask": "sprint-2-polished",
   "parentRepo": "artisanpro-shared",
   "role": "client-agent",
-  "summary": "Sprint 2 Product Depth 100% ACHEV\u00c9 \u2705 : Tous les 10 chantiers livr\u00e9s (fix-import-parse P0, devis-branding P1, quotes-pipeline-actions P1, company-logo-branding P1, signature-canvas P1, clients-crm-page P2, profile-edit-avatar-presence P1, revenue-progress-widget P2, carrelage-module P1, settings-supabase-sync P2).",
+  "summary": "Sprint 2 Product Depth & UI Polish ACHEV\u00c9 \u2705 : Sidebar User Profile (Avatar circle 44px + Nom + Statut), Settings Avatar Box (fix taille 76px), Workflow Signature Hybride (signature par d\u00e9faut dans R\u00e9glages + auto-chargement devis), et Peinture Workspace Pro Max.",
   "completedPhases": [],
   "currentTasks": {
     "shared-types-sync": "done",
