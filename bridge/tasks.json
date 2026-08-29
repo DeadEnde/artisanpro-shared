@@ -1325,7 +1325,8 @@
         "Added '+ Enregistrer comme devis' action saving directly into quotes database",
         "Workspace Carrelage Pro complet avec calepinage (droite, diagonale, d\u00e9cal\u00e9e)",
         "Calcul fa\u00efence murale, plinthes, ragr\u00e9age, colle C2 et joints",
-        "Presets m\u00e9tier: Standard 60x60, Grand format 120x60, Salle de bain, Terrasse"
+        "Presets m\u00e9tier: Standard 60x60, Grand format 120x60, Salle de bain, Terrasse",
+        "Deep Cost Structure Upgrade: surface prep, primer, cleaning, transport, equipment, overhead %, contingency %, discount %, margin %, VAT %, profit & margin calculation, and Pro Max receipt"
       ]
     },
     {
@@ -1527,7 +1528,8 @@
         "Engine de calcul \u00e9lectrique complet: points lumineux, prises 16A, appareillage, c\u00e2bles 1.5/2.5/6mm2, tableau et diff\u00e9rentiels 30mA",
         "Presets m\u00e9tier: Studio/F2 (35m2), Appartement F3/F4 (80m2), Villa/Maison (220m2), R\u00e9novation & mise aux normes",
         "Workspace interactif avec calcul mat\u00e9riel + main d'\u0153uvre et sauvegarde en devis",
-        "Int\u00e9gration dans le routeur, sidebar navigation et cartes du tableau de bord"
+        "Int\u00e9gration dans le routeur, sidebar navigation et cartes du tableau de bord",
+        "Deep Cost Structure & Normative Engine with tableau dimensioning, cable types, and NFC 15-100 compliance"
       ]
     }
   ]
