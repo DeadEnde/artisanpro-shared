@@ -1,13 +1,13 @@
 {
-  "version": 16,
+  "version": 17,
   "coordinator": "shared-agent",
   "currentPhase": "Phase 2: Product Depth (owner roadmap 2026-08-29)",
   "overallStatus": "sprint_in_progress",
-  "lastUpdate": "2026-08-29T01:54:30.971Z",
-  "activeTask": "fix-import-parse",
+  "lastUpdate": "2026-08-29T18:00:00.000Z",
+  "activeTask": "company-logo-branding",
   "parentRepo": "artisanpro-shared",
   "role": "client-agent",
-  "summary": "Sprint 2 enrichi par ABDELKHALIK: P0 fix-import-parse en tête (bug import JSON/CSV qui ne charge rien), puis devis-branding, company-logo, signature-canvas, quotes-pipeline, profile-avatar-presence, revenue-progress-widget, clients-crm, carrelage-module, settings-sync. 10 tâches todo au total.",
+  "summary": "Sprint 2 Product Depth en cours: P0 fix-import-parse LIVR\u00c9 \u2705 (parsers r\u00e9silients JSON/CSV + chargement imm\u00e9diat workspace), devis-branding LIVR\u00c9 \u2705 (nom entreprise + t\u00e9l\u00e9phone + ville sur devis), quotes-pipeline-actions LIVR\u00c9 \u2705 (page devis Pro Max, filtres avec compteurs, actions par ligne, vue mobile). Prochaine \u00e9tape: company-logo-branding, signature-canvas, clients-crm-page.",
   "completedPhases": [],
   "currentTasks": {
     "shared-types-sync": "done",
@@ -39,16 +39,17 @@
     "client-quote-invoice": "done",
     "admin-legacy-cleanup": "done",
     "ui-rtl-responsive-audit": "done",
-    "devis-branding": "todo",
-    "quotes-pipeline-actions": "todo",
+    "devis-branding": "done",
+    "quotes-pipeline-actions": "done",
     "clients-crm-page": "todo",
     "carrelage-module": "todo",
     "settings-supabase-sync": "todo",
-    "fix-import-parse": "in_progress",
+    "fix-import-parse": "done",
     "company-logo-branding": "todo",
     "signature-canvas": "todo",
     "profile-edit-avatar-presence": "in_progress",
-    "revenue-progress-widget": "todo"
+    "revenue-progress-widget": "todo",
+    "stripe-subscriptions": "done"
   },
   "claimedFiles": [],
   "done": [
@@ -75,11 +76,8 @@
   ],
   "blocked": [],
   "next": [
-    "fix-import-parse",
-    "devis-branding",
     "company-logo-branding",
-    "signature-canvas",
-    "quotes-pipeline-actions"
+    "signature-canvas"
   ],
   "questions": [
     "Should we create separate repos for Artissan-Pro-Client and Artissan-Pro-API now, or keep working from workspace zip?",

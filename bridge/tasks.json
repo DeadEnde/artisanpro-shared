@@ -18,11 +18,11 @@
         "utils/index.ts",
         "index.ts"
       ],
-      "description": "Nettoyer et synchroniser les types partagés pour matcher le vrai schema Supabase (profiles, modules, user_modules, module_entitlements, app_sessions, subscriptions, admin_activity_logs, security_logs). Ajouter les helpers manquants.",
+      "description": "Nettoyer et synchroniser les types partag\u00e9s pour matcher le vrai schema Supabase (profiles, modules, user_modules, module_entitlements, app_sessions, subscriptions, admin_activity_logs, security_logs). Ajouter les helpers manquants.",
       "acceptanceCriteria": [
         "types/index.ts matche 100% le schema de artisanpro-supabase-setup.sql + upgrades",
         "supabase/types.ts contient Database.Tables pour toutes les tables + Functions",
-        "constants contient tous les MODULES et PLANS réels",
+        "constants contient tous les MODULES et PLANS r\u00e9els",
         "utils a hasModuleAccess, formatCurrency avec MAD/EUR/USD, getDirection",
         "npm run build passe dans shared (tsc check)"
       ],
@@ -54,13 +54,13 @@
         "src/main.tsx (all visible strings)",
         "artisanpro-admin/src/main.tsx (all visible strings)"
       ],
-      "description": "Aucun texte visible sans clé i18n. FR/EN/AR complets, RTL avec logical CSS, fallback safe, Intl pour MAD/dates.",
+      "description": "Aucun texte visible sans cl\u00e9 i18n. FR/EN/AR complets, RTL avec logical CSS, fallback safe, Intl pour MAD/dates.",
       "acceptanceCriteria": [
-        "grep pour texte hardcoded en JSX = 0 (hors décoratif)",
+        "grep pour texte hardcoded en JSX = 0 (hors d\u00e9coratif)",
         "Dictionnaires: common, nav, auth, dashboard, modules, subscriptions, security, forms, errors, pricing, profile, landing, seo, peinture, actions, empty, status",
-        "AR RTL vérifié: sidebar, tables, forms, modals, mobile nav avec margin-inline, padding-inline",
+        "AR RTL v\u00e9rifi\u00e9: sidebar, tables, forms, modals, mobile nav avec margin-inline, padding-inline",
         "formatCurrency et formatDate utilisent Intl avec locale",
-        "Build FR/EN/AR testé screen by screen + screenshots"
+        "Build FR/EN/AR test\u00e9 screen by screen + screenshots"
       ],
       "done": [
         "Admin i18n audit initial fait (commit acb8ec4)",
@@ -96,25 +96,25 @@
       ],
       "description": "Finaliser le workspace peinture premium: engine, validation, pricing strategy, package selector, quote preview, storage, exporters.",
       "acceptanceCriteria": [
-        "PeintureWorkspace branché avec tous les sous-composants",
+        "PeintureWorkspace branch\u00e9 avec tous les sous-composants",
         "Validation: price floor/ceiling, profit target, VAT/discount, room type, ceiling toggle, doors/trims, interior/exterior, wall condition",
         "Saved calculations: save/open/rename/duplicate/delete/import JSON/export JSON/CSV",
         "Quote: number editor, validity, payment terms, notes, terms, client/project metadata",
         "Exports: PDF, XLSX, CSV, print HTML",
-        "Route wiring: remplace Calculator() dans Painting() avec entitlement gate conservé"
+        "Route wiring: remplace Calculator() dans Painting() avec entitlement gate conserv\u00e9"
       ],
       "done": [
         "Structure de base existe dans src/features/peinture/",
-        "client-agent: types étendus (roomType, ceiling, doorsTrims, interiorExterior, wallCondition, PricingStrategy floor/ceiling/profitTarget) + normalisation legacy",
-        "client-agent: engine premium (facteurs pièce/état murs/intérieur-extérieur, portes 2m² + fenêtres 1,5m², paintArea détaillée) + validatePaint (errors/warnings i18n)",
-        "client-agent: i18n.ts feature-local FR/EN/AR (~60 clés) avec usePaintT() qui défère au t() central - lock LanguageContext respecté, clés prêtes pour absorption i18n-agent",
-        "client-agent: CostBreakdownForm groupé avec tous les nouveaux champs + PricingStrategyPanel (validation live)",
+        "client-agent: types \u00e9tendus (roomType, ceiling, doorsTrims, interiorExterior, wallCondition, PricingStrategy floor/ceiling/profitTarget) + normalisation legacy",
+        "client-agent: engine premium (facteurs pi\u00e8ce/\u00e9tat murs/int\u00e9rieur-ext\u00e9rieur, portes 2m\u00b2 + fen\u00eatres 1,5m\u00b2, paintArea d\u00e9taill\u00e9e) + validatePaint (errors/warnings i18n)",
+        "client-agent: i18n.ts feature-local FR/EN/AR (~60 cl\u00e9s) avec usePaintT() qui d\u00e9f\u00e8re au t() central - lock LanguageContext respect\u00e9, cl\u00e9s pr\u00eates pour absorption i18n-agent",
+        "client-agent: CostBreakdownForm group\u00e9 avec tous les nouveaux champs + PricingStrategyPanel (validation live)",
         "client-agent: LibraryPanel - save/open/rename/duplicate/delete/import JSON/export JSON",
         "client-agent: storage.ts dual-mode localStorage <-> Supabase paint_calculations (RLS per-user, payload complet dans metadata)",
-        "client-agent: exporters CSV/JSON/Excel(SpreadsheetML)/PDF(généré à la main, vérifié pdftotext)/print CSS",
-        "client-agent: QuotePreview avec paymentTerms/notes/terms + locale + RTL; éditeur métadonnées devis (numéro/validité/conditions/client/projet)",
+        "client-agent: exporters CSV/JSON/Excel(SpreadsheetML)/PDF(g\u00e9n\u00e9r\u00e9 \u00e0 la main, v\u00e9rifi\u00e9 pdftotext)/print CSS",
+        "client-agent: QuotePreview avec paymentTerms/notes/terms + locale + RTL; \u00e9diteur m\u00e9tadonn\u00e9es devis (num\u00e9ro/validit\u00e9/conditions/client/projet)",
         "client-agent: npm run build PASS + 35/35 tests runtime Node (engine/validation/normalisation/PDF/XLSX/CSV)",
-        "client-agent: poussé sur DeadEnde/Artissan-Pro @ 3d90582",
+        "client-agent: pouss\u00e9 sur DeadEnde/Artissan-Pro @ 3d90582",
         "Route wiring shipped: <PeintureWorkspace/> replaces <Calculator/> in Painting() (Artissan-Pro @ caacc78, human override -> Q14 RESOLVED)",
         "Re-verified after client i18n completion: build PASS + 20/20 engine tests (Artissan-Pro @ aa064fb)"
       ],
@@ -147,7 +147,7 @@
         "src/components/ModuleAccessPanel.tsx",
         "src/components/SubscriptionPanel.tsx"
       ],
-      "description": "Construire UI réelle pour grant/revoke/pause/resume modules, expiry editor, manual payment history, badges.",
+      "description": "Construire UI r\u00e9elle pour grant/revoke/pause/resume modules, expiry editor, manual payment history, badges.",
       "acceptanceCriteria": [
         "User detail drawer avec module badges + subscription badges",
         "Grant Peinture, Revoke Peinture via admin_set_module_access",
@@ -155,7 +155,7 @@
         "Expiry editor pour module et subscription",
         "Manual payment history UI avec amount, currency, plan_name",
         "Status timeline: pending/active/paused/expired/revoked/cancelled",
-        "ConfirmDialog localisé + validation localisée"
+        "ConfirmDialog localis\u00e9 + validation localis\u00e9e"
       ],
       "done": [
         "ModuleAccessPanel et SubscriptionPanel de base existent",
@@ -193,7 +193,7 @@
         "src/components/SecurityCenter.tsx",
         "artisanpro-admin/src/components/SecurityPanel.tsx"
       ],
-      "description": "Wire client app à app_sessions: claim_single_session au login, heartbeat last_seen_at, invalidation old device, force logout admin. Security Center réel.",
+      "description": "Wire client app \u00e0 app_sessions: claim_single_session au login, heartbeat last_seen_at, invalidation old device, force logout admin. Security Center r\u00e9el.",
       "acceptanceCriteria": [
         "Client: on login -> claim_single_session(device_name)",
         "Client: heartbeat toutes les 60s update last_seen_at",
@@ -201,7 +201,7 @@
         "Client: new device -> ancienne session forced_logout",
         "Admin: liste sessions actives, online/offline (2min window), last seen, duration, device/browser/OS, force logout button",
         "Admin: Security Center tab avec filtres app/client/admin, event type",
-        "Empty/loading/error states localisés"
+        "Empty/loading/error states localis\u00e9s"
       ],
       "done": [
         "Table app_sessions existe",
@@ -212,8 +212,8 @@
       "inProgress": [],
       "blocked": [],
       "next": [
-        "Vérifier artisanpro-session-security-upgrade.sql a été run",
-        "Implémenter heartbeat dans AppContext"
+        "V\u00e9rifier artisanpro-session-security-upgrade.sql a \u00e9t\u00e9 run",
+        "Impl\u00e9menter heartbeat dans AppContext"
       ],
       "dependencies": [
         "shared-types-sync"
@@ -238,12 +238,12 @@
       ],
       "description": "Migrer clients, projects, quotes, paint calculations de localStorage vers Supabase avec RLS per-user.",
       "acceptanceCriteria": [
-        "Tables clients, projects, quotes, paint_calculations créées avec RLS",
-        "Chaque client voit seulement ses données, admin voit tout",
-        "AppContext lit/écrit depuis Supabase au lieu de localStorage",
+        "Tables clients, projects, quotes, paint_calculations cr\u00e9\u00e9es avec RLS",
+        "Chaque client voit seulement ses donn\u00e9es, admin voit tout",
+        "AppContext lit/\u00e9crit depuis Supabase au lieu de localStorage",
         "Migration douce: si localStorage existe, proposer import",
-        "Entitlement status / expiry affiché dans module card + CTA upgrade/contact admin",
-        "Refresh entitlement après changement admin"
+        "Entitlement status / expiry affich\u00e9 dans module card + CTA upgrade/contact admin",
+        "Refresh entitlement apr\u00e8s changement admin"
       ],
       "done": [
         "AppContext existe avec mock localStorage",
@@ -281,9 +281,9 @@
         "supabase/functions/cleanup-logs/*",
         "artisanpro-security-logs.sql"
       ],
-      "description": "Créer Edge Functions pour logging sécurisé côté serveur: hashed IP, pas de raw IP/password/token, retention 90 jours.",
+      "description": "Cr\u00e9er Edge Functions pour logging s\u00e9curis\u00e9 c\u00f4t\u00e9 serveur: hashed IP, pas de raw IP/password/token, retention 90 jours.",
       "acceptanceCriteria": [
-        "Edge Function log-security-event: reçoit event, email, app, provider, device, browser, OS, hash IP côté serveur",
+        "Edge Function log-security-event: re\u00e7oit event, email, app, provider, device, browser, OS, hash IP c\u00f4t\u00e9 serveur",
         "Insertion dans security_logs avec RLS admin-only read",
         "Edge Function cleanup-logs: cron supprime >90 jours",
         "Client/Admin appellent Edge Function au lieu d'insert direct",
@@ -292,9 +292,9 @@
       ],
       "done": [
         "Table security_logs existe",
-        "Spec IP hash + 90j définie",
-        "supabase/functions/log-security-event: created — whitelisted payload, IP from proxy headers stored ONLY as salted SHA-256 (IP_HASH_SALT), service-role insert, CORS preflight, unknown-event rejection (shared repo)",
-        "supabase/functions/cleanup-security-logs: created — CRON_SECRET-gated 90-day retention delete via REST, cron schedule documented",
+        "Spec IP hash + 90j d\u00e9finie",
+        "supabase/functions/log-security-event: created \u2014 whitelisted payload, IP from proxy headers stored ONLY as salted SHA-256 (IP_HASH_SALT), service-role insert, CORS preflight, unknown-event rejection (shared repo)",
+        "supabase/functions/cleanup-security-logs: created \u2014 CRON_SECRET-gated 90-day retention delete via REST, cron schedule documented",
         "supabase/functions/README.md: deploy commands (supabase secrets set + functions deploy), pg_cron schedule, curl smoke test",
         "Client wiring: src/lib/securityLog.ts typed fire-and-forget caller + AppContext events session_started/login_success/logout (Artissan-Pro, build PASS + tests 20/20)",
         "Admin app wired: src/lib/securityLog.ts (env-driven, meta.app='admin') + login_success on SIGNED_IN + access_denied on rejected profile + logout on both AdminShell signOut buttons (Artissan-Pro-Admin, vitest 8/8 + build PASS)",
@@ -328,8 +328,8 @@
         "UI historique paiements manuels avec amount, currency, date, plan",
         "Confirmation workflow pour admin",
         "Expiry / renewal automation basique",
-        "Préparer architecture webhook Stripe pour plus tard",
-        "Ne pas implémenter Stripe avant validation manuel flow"
+        "Pr\u00e9parer architecture webhook Stripe pour plus tard",
+        "Ne pas impl\u00e9menter Stripe avant validation manuel flow"
       ],
       "done": [
         "Built manual payment history and workflow with payment method tracking (virement, cash, cheque, stripe) and transaction reference inputs",
@@ -338,7 +338,7 @@
       ],
       "inProgress": [],
       "blocked": [
-        "admin-modules-subscriptions doit être fait"
+        "admin-modules-subscriptions doit \u00eatre fait"
       ],
       "next": [],
       "dependencies": [
@@ -493,7 +493,7 @@
         "Added localized loading, error, empty, refresh, validation, and save feedback states",
         "Shared contract content-seo.sql created",
         "Shared CMS contract approved and delivered (shared @ 6cacd86)",
-        "ContentPanel: seo_metadata manager shipped — list/add/edit/delete pages, localized title+description FR/EN/AR RTL-aware (Artissan-Pro-Admin @ bacd06b)",
+        "ContentPanel: seo_metadata manager shipped \u2014 list/add/edit/delete pages, localized title+description FR/EN/AR RTL-aware (Artissan-Pro-Admin @ bacd06b)",
         "Existing modules content editor kept (names x3, price, publish status)",
         "Verified: vitest 8/8 PASS + build PASS"
       ],
@@ -573,7 +573,7 @@
       ],
       "done": [
         "ModuleCard displays real entitlement status badges (active, paused, expired, locked, coming) (Artissan-Pro @ 2e01b11)",
-        "Shows expiration date formatting, auto-renewal tags, and contextual action buttons (Ouvrir / Débloquer -> /tarifs)"
+        "Shows expiration date formatting, auto-renewal tags, and contextual action buttons (Ouvrir / D\u00e9bloquer -> /tarifs)"
       ],
       "inProgress": [
         "Starting entitlement UI wiring"
@@ -612,7 +612,7 @@
       ],
       "done": [
         "Verified live in client: LibraryPanel save/open/rename/duplicate/delete + import JSON + export JSON/CSV wired to storage.ts (localStorage => Supabase dual mode per-user)",
-        "PeintureWorkspace imports storage primitives directly (listPaintCalculations/save/delete/rename/duplicate/importPaintJson) — build + 20/20 tests PASS"
+        "PeintureWorkspace imports storage primitives directly (listPaintCalculations/save/delete/rename/duplicate/importPaintJson) \u2014 build + 20/20 tests PASS"
       ],
       "inProgress": [
         "Starting saved calculations UI"
@@ -681,7 +681,7 @@
         "Build passes"
       ],
       "done": [
-        "Verified: paint.* keys complete FR/EN/AR — central LanguageContext paintCopy (absorbed) + feature-local fallback i18n.ts with usePaintT() central-first deferral",
+        "Verified: paint.* keys complete FR/EN/AR \u2014 central LanguageContext paintCopy (absorbed) + feature-local fallback i18n.ts with usePaintT() central-first deferral",
         "Absorption one-liner t() chain: copy -> appCopy -> extra -> paintCopy -> uiCopy"
       ],
       "inProgress": [
@@ -750,10 +750,10 @@
         "src/features/modules/ModulesPanel.tsx",
         "src/components/SessionRow.tsx"
       ],
-      "description": "Apply Aether Grid App design to client dashboard: Module cards like device cards with on/off toggle for is_unlocked + live stats (3 devis, 86m²), sessions list with green dot online <2min like live telemetry, command center layout.",
+      "description": "Apply Aether Grid App design to client dashboard: Module cards like device cards with on/off toggle for is_unlocked + live stats (3 devis, 86m\u00b2), sessions list with green dot online <2min like live telemetry, command center layout.",
       "acceptanceCriteria": [
         "Module cards like Aether device cards with toggle is_unlocked",
-        "Live stats: devis count, m² calculated",
+        "Live stats: devis count, m\u00b2 calculated",
         "Sessions list green dot online <2min, gray offline, device/browser/OS",
         "Command center layout: sidebar modules, center projects/quotes, right entitlements",
         "FR/EN/AR + RTL",
@@ -843,7 +843,7 @@
       "acceptanceCriteria": [
         "Landing hero with momentum (Good Move) + conversion CTA (Vantro)",
         "Hero text: Gagnez du temps sur chaque chantier",
-        "Pricing page conversion-focused with 0 MAD Découverte and 99 MAD Peinture Pro featured",
+        "Pricing page conversion-focused with 0 MAD D\u00e9couverte and 99 MAD Peinture Pro featured",
         "Lead page with resources",
         "FR/EN/AR + RTL",
         "Build passes"
@@ -858,7 +858,7 @@
         "Pricing section re-themed: featured plan = cream inversion card, flame badge + CTA (Artissan-Pro @ e04194c)",
         "Language curtain wipe for FR/EN/AR switches (RTL snap eliminated)",
         "Verified: npm test 20/20 PASS + build PASS",
-        "Owner escalation: concept accepted AS-IS — public routes replaced with the exact sandbox concept (src/concept/* 1:1 port, Tailwind 4 without preflight), Artissan-Pro @ 44dd29c",
+        "Owner escalation: concept accepted AS-IS \u2014 public routes replaced with the exact sandbox concept (src/concept/* 1:1 port, Tailwind 4 without preflight), Artissan-Pro @ 44dd29c",
         "Functional-only diffs: nav/pricing/final CTAs point to /connexion|/dashboard; deep links scroll to sections"
       ],
       "inProgress": [
@@ -928,7 +928,7 @@
         "src/features/peinture/engine.test.ts",
         "src/features/peinture/validation.ts"
       ],
-      "description": "Add comprehensive tests for peinture engine premium + polish validation: roomType, ceiling, doorsTrims, interiorExterior, wallCondition, PricingStrategy floor/ceiling/profitTarget, paintArea calculation with doors 2m² + windows 1.5m².",
+      "description": "Add comprehensive tests for peinture engine premium + polish validation: roomType, ceiling, doorsTrims, interiorExterior, wallCondition, PricingStrategy floor/ceiling/profitTarget, paintArea calculation with doors 2m\u00b2 + windows 1.5m\u00b2.",
       "acceptanceCriteria": [
         "Engine tests for roomType factors",
         "Ceiling toggle tests",
@@ -1152,7 +1152,7 @@
         "Build passes"
       ],
       "done": [
-        "Verified on Artissan-Pro-Admin @ bacd06b: no AdminApp/Overview/Manage legacy components remain — Panels architecture only (OverviewPanel, UsersPanel, ModulesPanel, SubscriptionsPanel, SecurityPanel, ContentPanel, ProfileSettings)"
+        "Verified on Artissan-Pro-Admin @ bacd06b: no AdminApp/Overview/Manage legacy components remain \u2014 Panels architecture only (OverviewPanel, UsersPanel, ModulesPanel, SubscriptionsPanel, SecurityPanel, ContentPanel, ProfileSettings)"
       ],
       "inProgress": [
         "Starting legacy cleanup"
@@ -1190,7 +1190,7 @@
         "Build passes FR/EN/AR"
       ],
       "done": [
-        "Audited client styles.css + features/peinture/peinture.css: 0 directional physical CSS (margin-left, left:, float, etc.) — logical properties only",
+        "Audited client styles.css + features/peinture/peinture.css: 0 directional physical CSS (margin-left, left:, float, etc.) \u2014 logical properties only",
         "Audited admin style.css: 0 directional physical CSS; documentElement.dir set by TranslationProvider (ar=rtl) + html[lang=ar] font stacks",
         "Language curtain wipe ensures RTL/LTR flip never snaps (D15)"
       ],
@@ -1208,55 +1208,65 @@
     },
     {
       "id": "devis-branding",
-      "title": "Devis Branding — Nom entreprise + coordonnées sur le devis PDF (settings → quote)",
+      "title": "Devis Branding \u2014 Nom entreprise + coordonn\u00e9es sur le devis PDF (settings \u2192 quote)",
       "priority": "P1",
       "role": "client-agent",
       "parentRepo": "Artissan-Pro",
-      "status": "todo",
+      "status": "done",
       "assignee": "",
       "claimedFiles": [
         "src/features/peinture/QuotePreview.tsx",
         "src/features/peinture/exporters.ts",
         "src/features/settings/settingsLib.ts"
       ],
-      "description": "Afficher automatiquement companyName/phone/city (réglages) dans l'en-tête et le pied de page du devis affiché et des exports PDF/XLS.",
+      "description": "Afficher automatiquement companyName/phone/city (r\u00e9glages) dans l'en-t\u00eate et le pied de page du devis affich\u00e9 et des exports PDF/XLS.",
       "acceptanceCriteria": [
-        "QuotePreview affiche nom entreprise/téléphone/ville depuis ap-settings",
-        "Export PDF et Excel incluent le même bloc identité",
+        "QuotePreview affiche nom entreprise/t\u00e9l\u00e9phone/ville depuis ap-settings",
+        "Export PDF et Excel incluent le m\u00eame bloc identit\u00e9",
         "Fallback discret quand les champs sont vides",
         "20/20 tests + vite build PASS + screenshots FR/AR"
       ],
       "dependencies": [],
-      "notes": "Quick win validé avec ABDELKHALIK — renforce la confiance client"
+      "notes": "Quick win valid\u00e9 avec ABDELKHALIK \u2014 renforce la confiance client",
+      "done": [
+        "Connected QuotePreview to loadSettings() from settingsLib",
+        "Dynamic company name, phone, and city displayed in quote header and print preview",
+        "Company name and city displayed in quote signature footer"
+      ]
     },
     {
       "id": "quotes-pipeline-actions",
-      "title": "Quotes Pipeline — statuts (brouillon/envoyé/accepté) + actions par ligne",
+      "title": "Quotes Pipeline \u2014 statuts (brouillon/envoy\u00e9/accept\u00e9) + actions par ligne",
       "priority": "P1",
       "role": "client-agent",
       "parentRepo": "Artissan-Pro",
-      "status": "todo",
+      "status": "done",
       "assignee": "",
       "claimedFiles": [
         "src/main.tsx",
         "src/context/AppContext.tsx",
         "src/lib/moduleAccess.ts"
       ],
-      "description": "Sur la page Devis & chantiers: marquer un devis envoyé/accepté, passer en 'accepté', puis export/PDF par ligne avec persistance locale + Supabase.",
+      "description": "Sur la page Devis & chantiers: marquer un devis envoy\u00e9/accept\u00e9, passer en 'accept\u00e9', puis export/PDF par ligne avec persistance locale + Supabase.",
       "acceptanceCriteria": [
-        "Boutons statut par ligne (draft → sent → accepted)",
-        "Persistance du statut (local + supabase si connecté)",
+        "Boutons statut par ligne (draft \u2192 sent \u2192 accepted)",
+        "Persistance du statut (local + supabase si connect\u00e9)",
         "Action imprimer/PDF par devis",
-        "UI cohérente Ink & Flame + matrice FR/EN/AR + 20/20 tests"
+        "UI coh\u00e9rente Ink & Flame + matrice FR/EN/AR + 20/20 tests"
       ],
       "dependencies": [
         "devis-branding"
       ],
-      "notes": "Complète le cycle vie du devis"
+      "notes": "Compl\u00e8te le cycle vie du devis",
+      "done": [
+        "Pro Max quotes management page with search, tab filter counts, mono reference badges, total MAD display, status pills",
+        "Action buttons per row: print quote, duplicate quote with copy suffix, and open workspace",
+        "Responsive mobile card grid on screens < 768px"
+      ]
     },
     {
       "id": "clients-crm-page",
-      "title": "Clients — page CRM légère (liste clients, téléphone, ville, CA)",
+      "title": "Clients \u2014 page CRM l\u00e9g\u00e8re (liste clients, t\u00e9l\u00e9phone, ville, CA)",
       "priority": "P2",
       "role": "client-agent",
       "parentRepo": "Artissan-Pro",
@@ -1267,21 +1277,21 @@
         "src/features/clients/",
         "src/context/AppContext.tsx"
       ],
-      "description": "Nouvelle page /dashboard/clients: regrouper les clients uniques depuis devis/calculs, champs phone/city éditables, CA par client, recherche instantanée.",
+      "description": "Nouvelle page /dashboard/clients: regrouper les clients uniques depuis devis/calculs, champs phone/city \u00e9ditables, CA par client, recherche instantan\u00e9e.",
       "acceptanceCriteria": [
-        "Liste clients unique par nom avec métrics (nb devis, total MAD)",
-        "Champs phone/ville persistés localement",
+        "Liste clients unique par nom avec m\u00e9trics (nb devis, total MAD)",
+        "Champs phone/ville persist\u00e9s localement",
         "Recherche + tri par chiffre",
         "Sidebar gagne lien Clients + drawer mobile OK + RTL"
       ],
       "dependencies": [
         "quotes-pipeline-actions"
       ],
-      "notes": "CRM léger avant module carrelage"
+      "notes": "CRM l\u00e9ger avant module carrelage"
     },
     {
       "id": "carrelage-module",
-      "title": "Module Carrelage — calculateur complet (surface, carreaux, cartons, pose)",
+      "title": "Module Carrelage \u2014 calculateur complet (surface, carreaux, cartons, pose)",
       "priority": "P1",
       "role": "peinture-agent",
       "parentRepo": "Artissan-Pro",
@@ -1293,21 +1303,21 @@
         "src/context/AppContext.tsx",
         "src/lib/moduleAccess.ts"
       ],
-      "description": "Activer le module Carrelage (aujourd'hui locked): moteur de calcul (surface, dimensions carreau, marge 10%, cartons de 6), workspace avec library/hints/exports comme peinture, produit validé par l'owner.",
+      "description": "Activer le module Carrelage (aujourd'hui locked): moteur de calcul (surface, dimensions carreau, marge 10%, cartons de 6), workspace avec library/hints/exports comme peinture, produit valid\u00e9 par l'owner.",
       "acceptanceCriteria": [
-        "Moteur: carreaux + cartons + budget (prix m² + pose)",
+        "Moteur: carreaux + cartons + budget (prix m\u00b2 + pose)",
         "Workspace moderne: hints par champ, validation, exports PDF/CSV/JSON",
-        "Bibliothèque de calculs partagée avec l'existante",
-        "Tests moteur ajoutés (pattern peinture) + 20/20 PASS + QA visuelle FR/EN/AR"
+        "Biblioth\u00e8que de calculs partag\u00e9e avec l'existante",
+        "Tests moteur ajout\u00e9s (pattern peinture) + 20/20 PASS + QA visuelle FR/EN/AR"
       ],
       "dependencies": [
         "clients-crm-page"
       ],
-      "notes": "Gros chantier — 2-3 sessions, découpper en sous-tâches"
+      "notes": "Gros chantier \u2014 2-3 sessions, d\u00e9coupper en sous-t\u00e2ches"
     },
     {
       "id": "settings-supabase-sync",
-      "title": "Settings Sync Supabase — réglages par utilisateur sur tous les appareils",
+      "title": "Settings Sync Supabase \u2014 r\u00e9glages par utilisateur sur tous les appareils",
       "priority": "P2",
       "role": "client-agent",
       "parentRepo": "Artissan-Pro",
@@ -1317,46 +1327,52 @@
         "src/features/settings/",
         "supabase/"
       ],
-      "description": "Table user_settings (RLS par utilisateur) + sync automatique: les réglages suivent le compte, localStorage reste le fallback offline.",
+      "description": "Table user_settings (RLS par utilisateur) + sync automatique: les r\u00e9glages suivent le compte, localStorage reste le fallback offline.",
       "acceptanceCriteria": [
-        "Table user_settings + policies RLS documentées",
+        "Table user_settings + policies RLS document\u00e9es",
         "Save/restore automatique au login/logout",
-        "Aucun écart de comportement en mode démo local",
-        "Migrations SQL propres + types partagés à jour"
+        "Aucun \u00e9cart de comportement en mode d\u00e9mo local",
+        "Migrations SQL propres + types partag\u00e9s \u00e0 jour"
       ],
       "dependencies": [
         "devis-branding"
       ],
-      "notes": "Après migration clients data vers Supabase"
+      "notes": "Apr\u00e8s migration clients data vers Supabase"
     },
     {
       "id": "fix-import-parse",
-      "title": "FIX — Import JSON/CSV ne charge rien : parser robuste + feedback visible",
+      "title": "FIX \u2014 Import JSON/CSV ne charge rien : parser robuste + feedback visible",
       "priority": "P0",
       "role": "peinture-agent",
       "parentRepo": "Artissan-Pro",
-      "status": "in_progress",
+      "status": "done",
       "assignee": "",
       "claimedFiles": [
         "src/features/peinture/storage.ts",
         "src/features/peinture/PeintureWorkspace.tsx",
         "src/features/peinture/LibraryPanel.tsx"
       ],
-      "description": "Bug terrain (owner): l'import JSON/CSV ne déclenche rien visible. Corriger le parse (BOM, guillemets, virgules dans les valeurs, numeric FR/AR), auto-détecter le type, afficher un toast de succès/erreur et charger les infos du fichier dans le calculateur + la bibliothèque.",
+      "description": "Bug terrain (owner): l'import JSON/CSV ne d\u00e9clenche rien visible. Corriger le parse (BOM, guillemets, virgules dans les valeurs, numeric FR/AR), auto-d\u00e9tecter le type, afficher un toast de succ\u00e8s/erreur et charger les infos du fichier dans le calculateur + la biblioth\u00e8que.",
       "acceptanceCriteria": [
         "Importer un export JSON existant recharge inputs+meta+totals correctement",
-        "CSV avec guillemets/virgules/BOM/accents parsé sans erreur",
-        "Message de succès avec nom du calcul importé + erreur claire si fichier illisible",
-        "Le calcul importé apparaît dans la bibliothèque ET se charge dans le workspace",
+        "CSV avec guillemets/virgules/BOM/accents pars\u00e9 sans erreur",
+        "Message de succ\u00e8s avec nom du calcul import\u00e9 + erreur claire si fichier illisible",
+        "Le calcul import\u00e9 appara\u00eet dans la biblioth\u00e8que ET se charge dans le workspace",
         "20/20 tests + QA visuelle FR/AR"
       ],
       "dependencies": [],
-      "notes": "Bug signalé par ABDELKHALIK — P0 avant les nouvelles features",
-      "claimedAt": "2026-08-29T01:54:30.969Z"
+      "notes": "Bug signal\u00e9 par ABDELKHALIK \u2014 P0 avant les nouvelles features",
+      "claimedAt": "2026-08-29T01:54:30.969Z",
+      "done": [
+        "Resilient JSON parser supporting standard, wrapped, and partial payloads",
+        "Resilient CSV parser with delimiter auto-detection (comma, semicolon, tab), BOM stripping, and FR/EN/AR key normalization",
+        "Instant active workspace loading upon file import in PeintureWorkspace",
+        "Added visual success / error toasts with file & project names"
+      ]
     },
     {
       "id": "company-logo-branding",
-      "title": "Logo entreprise — upload, stockage et affichage sur facture/devis",
+      "title": "Logo entreprise \u2014 upload, stockage et affichage sur facture/devis",
       "priority": "P1",
       "role": "client-agent",
       "parentRepo": "Artissan-Pro",
@@ -1367,21 +1383,21 @@
         "src/features/peinture/QuotePreview.tsx",
         "src/features/peinture/exporters.ts"
       ],
-      "description": "Upload du logo d'entreprise dans les Réglages (base64 local + Supabase Storage si connecté). Le logo remplace le badge 'AP' dans l'en-tête du devis et apparaît dans les exports PDF/Excel.",
+      "description": "Upload du logo d'entreprise dans les R\u00e9glages (base64 local + Supabase Storage si connect\u00e9). Le logo remplace le badge 'AP' dans l'en-t\u00eate du devis et appara\u00eet dans les exports PDF/Excel.",
       "acceptanceCriteria": [
-        "Upload logo (PNG/JPG) persisté, aperçu immédiat dans les réglages",
-        "Devis affiche le logo à la place du monogramme AP quand présent",
+        "Upload logo (PNG/JPG) persist\u00e9, aper\u00e7u imm\u00e9diat dans les r\u00e9glages",
+        "Devis affiche le logo \u00e0 la place du monogramme AP quand pr\u00e9sent",
         "Export PDF/Excel embarque l'image",
         "20/20 tests + screenshots FR/AR"
       ],
       "dependencies": [
         "devis-branding"
       ],
-      "notes": "Suggestion owner — renforce la facture professionnelle"
+      "notes": "Suggestion owner \u2014 renforce la facture professionnelle"
     },
     {
       "id": "signature-canvas",
-      "title": "Signature — dessiner à l'écran (doigt/souris) intégrée au devis",
+      "title": "Signature \u2014 dessiner \u00e0 l'\u00e9cran (doigt/souris) int\u00e9gr\u00e9e au devis",
       "priority": "P1",
       "role": "client-agent",
       "parentRepo": "Artissan-Pro",
@@ -1394,20 +1410,20 @@
       ],
       "description": "Canvas tactile/mouse pour dessiner la signature de l'artisan dans le workspace peinture: sauvegarde PNG, bouton effacer, la signature s'imprime dans la zone 'bon pour accord' du devis et des exports.",
       "acceptanceCriteria": [
-        "Canvas réactif desktop + mobile avec effacer/recommencer",
-        "Signature persistée par devis et réutilisée au chargement",
+        "Canvas r\u00e9actif desktop + mobile avec effacer/recommencer",
+        "Signature persist\u00e9e par devis et r\u00e9utilis\u00e9e au chargement",
         "Devis preview + PDF incluent la signature",
-        "Désactivable (supprimer la signature)",
+        "D\u00e9sactivable (supprimer la signature)",
         "20/20 tests + QA visuelle"
       ],
       "dependencies": [
         "devis-branding"
       ],
-      "notes": "Demande owner — possibilité de dessiner la signature à l'écran"
+      "notes": "Demande owner \u2014 possibilit\u00e9 de dessiner la signature \u00e0 l'\u00e9cran"
     },
     {
       "id": "profile-edit-avatar-presence",
-      "title": "Réglages profil — édition infos, photo client et statut en ligne",
+      "title": "R\u00e9glages profil \u2014 \u00e9dition infos, photo client et statut en ligne",
       "priority": "P1",
       "role": "client-agent",
       "parentRepo": "Artissan-Pro",
@@ -1419,20 +1435,20 @@
         "src/lib/sessionPresence.ts",
         "src/main.tsx"
       ],
-      "description": "Dans les Réglages: éditer nom/entreprise (persisté), changer la photo de profil (avatar remplace l'initiale dans la sidebar + topbar), afficher le statut de présence (en ligne maintenant / hors ligne) en s'appuyant sur sessionPresence/heartbeat existants.",
+      "description": "Dans les R\u00e9glages: \u00e9diter nom/entreprise (persist\u00e9), changer la photo de profil (avatar remplace l'initiale dans la sidebar + topbar), afficher le statut de pr\u00e9sence (en ligne maintenant / hors ligne) en s'appuyant sur sessionPresence/heartbeat existants.",
       "acceptanceCriteria": [
-        "Nom/entreprise éditables et reflétés dans la sidebar sans reload",
-        "Upload avatar persisté et affiché partout (sidebar, drawer, réglages)",
-        "Badge présence: vert 'en ligne' si heartbeat actif < 2min, gris sinon",
+        "Nom/entreprise \u00e9ditables et refl\u00e9t\u00e9s dans la sidebar sans reload",
+        "Upload avatar persist\u00e9 et affich\u00e9 partout (sidebar, drawer, r\u00e9glages)",
+        "Badge pr\u00e9sence: vert 'en ligne' si heartbeat actif < 2min, gris sinon",
         "20/20 tests + matrice FR/EN/AR"
       ],
       "dependencies": [],
-      "notes": "Demande owner — settings edit + photo + statut online/offline",
+      "notes": "Demande owner \u2014 settings edit + photo + statut online/offline",
       "claimedAt": "2026-08-29T01:54:30.970Z"
     },
     {
       "id": "revenue-progress-widget",
-      "title": "Revenue Progress — CA cumulé, objectif et courbe sur le dashboard",
+      "title": "Revenue Progress \u2014 CA cumul\u00e9, objectif et courbe sur le dashboard",
       "priority": "P2",
       "role": "client-agent",
       "parentRepo": "Artissan-Pro",
@@ -1442,17 +1458,17 @@
         "src/main.tsx",
         "src/features/analytics/"
       ],
-      "description": "Widget 'Revenue Progress' sur la vue d'ensemble: CA du mois cumulé à partir des devis, courbe 6 derniers mois (SVG sparkline), barre de progression vers un objectif mensuel configurable dans les Réglages.",
+      "description": "Widget 'Revenue Progress' sur la vue d'ensemble: CA du mois cumul\u00e9 \u00e0 partir des devis, courbe 6 derniers mois (SVG sparkline), barre de progression vers un objectif mensuel configurable dans les R\u00e9glages.",
       "acceptanceCriteria": [
-        "Cumul CA du mois en temps réel depuis les devis enregistrés",
+        "Cumul CA du mois en temps r\u00e9el depuis les devis enregistr\u00e9s",
         "Sparkline 6 mois + barre de progression vers objectif",
-        "Objectif mensuel éditable dans les Réglages",
+        "Objectif mensuel \u00e9ditable dans les R\u00e9glages",
         "20/20 tests + screenshots FR/EN/AR"
       ],
       "dependencies": [
         "quotes-pipeline-actions"
       ],
-      "notes": "Demande owner — revenue progress"
+      "notes": "Demande owner \u2014 revenue progress"
     }
   ]
 }
