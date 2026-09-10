@@ -1,13 +1,13 @@
 {
-  "version": 24,
+  "version": 25,
   "coordinator": "shared-agent",
   "currentPhase": "Phase 2: Product Depth (owner roadmap 2026-08-29)",
   "overallStatus": "enterprise_production_ready",
-  "lastUpdate": "2026-08-30T03:45:00.000Z",
-  "activeTask": "enterprise-masterpiece-delivered",
+  "lastUpdate": "2026-08-30T04:30:00.000Z",
+  "activeTask": "demo-modes-and-trade-tabs-completed",
   "parentRepo": "artisanpro-shared",
   "role": "client-agent",
-  "summary": "PROJET ARTISANPRO 100% ACHEV\u00c9 & LIVR\u00c9 EN PRODUCTION \ud83c\udf89 : Suite 4 Modules (Peinture Pro v2, Carrelage Pro v1, \u00c9lectricit\u00e9 Pro v1 NFC 15-100, Plomberie Pro v1), Partage WhatsApp 1-clic, Gestion des Acomptes & Facturation, PWA Mobile installable, Moteur de PDF haute r\u00e9solution avec logo & signature, et Syst\u00e8me Ink & Flame sombre unifi\u00e9.",
+  "summary": "MODE D\u00c9MO \u00c9LECTRICIT\u00c9 & PLOMBERIE LIVR\u00c9 \u2705 : Bouton 1-clic Mode D\u00e9mo dans les ateliers \u00c9lectricit\u00e9 et Plomberie (chargement projets r\u00e9els Appartement F3 Maarif et Villa Californie), Calculateur interactif 4 M\u00e9tiers sur la Landing Page (Peinture, Carrelage, \u00c9lec, Plomb), et Grilles d'inputs sombres haute lisibilit\u00e9.",
   "completedPhases": [],
   "currentTasks": {
     "shared-types-sync": "done",
