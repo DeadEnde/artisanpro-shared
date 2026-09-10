@@ -1,13 +1,13 @@
 {
-  "version": 25,
+  "version": 26,
   "coordinator": "shared-agent",
   "currentPhase": "Phase 2: Product Depth (owner roadmap 2026-08-29)",
   "overallStatus": "enterprise_production_ready",
-  "lastUpdate": "2026-08-30T04:30:00.000Z",
-  "activeTask": "demo-modes-and-trade-tabs-completed",
+  "lastUpdate": "2026-08-30T05:10:00.000Z",
+  "activeTask": "rtl-i18n-modules-completed",
   "parentRepo": "artisanpro-shared",
   "role": "client-agent",
-  "summary": "MODE D\u00c9MO \u00c9LECTRICIT\u00c9 & PLOMBERIE LIVR\u00c9 \u2705 : Bouton 1-clic Mode D\u00e9mo dans les ateliers \u00c9lectricit\u00e9 et Plomberie (chargement projets r\u00e9els Appartement F3 Maarif et Villa Californie), Calculateur interactif 4 M\u00e9tiers sur la Landing Page (Peinture, Carrelage, \u00c9lec, Plomb), et Grilles d'inputs sombres haute lisibilit\u00e9.",
+  "summary": "FIX RTL i18n Modules \u2705 : Catalogue des modules 100% traduit FR/EN/AR (noms \u0627\u0644\u0635\u0628\u0627\u063a\u0629 \u0627\u0644\u0628\u0644\u0627\u0637 \u0627\u0644\u0643\u0647\u0631\u0628\u0627\u0621 \u0627\u0644\u0633\u0628\u0627\u0643\u0629, taglines, chips, boutons), moteur PDF arabe RTL (dir, ar-MA MAD), sidebar internationalis\u00e9.",
   "completedPhases": [],
   "currentTasks": {
     "shared-types-sync": "done",
