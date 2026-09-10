@@ -1531,6 +1531,64 @@
         "Int\u00e9gration dans le routeur, sidebar navigation et cartes du tableau de bord",
         "Deep Cost Structure & Normative Engine with tableau dimensioning, cable types, and NFC 15-100 compliance"
       ]
+    },
+    {
+      "id": "plomberie-module",
+      "title": "Module Plomberie & Sanitaire Pro \u2014 Calculateur d'installation, canalisations PPR/PVC & devis (Module 04)",
+      "status": "done",
+      "priority": "P1",
+      "role": "plomberie-agent",
+      "parentRepo": "Artissan-Pro",
+      "claimedFiles": [
+        "src/features/plomberie/types.ts",
+        "src/features/plomberie/engine.ts",
+        "src/features/plomberie/PlomberieWorkspace.tsx",
+        "src/features/plomberie/plomberie.css",
+        "src/main.tsx"
+      ],
+      "description": "Calculateur d'installation sanitaire et plomberie pour artisans marocains: appareils sanitaires, alimentation PPR/multicouche, \u00e9vacuation PVC, chauffe-eau, devis automatiques.",
+      "done": [
+        "Engine de calcul complet sanitaire (WC suspendus, douches italiennes, vasques, baignoires, \u00e9viers)",
+        "R\u00e9seaux d'alimentation PPR/multicouche et \u00e9vacuations PVC",
+        "Production eau chaude (\u00e9lectrique, gaz, solaire)",
+        "Presets m\u00e9tier: Standard \u00e9conomique, Confort artisanal, Luxe noir mat",
+        "Workspace complet avec biblioth\u00e8que de sauvegarde et exports PDF/Excel/CSV/JSON"
+      ]
+    },
+    {
+      "id": "whatsapp-instant-sharing",
+      "title": "WhatsApp Instant Quote Sharing & Payment Tracking Pipeline",
+      "status": "done",
+      "priority": "P1",
+      "role": "client-agent",
+      "parentRepo": "Artissan-Pro",
+      "claimedFiles": [
+        "src/main.tsx",
+        "src/types.ts"
+      ],
+      "description": "Partage en un clic sur WhatsApp des devis avec message format\u00e9 en Darija/Fran\u00e7ais et suivi des acomptes (40%) et facturation.",
+      "done": [
+        "G\u00e9n\u00e9rateur de message WhatsApp avec nom entreprise, num\u00e9ro de devis, projet et montant total MAD",
+        "Cycle de vie des devis: Brouillon -> Envoy\u00e9 -> Accept\u00e9 -> Acompte -> Factur\u00e9",
+        "Calcul automatique des acomptes per\u00e7us et du reste \u00e0 payer"
+      ]
+    },
+    {
+      "id": "pwa-mobile-manifest",
+      "title": "PWA & Standalone Mobile Web App Architecture",
+      "status": "done",
+      "priority": "P1",
+      "role": "client-agent",
+      "parentRepo": "Artissan-Pro",
+      "claimedFiles": [
+        "public/manifest.json",
+        "index.html"
+      ],
+      "description": "Configuration PWA compl\u00e8te pour installation sur l'\u00e9cran d'accueil mobile (Android/iOS) avec th\u00e8me sombre natif.",
+      "done": [
+        "Cr\u00e9ation du manifest.json avec display standalone et theme-color #FF5C28",
+        "Balises m\u00e9ta mobiles Apple Web App et icones"
+      ]
     }
   ]
 }
