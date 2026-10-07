@@ -171,3 +171,34 @@
 **Date:** 2026-10-07
 **Decision:** The client's `shared` submodule pin was 16 commits behind remote main. Diff `bcfda11..669a4f2` touches **only** `bridge/*` — no file imported by the client. The pin was advanced, so both apps now resolve `shared/supabase/types.ts` from the same place.
 **Checked:** `tsc -b` exit 0 and `npm run build` green after the bump.
+
+### D23: The Four Engine Defects — FIXED
+**Date:** 2026-10-07
+**Decided by:** repo owner ("Ok slhom" / صلّحهم) after the D21 audit surfaced them.
+**Context:** D21 documented four defects in the quoting engines. They were frozen by characterisation tests pending an owner decision because every fix changes real customer prices.
+
+**What changed**
+
+1. **carrelage — wastePct ignored on diagonal/offset layouts.**
+   The multiplier was hard-frozen at 1.15 / 1.12, silently discarding the user's setting.
+   Now **additive**: `1 + (wastePct + layoutBonus)/100`, where the bonus is +5 pts diagonal, +2 pts offset.
+   At the default `wastePct = 10` this yields exactly 1.15 and 1.12 — **so no existing quote changes** — but the control now has an effect at every other value.
+
+2. **carrelage — displayed ragréage ≠ charged ragréage.**
+   The quote showed `surface × ragreagePriceMeter` while the cost used `ceil(surface/5) × 85`, a hardcoded bag price that ignored the setting. A 45 m² job displayed 3 825 MAD and charged 765 MAD.
+   Now the user's MAD/m² rate is authoritative and `ragreageCost` **is** the charged amount. The bag count survives as `ragreageBags`, informational only (purchasing).
+   ⚠️ **Price impact:** ragréage lines rise sharply (3 825 instead of 765 on the 45 m² example). If 85 was meant as a *per bag* price rather than per m², lower `ragreagePriceMeter` to ~17 in the UI.
+
+3. **carrelage — epoxy surcharge on the wrong line.**
+   `hasJointEpoxy` multiplied **plinthes** by 1.7. Epoxy is a jointing product. The ×1.7 now applies to the grout line; plinthes are untouched.
+
+4. **electricite — no margin, no overhead, no VAT.**
+   `totalDevis` was a raw cost price. The module now runs the same chain as plomberie: `costDirect → overhead → contingency → totalAvantMarge → saleBeforeTax → vat → totalDevis`. Four new inputs (`overheadPct`, `contingencyPct`, `marginPct`, `vatPct`) with a FR/EN/AR UI section, and HT / TVA / marge rows in the synthesis.
+   Two *additional* export-layer defects were found and fixed while wiring it:
+   - the PDF hardcoded `+20%` VAT on top of the total while the CSV labelled that same pre-VAT number "Total TTC" — three places, three different answers. The exporters now read `vat` / `saleBeforeTax` from the engine;
+   - the PDF listed **cost** lines under a **sale-price** subtotal. Line items are now scaled by the markup factor, with the last line absorbing rounding drift so the column sums exactly to the HT subtotal.
+   ⚠️ **Price impact:** with the defaults (overhead 10 %, contingency 5 %, margin 30 %, VAT 20 %) an electrician's quote goes from 12 072 to 21 658 MAD — **+79 %**. That is the corrected price, not an increase: the previous figure was the cost price.
+
+**Also fixed (found during this work):** `setInputs(item.inputs)` in the carrelage, electricite and plomberie workspaces replaced the whole input object with the *saved* one. Any quote stored before today lacks the new electricite fields, so opening it would have produced `undefined/100` → **NaN across the entire quote**. All three now merge over defaults, matching what peinture already did.
+
+**Verification:** `tsc -b` exit 0 · `npm test` **28/28** · `vite build` green (931 ms). The four characterisation tests were rewritten as assertions on the corrected behaviour.

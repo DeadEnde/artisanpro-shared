@@ -1,13 +1,13 @@
 {
-  "version": 28,
+  "version": 29,
   "coordinator": "shared-agent",
   "currentPhase": "Sprint 2 terminé — vérifié par assertions",
   "overallStatus": "sprint_complete_pending_owner_review",
-  "lastUpdate": "2026-10-07T13:34:27.000Z",
+  "lastUpdate": "2026-10-07T14:30:00.000Z",
   "activeTask": "rtl-i18n-workspaces-100pct",
   "parentRepo": "artisanpro-shared",
   "role": "client-agent",
-  "summary": "10/10 tâches Sprint 2 vérifiées faites (verify-claims.py sur le code réel, repo 4830dc8). Travaux de cette session: présence réelle (AppContext+Shell), sync réglages Supabase (setSettingsRemoteUser + user_settings + fallback profiles), logo/avatar Supabase Storage (lib/branding.ts, bucket branding + RLS), widget Revenue Progress (objectif 20 000 MAD). Tests moteurs: 24 (contre 2) — carrelage/électricité/plomberie n'en avaient AUCUN.",
+  "summary": "Sprint 2 مغلق (10/10 متحقَّق) + العيوب الأربعة فالمحرّكات مصلّحة (D23). carrelage: نسبة الهدر كتطبّق فكل التقويسات (نموذج إضافي — القيم الافتراضية ما تبدلاتش)، الرغراج المعروض = المفروض، الإيبوكسي على التقويس ماشي على اللِّزَامات. électricité: هامش + مصاريف + TVA + قسم واجهة ثلاثي اللغة، وإصلاح الصدّار (PDF كان كيزيد 20% بالقوة، والـ CSV كان كيسمي رقم HT 'Total TTC'). زيادة: إصلاح NaN عند فتح ديفي قديم (merge مع الافتراضيات ف 3 ورشات).",
   "completedPhases": [],
   "currentTasks": {
     "shared-types-sync": "done",
@@ -79,10 +79,10 @@
   ],
   "blocked": [],
   "next": [
-    "Revue propriétaire des 4 défauts moteur",
-    "Décision: découpage du bundle",
-    "Q15 admin: aligner le pin shared",
-    "Appliquer user-settings.sql au projet Supabase (Q6)"
+    "مراجعة المالك لنِسَب الكهرباء والرغراج",
+    "تطبيق user-settings.sql (Q6)",
+    "تقطيع الـ bundle",
+    "تنظيف admin (submodule + tsbuildinfo + pin)"
   ],
   "questions": [
     "Should we create separate repos for Artissan-Pro-Client and Artissan-Pro-API now, or keep working from workspace zip?",
@@ -189,31 +189,28 @@
   "lastSeenSha": "",
   "updatedAt": "2026-08-27T17:49:07.732768+00:00",
   "testCoverage": {
-    "total": 24,
+    "total": 28,
     "files": [
       "tests/peinture-engine.test.ts",
       "tests/engines.test.ts"
     ],
     "engines": {
       "peinture": 2,
-      "carrelage": 9,
-      "electricite": 7,
+      "carrelage": 12,
+      "electricite": 9,
       "plomberie": 5
     },
     "command": "npm test"
   },
   "knownIssues": [
-    "DÉFAUT carrelage: le wastePct est ignoré en pose diagonale/décalée (multiplicateur figé 1.15/1.12).",
-    "DÉFAUT carrelage: ragreageCost affiché (surface x prix/m2) ≠ montant facturé (ceil(surface/5) x 85 codé en dur) — le détail du devis ne se réconcilie pas.",
-    "DÉFAUT carrelage: le surcoût joint époxy est appliqué aux PLINTHES au lieu du jointoiement.",
-    "DÉFAUT électricité: aucun coefficient de marge, frais généraux ni TVA dans le moteur — le total est un coût de revient brut.",
-    "DÉFAUT électricité: les interrupteurs comptent comme des points de charge dans le dimensionnement des disjoncteurs (NFC 15-100 discutable).",
-    "Bundle client 676 kB / 201 kB gz en un seul chunk (> seuil Vite 500 kB). Découpage par route non fait.",
-    "Admin: .gitmodules déclare un submodule en double (artisanpro-shared + shared, même URL) — entrée artisanpro-shared orpheline.",
-    "Admin: tsconfig.tsbuildinfo est committé (devrait être dans .gitignore).",
-    "Admin pin shared@8e3fbd3, client pin shared@bcfda11 → deux versions divergentes du submodule.",
-    "Aucun PRODUCT.md / DESIGN.md dans les repos — la loi design vit seulement dans decisions.md D15/D15b.",
-    "Repos privés: VITE_SUPABASE_URL / VITE_SUPABASE_ANON_KEY absents localement (Q2) — vérification live impossible."
+    "الرغراج: الثمن بالمتر المربع ولّى مسيطر — على 45م² الكلفة ولّات 3825 بدل 765. خاص المالك يراجع واش 85 درهم/م² ولا /كيس.",
+    "الكهرباء: الإجمالي +79% (12072 → 21658 درهم) حيت كان ثمن التكلفة. خاص مراجعة percentages (30% هامش + 10% مصاريف + 5% طوارئ + 20% TVA).",
+    "Bundle client 681 kB / 202 kB gz ف chunk وحد (> 500 kB). التقطيع ماشي مدير.",
+    "admin: .gitmodules كيعلن submodule مزدوج (artisanpro-shared + shared) — دخل يتيم. و tsconfig.tsbuildinfo مُودَع.",
+    "admin pin shared@8e3fbd3، والعميل على 1940ca3 → نسختان مختلفتان.",
+    "ما كاينش PRODUCT.md / DESIGN.md فالمستودعات — القانون التصميمي غير ف decisions.md D15/D15b.",
+    "VITE_SUPABASE_URL / VITE_SUPABASE_ANON_KEY ما كايناش محلياً (Q2) — التحقق الحيّ مستحيل.",
+    "user-settings.sql باقي ما تطبّقش على مشروع Supabase (Q6)."
   ],
   "locks": []
 }
