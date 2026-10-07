@@ -372,6 +372,49 @@ export interface Database {
         Update: Partial<Database['public']['Tables']['seo_metadata']['Insert']>;
           Relationships: [];
       };
+      /**
+       * Per-user app settings (Sprint 2). localStorage stays the offline cache;
+       * this table is the cross-device source of truth.
+       * Migration: shared/supabase/user-settings.sql
+       */
+      user_settings: {
+        Row: {
+          user_id: string;
+          company_name: string | null;
+          company_logo: string | null;
+          phone: string | null;
+          city: string | null;
+          full_name: string | null;
+          avatar_url: string | null;
+          default_signature: string | null;
+          default_vat: number | null;
+          default_margin: number | null;
+          quote_prefix: string | null;
+          validity_days: number | null;
+          payment_terms: string | null;
+          monthly_revenue_goal: number | null;
+          updated_at: string;
+        };
+        Insert: {
+          user_id: string;
+          company_name?: string | null;
+          company_logo?: string | null;
+          phone?: string | null;
+          city?: string | null;
+          full_name?: string | null;
+          avatar_url?: string | null;
+          default_signature?: string | null;
+          default_vat?: number | null;
+          default_margin?: number | null;
+          quote_prefix?: string | null;
+          validity_days?: number | null;
+          payment_terms?: string | null;
+          monthly_revenue_goal?: number | null;
+          updated_at?: string;
+        };
+        Update: Partial<Database['public']['Tables']['user_settings']['Insert']>;
+          Relationships: [];
+      };
     };
     Views: {
       module_entitlements: {

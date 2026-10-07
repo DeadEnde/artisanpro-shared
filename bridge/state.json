@@ -1,13 +1,13 @@
 {
-  "version": 27,
+  "version": 28,
   "coordinator": "shared-agent",
-  "currentPhase": "Phase 2: Product Depth (owner roadmap 2026-08-29)",
-  "overallStatus": "enterprise_production_ready",
-  "lastUpdate": "2026-08-30T06:00:00.000Z",
+  "currentPhase": "Sprint 2 terminé — vérifié par assertions",
+  "overallStatus": "sprint_complete_pending_owner_review",
+  "lastUpdate": "2026-10-07T13:34:27.000Z",
   "activeTask": "rtl-i18n-workspaces-100pct",
   "parentRepo": "artisanpro-shared",
   "role": "client-agent",
-  "summary": "i18n 100% Workspaces \u2705 : Moteur i18n partag\u00e9 (205+ cl\u00e9s FR/EN/AR) c\u00e2bl\u00e9 dans Carrelage/\u00c9lectricit\u00e9/Plomberie. Aucun texte fran\u00e7ais hardcod\u00e9 en AR. Bouton fermeture drawer RTL corrig\u00e9 (bascule \u00e0 gauche).",
+  "summary": "10/10 tâches Sprint 2 vérifiées faites (verify-claims.py sur le code réel, repo 4830dc8). Travaux de cette session: présence réelle (AppContext+Shell), sync réglages Supabase (setSettingsRemoteUser + user_settings + fallback profiles), logo/avatar Supabase Storage (lib/branding.ts, bucket branding + RLS), widget Revenue Progress (objectif 20 000 MAD). Tests moteurs: 24 (contre 2) — carrelage/électricité/plomberie n'en avaient AUCUN.",
   "completedPhases": [],
   "currentTasks": {
     "shared-types-sync": "done",
@@ -78,7 +78,12 @@
     "Auto-assigned 1 tasks: signature-canvas"
   ],
   "blocked": [],
-  "next": [],
+  "next": [
+    "Revue propriétaire des 4 défauts moteur",
+    "Décision: découpage du bundle",
+    "Q15 admin: aligner le pin shared",
+    "Appliquer user-settings.sql au projet Supabase (Q6)"
+  ],
   "questions": [
     "Should we create separate repos for Artissan-Pro-Client and Artissan-Pro-API now, or keep working from workspace zip?",
     "Stripe: confirm we stay manual until Phase 4 - user said manual now, Stripe later"
@@ -182,5 +187,33 @@
   },
   "mode": "coordinator",
   "lastSeenSha": "",
-  "updatedAt": "2026-08-27T17:49:07.732768+00:00"
+  "updatedAt": "2026-08-27T17:49:07.732768+00:00",
+  "testCoverage": {
+    "total": 24,
+    "files": [
+      "tests/peinture-engine.test.ts",
+      "tests/engines.test.ts"
+    ],
+    "engines": {
+      "peinture": 2,
+      "carrelage": 9,
+      "electricite": 7,
+      "plomberie": 5
+    },
+    "command": "npm test"
+  },
+  "knownIssues": [
+    "DÉFAUT carrelage: le wastePct est ignoré en pose diagonale/décalée (multiplicateur figé 1.15/1.12).",
+    "DÉFAUT carrelage: ragreageCost affiché (surface x prix/m2) ≠ montant facturé (ceil(surface/5) x 85 codé en dur) — le détail du devis ne se réconcilie pas.",
+    "DÉFAUT carrelage: le surcoût joint époxy est appliqué aux PLINTHES au lieu du jointoiement.",
+    "DÉFAUT électricité: aucun coefficient de marge, frais généraux ni TVA dans le moteur — le total est un coût de revient brut.",
+    "DÉFAUT électricité: les interrupteurs comptent comme des points de charge dans le dimensionnement des disjoncteurs (NFC 15-100 discutable).",
+    "Bundle client 676 kB / 201 kB gz en un seul chunk (> seuil Vite 500 kB). Découpage par route non fait.",
+    "Admin: .gitmodules déclare un submodule en double (artisanpro-shared + shared, même URL) — entrée artisanpro-shared orpheline.",
+    "Admin: tsconfig.tsbuildinfo est committé (devrait être dans .gitignore).",
+    "Admin pin shared@8e3fbd3, client pin shared@bcfda11 → deux versions divergentes du submodule.",
+    "Aucun PRODUCT.md / DESIGN.md dans les repos — la loi design vit seulement dans decisions.md D15/D15b.",
+    "Repos privés: VITE_SUPABASE_URL / VITE_SUPABASE_ANON_KEY absents localement (Q2) — vérification live impossible."
+  ],
+  "locks": []
 }

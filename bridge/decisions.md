@@ -149,3 +149,25 @@
 ### D19: Security Logs — Both Apps Emit Through Edge Function
 **Date:** 2026-08-29
 **Decision:** Roadmap complete (29/29 tasks). The admin app now emits login_success / access_denied / logout through the same log-security-event edge function (meta.app discriminator), closing edge-function-security-logs. Remaining items are owner operations only: Supabase secrets + functions deploy + pg_cron schedule (documented, cannot run without project CLI auth).
+
+### D20: Bridge Reconciliation Against Real Code — Sprint 2 Closure
+**Date:** 2026-10-07
+**Decided by:** Engineer (Arena Agent) — acting as source of truth
+**Context:** The bridge was frozen at 2026-08-29 while the client repo advanced to 2026-09-11. Two bridges disagreed: the client's pinned copy (`bcfda11`) was 5 tasks BEHIND the code; the remote copy (`669a4f2`) claimed 10/10 Sprint 2 done while 2 tasks did not exist in the code. Three locks were held by an empty `agent:""` string since 2026-08-29.
+**Decision:** The bridge is verified against the code by executable assertions, not by trust in prior reports. The tool is `bridge/verify-claims.py`; it runs greppable assertions per task and rewrites `tasks.json`/`locks.json` from the result.
+**Rule (anti-drift):** the bridge is reconciled at the start of *every* session. If bridge and code disagree, **the code is the fact and the bridge is the bug**. A task is only `done` with recorded command output — "the code looks complete" is not evidence.
+
+### D21: Engine Test Coverage — Restored
+**Date:** 2026-10-07
+**Context:** D16 claimed "test suite verified passing 20/20". The repo contained 2 tests. `carrelage`, `electricite` and `plomberie` engines — which produce customer-facing quotes — had **zero**.
+**Decision:** `tests/engines.test.ts` added: 22 tests pinning the arithmetic invariants of the three engines. Total now 24. Four known engine defects are captured as `[caractérisation]` tests so they cannot change silently:
+1. `carrelage` ignores `wastePct` in diagonale/décalée layout (multiplier hard-frozen at 1.15/1.12).
+2. `carrelage` displays `ragreageCost = surface × prix/m²` but charges `ceil(surface/5) × 85` — the quote detail does not reconcile with the cost.
+3. `carrelage` applies the `hasJointEpoxy` surcharge to **plinthes** instead of jointing.
+4. `electricite` applies **no margin, no overhead, no VAT** — its `totalDevis` is a raw cost price. Carrelage and plomberie apply all three.
+**Status:** defects are documented and frozen, **not yet fixed** — they change customer prices and require an owner decision.
+
+### D22: Submodule Pin Advanced bcfda11 → 669a4f2
+**Date:** 2026-10-07
+**Decision:** The client's `shared` submodule pin was 16 commits behind remote main. Diff `bcfda11..669a4f2` touches **only** `bridge/*` — no file imported by the client. The pin was advanced, so both apps now resolve `shared/supabase/types.ts` from the same place.
+**Checked:** `tsc -b` exit 0 and `npm run build` green after the bump.

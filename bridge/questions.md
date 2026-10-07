@@ -169,3 +169,30 @@ Safety rules implemented: demo seed rows (ids c1/p1/q1) are NEVER imported (D3 n
 **Question:** Please add dedicated localized keys for MRR and churn rate when the i18n lock is released; revenue calculations are complete and currently use existing localized dashboard/subscription labels.
 **Impact:** No data functionality is blocked; dedicated semantic labels would improve the analytics UI.
 **Status:** OPEN
+
+---
+
+## 2026-10-07 — أسئلة جديدة
+
+### Q15: Repo admin — تدقيق
+**من:** engineer | **إلى:** المستخدم | **التاريخ:** 2026-10-07
+**السؤال:** تم استنساخ `Artissan-Pro-Admin` (85caa5b). البناء ✓ و الاختبارات 8/8 — لكن `.gitmodules` يعلن submodule مزدوجاً (`artisanpro-shared` + `shared` بنفس الرابط) و `tsconfig.tsbuildinfo` مُودَع في المستودع. والـ pin يشير إلى `8e3fbd3` بينما العميل على `669a4f2` → نسختان مختلفتان من shared.
+**الحالة:** مفتوح.
+
+### Q16: ترتيب تحميل الصور — Supabase Storage
+**من:** engineer | **إلى:** المستخدم | **التاريخ:** 2026-10-07
+**القرار:** الخيار (ج) — localStorage كذاكرة فورية، و Storage كمصدر حقيقة. منفَّذ في `src/lib/branding.ts`.
+**متبقٍّ:** تطبيق `supabase/user-settings.sql` على مشروع Supabase (الجدول + bucket `branding` + سياسات RLS) — عملية يملكها المالك فقط.
+
+### Q17: من ينفذ باقي العمل
+**من:** engineer | **إلى:** المستخدم | **التاريخ:** 2026-10-07
+**القرار:** المهندس ينفذ مباشرة، والـ bridge يبقى جدول المهام. Codex للعمل المحلي داخل الـ IDE، Hermes للجولات الطويلة المستقلة.
+
+### Q18: الهدف الشهري لرقم المعاملات
+**من:** engineer | **إلى:** المستخدم | **التاريخ:** 2026-10-07
+**القرار:** قيمة ثابتة = **20 000 درهم**، قابلة للتعديل من الإعدادات. عند غياب الهدف يُعرض دعوة لتعريفه بدل شريط تقدّم وهمي (D3).
+
+### Q19: العيوب الأربعة في المحرّكات — قرار المالك مطلوب
+**من:** engineer | **إلى:** المستخدم | **التاريخ:** 2026-10-07
+**السؤال:** هل أُصلح عيوب D21 (تجاهل نسبة الهدر في التركيب المائل، عدم تطابق الرغراج في عرض السعر، ضريبة الإيبوكسي على اللِّزَامات، وغياب الهامش/الضريبة في محرّك الكهرباء)؟
+**الأثر:** كل إصلاح يغيّر أسعار عروض العملاء فعلياً — لذلك القرار للمالك.
